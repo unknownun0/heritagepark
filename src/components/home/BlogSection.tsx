@@ -23,7 +23,7 @@ export default function BlogSection() {
     <section className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-4">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase">Educational Hub</p>
+          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase">Educational</p>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-3">
           Answers, Before You Need Them.

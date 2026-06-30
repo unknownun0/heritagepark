@@ -136,13 +136,13 @@ export default function HomeSections() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {properties.map((p) => (
-              <div key={p.title} className="border border-light-stone rounded-lg p-6 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-primary mb-2">{p.title}</h3>
+              <Link key={p.title} href={p.href} className="group block border border-primary/10 rounded-lg p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-l-2 border-transparent hover:border-gold">
+                <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-gold transition-colors">{p.title}</h3>
                 <p className="text-sm text-primary/60 mb-4">{p.desc}</p>
-                <Link href={p.href} className="text-gold font-semibold text-sm hover:underline">
+                <span className="text-gold font-semibold text-sm group-hover:underline">
                   Learn More &rarr;
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
