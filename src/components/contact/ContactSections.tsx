@@ -1,4 +1,45 @@
+'use client'
+
+import { useState } from 'react'
+
+const channels = [
+  { value: 'gmail', label: 'Gmail', icon: '✉' },
+  { value: 'whatsapp', label: 'WhatsApp', icon: '💬' },
+  { value: 'viber', label: 'Viber', icon: '📞' },
+  { value: 'messenger', label: 'Messenger', icon: '💭' },
+]
+
 export default function ContactSections() {
+  const [channel, setChannel] = useState('gmail')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [interest, setInterest] = useState('')
+  const [message, setMessage] = useState('')
+  const [contactTime, setContactTime] = useState('')
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const intro = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AInterest: ${interest}%0APreferred Time: ${contactTime}%0A%0A`
+    const fullMsg = `${intro}${message}`
+
+    switch (channel) {
+      case 'gmail':
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=info@heritagepark.ph&su=Inquiry%20from%20${encodeURIComponent(name)}&body=${fullMsg}`, '_blank')
+        break
+      case 'whatsapp':
+        window.open(`https://wa.me/639178423741?text=${fullMsg}`, '_blank')
+        break
+      case 'viber':
+        window.open(`viber://pa?chatURI=heritagepark&text=${fullMsg}`, '_blank')
+        break
+      case 'messenger':
+        window.open(`https://m.me/heritageparkph?text=${fullMsg}`, '_blank')
+        break
+    }
+  }
+
   return (
     <>
       <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center bg-primary">
@@ -15,14 +56,17 @@ export default function ContactSections() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-bold text-primary mb-6">Send Us a Message</h2>
-              <form className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-primary mb-1">Name</label>
                   <input
                     type="text"
                     id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-full px-4 py-3 border border-primary/10 rounded bg-cream text-primary placeholder:text-primary/30 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors text-sm"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div>
@@ -30,8 +74,11 @@ export default function ContactSections() {
                   <input
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-3 border border-primary/10 rounded bg-cream text-primary placeholder:text-primary/30 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors text-sm"
                     placeholder="your@email.com"
+                    required
                   />
                 </div>
                 <div>
@@ -39,20 +86,26 @@ export default function ContactSections() {
                   <input
                     type="tel"
                     id="phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="w-full px-4 py-3 border border-primary/10 rounded bg-cream text-primary placeholder:text-primary/30 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors text-sm"
                     placeholder="+63 912 345 6789"
+                    required
                   />
                 </div>
                 <div>
                   <label htmlFor="interest" className="block text-sm font-semibold text-primary mb-1">I&apos;m interested in</label>
                   <select
                     id="interest"
+                    value={interest}
+                    onChange={(e) => setInterest(e.target.value)}
                     className="w-full px-4 py-3 border border-primary/10 rounded bg-cream text-primary focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors text-sm"
+                    required
                   >
                     <option value="">Select an option</option>
-                    <option value="memorial-properties">Memorial Properties</option>
-                    <option value="memorial-services">Memorial Services</option>
-                    <option value="just-exploring">Just Exploring</option>
+                    <option value="Memorial Properties">Memorial Properties</option>
+                    <option value="Memorial Services">Memorial Services</option>
+                    <option value="Just Exploring">Just Exploring</option>
                   </select>
                 </div>
                 <div>
@@ -60,23 +113,51 @@ export default function ContactSections() {
                   <textarea
                     id="message"
                     rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     className="w-full px-4 py-3 border border-primary/10 rounded bg-cream text-primary placeholder:text-primary/30 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors text-sm resize-y"
                     placeholder="Tell us how we can help..."
+                    required
                   />
                 </div>
                 <div>
                   <label htmlFor="contact-time" className="block text-sm font-semibold text-primary mb-1">Preferred Contact Time</label>
                   <select
                     id="contact-time"
+                    value={contactTime}
+                    onChange={(e) => setContactTime(e.target.value)}
                     className="w-full px-4 py-3 border border-primary/10 rounded bg-cream text-primary focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors text-sm"
+                    required
                   >
                     <option value="">Select a time</option>
-                    <option value="morning">Morning (8AM – 12PM)</option>
-                    <option value="afternoon">Afternoon (12PM – 5PM)</option>
-                    <option value="evening">Evening (5PM – 8PM)</option>
-                    <option value="anytime">Anytime</option>
+                    <option value="Morning (8AM – 12PM)">Morning (8AM – 12PM)</option>
+                    <option value="Afternoon (12PM – 5PM)">Afternoon (12PM – 5PM)</option>
+                    <option value="Evening (5PM – 8PM)">Evening (5PM – 8PM)</option>
+                    <option value="Anytime">Anytime</option>
                   </select>
                 </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-primary mb-3">Send via</label>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    {channels.map((ch) => (
+                      <button
+                        key={ch.value}
+                        type="button"
+                        onClick={() => setChannel(ch.value)}
+                        className={`flex flex-col items-center gap-1.5 px-3 py-3 rounded-lg border text-xs font-medium transition-all ${
+                          channel === ch.value
+                            ? 'bg-gold/10 border-gold text-primary'
+                            : 'bg-cream border-primary/10 text-primary/60 hover:border-gold/30'
+                        }`}
+                      >
+                        <span className="text-base">{ch.icon}</span>
+                        {ch.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 <p className="text-xs text-moss italic font-accent">No pressure, ever. Just a conversation.</p>
                 <button
                   type="submit"
