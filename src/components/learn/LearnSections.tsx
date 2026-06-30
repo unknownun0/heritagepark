@@ -65,9 +65,8 @@ export default function LearnSections() {
               <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
                 <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
                   <div className="p-5">
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="mb-2">
                       <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
-                      <span className="text-[10px] font-semibold text-gold uppercase">{post.lang}</span>
                     </div>
                     <h3 className="text-sm font-semibold text-primary mb-1.5 group-hover:text-gold transition-colors">{post.title}</h3>
                     <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>

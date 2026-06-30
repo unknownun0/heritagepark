@@ -198,8 +198,8 @@ export default function ContactSections() {
                   <div>
                     <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Address</h3>
                     <p>Heritage Park Memorial</p>
-                    <p>123 Peaceful Valley Road</p>
-                    <p>Manila, Philippines</p>
+                    <p>Lawton Ave, Taguig</p>
+                    <p>Metro Manila, Philippines</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Phone</h3>
@@ -217,15 +217,20 @@ export default function ContactSections() {
                 </div>
               </div>
 
-              <div className="bg-cream rounded-lg overflow-hidden h-64 flex items-center justify-center border border-primary/5">
-                <div className="text-center text-primary/40">
+              <a
+                href="https://maps.app.goo.gl/wft18AKdizcAjY5u7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-cream rounded-lg overflow-hidden h-64 flex items-center justify-center border border-primary/5 hover:border-gold/30 transition-colors group"
+              >
+                <div className="text-center text-primary/40 group-hover:text-gold transition-colors">
                   <svg className="w-12 h-12 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <p className="text-sm">Map Embed Placeholder</p>
+                  <p className="text-sm">Open in Google Maps</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

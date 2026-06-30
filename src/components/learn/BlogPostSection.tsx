@@ -41,7 +41,6 @@ export default function BlogPostSection({ slug }: Props) {
           <div className="flex items-center gap-3 text-xs mb-4">
             <span className="bg-primary/5 text-primary/60 px-2.5 py-1 rounded font-medium">{post.topic}</span>
             <span className="text-primary/40">{post.readTime}</span>
-            <span className="text-gold font-semibold uppercase ml-auto">{post.lang}</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6">{post.title}</h1>

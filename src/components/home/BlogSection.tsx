@@ -6,11 +6,11 @@ import { topicFilters, getAllPosts } from '@/data/blog-posts'
 
 const featuredSlugs = [
   'understanding-memorial-trust-funds',
-  'mga-karapatan-ng-mamimili-sa-pre-need-plans',
   'the-healing-power-of-nature',
   'choosing-between-burial-and-cremation',
   'the-role-of-memorials-in-filipino-culture',
-  'pagpili-ng-tamang-memorial-lot-para-sa-pamilya',
+  'filipino-traditions-of-remembering',
+  'the-true-cost-of-memorial-services',
 ]
 
 export default function BlogSection() {
@@ -54,9 +54,8 @@ export default function BlogSection() {
             <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
               <article className="bg-primary rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full border-l-2 border-transparent hover:border-gold">
                 <div className="p-5">
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="mb-3">
                     <span className="text-xs bg-white/10 text-white/70 px-2 py-1 rounded">{post.topic}</span>
-                    <span className="text-xs font-semibold text-gold uppercase">{post.lang}</span>
                   </div>
                   <h3 className="text-base font-semibold text-white mb-2 line-clamp-2 group-hover:text-gold transition-colors">{post.title}</h3>
                   <p className="text-sm text-white/60 line-clamp-2">{post.excerpt}</p>
