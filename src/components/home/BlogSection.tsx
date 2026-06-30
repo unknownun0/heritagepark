@@ -2,12 +2,22 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { topicFilters, getFilteredPosts } from '@/data/blog-posts'
+import { topicFilters, getAllPosts } from '@/data/blog-posts'
+
+const featuredSlugs = [
+  'understanding-memorial-trust-funds',
+  'mga-karapatan-ng-mamimili-sa-pre-need-plans',
+  'the-healing-power-of-nature',
+  'choosing-between-burial-and-cremation',
+  'the-role-of-memorials-in-filipino-culture',
+  'pagpili-ng-tamang-memorial-lot-para-sa-pamilya',
+]
 
 export default function BlogSection() {
   const [activeTopic, setActiveTopic] = useState('all')
 
-  const filtered = getFilteredPosts(activeTopic)
+  const allFeatured = getAllPosts().filter((p) => featuredSlugs.includes(p.slug))
+  const filtered = activeTopic === 'all' ? allFeatured : allFeatured.filter((p) => p.topicId === activeTopic)
 
   return (
     <section className="py-20 bg-cream">
