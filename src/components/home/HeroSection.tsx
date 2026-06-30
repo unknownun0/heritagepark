@@ -9,7 +9,7 @@ export default function HeroSection() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/videos/Heritage%20Park%20AVP%20pompa%20r03%20waterrmark.mp4" type="video/mp4" />
+        <source src="/videos/heritagepark_bg.mp4" type="video/mp4" />
       </video>
       <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
