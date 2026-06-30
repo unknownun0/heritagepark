@@ -64,19 +64,13 @@ export default function Header() {
 
   const navLinkClass = (isActive: boolean) =>
     `px-3 py-2 text-xs font-medium tracking-wide uppercase rounded transition-colors ${
-      isActive
-        ? 'text-gold'
-        : scrolled
-          ? 'text-primary/80 hover:text-primary'
-          : 'text-white/80 hover:text-white'
+      isActive ? 'text-gold' : 'text-primary/80 hover:text-primary'
     }`
 
   return (
     <>
       <header
-        className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
-          scrolled ? 'bg-cream/95 backdrop-blur shadow-sm' : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-cream/95 backdrop-blur shadow-sm`}
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -103,11 +97,7 @@ export default function Header() {
               <div className="relative ml-2" ref={dropdownRef}>
                 <button
                   onClick={() => setAtNeedOpen(!atNeedOpen)}
-                  className={`flex items-center gap-1 px-3 py-2 text-xs font-semibold tracking-wide uppercase rounded transition-colors ${
-                    scrolled
-                      ? 'bg-gold text-primary hover:bg-gold/90'
-                      : 'bg-gold/20 text-gold hover:bg-gold/30'
-                  }`}
+                  className="flex items-center gap-1 px-3 py-2 text-xs font-semibold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
                 >
                   AT NEED
                   <svg className={`w-3 h-3 transition-transform ${atNeedOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -138,7 +128,7 @@ export default function Header() {
               className="xl:hidden p-2"
               aria-label="Open menu"
             >
-              <svg className={`w-6 h-6 transition-colors ${scrolled ? 'text-primary' : 'text-white'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6 transition-colors text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
