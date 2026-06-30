@@ -1,7 +1,12 @@
 'use client'
 
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import BlogSection from './BlogSection'
+import FeedbackFeatured from './FeedbackFeatured'
+import FeedbackForm from './FeedbackForm'
 
 const values = [
   {
@@ -37,6 +42,8 @@ const properties = [
 ]
 
 export default function HomeSections() {
+  const [feedbackKey, setFeedbackKey] = useState(0)
+
   return (
     <>
       {/* SECTION 1 - The Two Paths */}
@@ -184,31 +191,24 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* SECTION 6 - Testimonial / Trust Strip */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <svg className="w-8 h-8 text-gold/40 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-          <blockquote className="font-accent text-2xl md:text-3xl italic text-primary/80 leading-relaxed mb-6">
-            &ldquo;Heritage Park gave our family the time and space to make the right decision — without pressure. We are truly grateful for their compassion.&rdquo;
-          </blockquote>
-          <p className="text-primary/60 font-semibold text-sm">&mdash; Maria S., Taguig</p>
-        </div>
-      </section>
+      <FeedbackFeatured key={feedbackKey} />
 
-      {/* SECTION 7 - Meet Your Consultant */}
-      <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h3 className="text-xl md:text-2xl font-bold text-primary mb-3">
-            Every family is guided by a dedicated Memorial Sales Consultant
-          </h3>
-          <p className="text-primary/60 text-sm mb-6">
-            Your consultant will walk you through every step — answering questions, touring the park, and helping you create a plan that fits your family&apos;s needs and budget.
-          </p>
-          <Link href="/find-a-consultant" className="text-gold font-semibold text-sm underline underline-offset-4 hover:text-primary transition-colors">
-            Meet Your Consultant &rarr;
-          </Link>
+      {/* SECTION 7 - Feedback Form */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Share Your Experience</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">We&apos;d Love to Hear From You</h2>
+              <p className="text-primary/60 text-sm leading-relaxed">
+                Your feedback helps us serve families better. Whether you visited the park, attended a service, or
+                simply spoke with our team — tell us about your experience.
+              </p>
+            </div>
+            <div className="bg-cream rounded-lg p-6 md:p-8">
+              <FeedbackForm onSubmitted={() => setFeedbackKey((k) => k + 1)} />
+            </div>
+          </div>
         </div>
       </section>
 
