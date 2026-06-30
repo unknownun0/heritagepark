@@ -32,7 +32,7 @@ export default function NacionalSections() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/40 to-transparent" />
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Nacional Memorial Homes</p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">Nacional Memorial Homes<br /><span className="text-gold">— Quezon City</span></h1>
+          <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">Nacional Memorial Homes<br /><span className="text-gold">— Quezon City</span></h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">The same Heritage Park quality standard, now serving Quezon City and the wider Metro Manila community with dignified memorial service plans.</p>
         </div>
       </section>

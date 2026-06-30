@@ -44,7 +44,7 @@ export default function PropertyComparison() {
         <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Memorial Properties</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Find the Right Place for Your Family</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Find the Right Place for Your Family</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">Every family is different. Here&apos;s how to think about what fits yours.</p>
         </div>
       </section>
@@ -84,19 +84,19 @@ export default function PropertyComparison() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b-2 border-primary">
-                  <th className="py-4 px-4 text-primary font-heading font-bold text-sm uppercase tracking-wider">Property</th>
-                  <th className="py-4 px-4 text-primary font-heading font-bold text-sm uppercase tracking-wider">Lot Size</th>
-                  <th className="py-4 px-4 text-primary font-heading font-bold text-sm uppercase tracking-wider">Typical Capacity</th>
-                  <th className="py-4 px-4 text-primary font-heading font-bold text-sm uppercase tracking-wider">Best For</th>
+                  <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Property</th>
+                  <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Lot Size</th>
+                  <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Typical Capacity</th>
+                  <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider hidden md:table-cell">Best For</th>
                 </tr>
               </thead>
               <tbody>
                 {tableRows.map((row, i) => (
                   <tr key={row.property} className={i < tableRows.length - 1 ? 'border-b border-light-stone' : ''}>
-                    <td className="py-4 px-4 font-heading font-bold text-primary">{row.property}</td>
-                    <td className="py-4 px-4 text-primary/70 text-sm">{row.size}</td>
-                    <td className="py-4 px-4 text-primary/70 text-sm">{row.capacity}</td>
-                    <td className="py-4 px-4 text-primary/70 text-sm">{row.bestFor}</td>
+                    <td className="py-3 px-2 md:py-4 md:px-4 font-heading font-bold text-primary text-xs md:text-sm">{row.property}</td>
+                    <td className="py-3 px-2 md:py-4 md:px-4 text-primary/70 text-xs md:text-sm">{row.size}</td>
+                    <td className="py-3 px-2 md:py-4 md:px-4 text-primary/70 text-xs md:text-sm">{row.capacity}</td>
+                    <td className="py-3 px-2 md:py-4 md:px-4 text-primary/70 text-xs md:text-sm hidden md:table-cell">{row.bestFor}</td>
                   </tr>
                 ))}
               </tbody>

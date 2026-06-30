@@ -58,7 +58,7 @@ export default function ServicePlans() {
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
         <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Care and Service, Planned in Advance</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Care and Service, Planned in Advance</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">Beyond a final resting place, Heritage Park also offers memorial service plans — so your family is cared for in every detail, not just provided a place.</p>
         </div>
       </section>

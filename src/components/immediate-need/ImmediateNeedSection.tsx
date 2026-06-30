@@ -34,7 +34,7 @@ export default function ImmediateNeedSection() {
         />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto py-20">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">Immediate Need</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             We&apos;re Here to Help, Right Now.
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto mb-10">

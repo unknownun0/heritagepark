@@ -97,20 +97,20 @@ export default function MortuaryPlansSection() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b-2 border-primary/10">
-                  <th className="text-left py-4 px-3 text-primary font-bold w-44">Inclusions</th>
+                  <th className="text-left py-3 px-2 md:py-4 md:px-3 text-primary font-bold text-xs md:text-sm md:w-44">Inclusions</th>
                   {mortuaryDisplayPlans.map((plan) => (
-                  <th key={plan.name} className="text-center py-4 px-3 text-primary font-bold">{plan.name}</th>
+                  <th key={plan.name} className="text-center py-3 px-2 md:py-4 md:px-3 text-primary font-bold text-xs md:text-sm">{plan.name}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {inclusionLabels.map(({ key, label }) => (
                   <tr key={key} className="border-b border-primary/5">
-                    <td className="py-3 px-3 text-primary/70 font-medium">{label}</td>
+                    <td className="py-2 px-2 md:py-3 md:px-3 text-primary/70 font-medium text-xs md:text-sm">{label}</td>
                     {mortuaryDisplayPlans.map((plan) => {
                       const value = plan.inclusions[key as InclusionKey]
                       return (
-                        <td key={plan.name} className="text-center py-3 px-3 text-primary/70">
+                        <td key={plan.name} className="text-center py-2 px-2 md:py-3 md:px-3 text-primary/70">
                           {typeof value === 'boolean' ? (
                             value ? (
                               <svg className="w-4 h-4 text-moss mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,9 +128,9 @@ export default function MortuaryPlansSection() {
                   </tr>
                 ))}
                 <tr className="border-t-2 border-primary/10">
-                  <td className="py-4 px-3 text-primary font-bold">Price Range</td>
-                  {mortuaryDisplayPlans.map((plan) => (
-                    <td key={plan.name} className="text-center py-4 px-3">
+                    <td className="py-3 px-2 md:py-4 md:px-3 text-primary font-bold text-xs md:text-sm">Price Range</td>
+                    {mortuaryDisplayPlans.map((plan) => (
+                      <td key={plan.name} className="text-center py-3 px-2 md:py-4 md:px-3">
                       <span className="text-gold font-bold text-sm">{plan.priceRange}</span>
                     </td>
                   ))}

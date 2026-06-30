@@ -9,7 +9,7 @@ export default function AeternumSections() {
         </div>
         <div className="relative z-20 text-center px-4 max-w-4xl">
           <p className="text-gold text-sm font-semibold tracking-[0.3em] uppercase mb-4">Aeternum</p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
             <span className="text-gold">Aeternum</span>
           </h1>
           <p className="text-white/60 text-lg md:text-xl max-w-xl mx-auto mb-10 font-light tracking-wide">

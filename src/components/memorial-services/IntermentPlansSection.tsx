@@ -50,19 +50,19 @@ export default function IntermentPlansSection() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b-2 border-primary/10">
-                  <th className="text-left py-4 px-3 text-primary font-bold">Plan</th>
-                  <th className="text-left py-4 px-3 text-primary font-bold">Service Type</th>
-                  <th className="text-left py-4 px-3 text-primary font-bold">Description</th>
-                  <th className="text-left py-4 px-3 text-primary font-bold">Vault Type</th>
+                  <th className="text-left py-3 px-2 md:py-4 md:px-3 text-primary font-bold text-xs md:text-sm">Plan</th>
+                  <th className="text-left py-3 px-2 md:py-4 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Service Type</th>
+                  <th className="text-left py-3 px-2 md:py-4 md:px-3 text-primary font-bold text-xs md:text-sm">Description</th>
+                  <th className="text-left py-3 px-2 md:py-4 md:px-3 text-primary font-bold text-xs md:text-sm">Vault Type</th>
                 </tr>
               </thead>
               <tbody>
                 {intermentDisplayPlans.map((plan) => (
                   <tr key={plan.name} className="border-b border-primary/5">
-                    <td className="py-4 px-3 font-bold text-primary">{plan.name}</td>
-                    <td className="py-4 px-3 text-primary/70">{plan.serviceType}</td>
-                    <td className="py-4 px-3 text-primary/60 text-xs leading-relaxed">{plan.desc}</td>
-                    <td className="py-4 px-3">
+                    <td className="py-3 px-2 md:py-4 md:px-3 font-bold text-primary text-xs md:text-sm">{plan.name}</td>
+                    <td className="py-3 px-2 md:py-4 md:px-3 text-primary/70 text-xs md:text-sm hidden sm:table-cell">{plan.serviceType}</td>
+                    <td className="py-3 px-2 md:py-4 md:px-3 text-primary/60 text-xs leading-relaxed">{plan.desc}</td>
+                    <td className="py-3 px-2 md:py-4 md:px-3">
                       <span className="inline-block bg-moss/10 text-moss text-xs font-medium px-2.5 py-1 rounded">{plan.vaultType}</span>
                     </td>
                   </tr>

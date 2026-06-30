@@ -8,7 +8,7 @@ export default function MemoryPlaceSection() {
         <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Memory Place</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Secure Place of Honor, Above Ground</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Secure Place of Honor, Above Ground</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">Beautifully designed crypts that combine structure, dignity, and lasting peace of mind.</p>
         </div>
       </section>

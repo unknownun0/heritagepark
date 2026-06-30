@@ -19,7 +19,7 @@ export default function GardenLotsSection() {
         <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Garden Lots</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Lasting Place for Your Whole Family</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Lasting Place for Your Whole Family</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">Generous space, timeless elegance — designed for families who plan together.</p>
         </div>
       </section>

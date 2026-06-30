@@ -213,23 +213,23 @@ export default function FinanceCalculator(props: Props) {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b-2 border-primary/10">
-                  <th className="text-left py-3 px-3 text-primary font-bold">Plan</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Contract Price</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Annual (5 yrs)</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Semi-Annual (5 yrs)</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Quarterly (5 yrs)</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Monthly (5 yrs)</th>
+                  <th className="text-left py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm">Plan</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm">Contract Price</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm">Annual (5 yrs)</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Semi-Annual (5 yrs)</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Quarterly (5 yrs)</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Monthly (5 yrs)</th>
                 </tr>
               </thead>
               <tbody>
                 {sData.map((p) => (
                   <tr key={p.name} className={`border-b border-primary/5 hover:bg-white/50 transition-colors ${p.name === plan.name ? 'bg-gold/5' : ''}`}>
-                    <td className="py-3 px-3 font-bold text-primary">{p.name}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.contractPrice)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.annual)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.semiAnnual)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.quarterly)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.monthly)}</td>
+                    <td className="py-2 px-1.5 md:py-3 md:px-3 font-bold text-primary text-xs md:text-sm">{p.name}</td>
+                    <td className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary text-xs md:text-sm">{formatPeso(p.contractPrice)}</td>
+                    <td className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary text-xs md:text-sm">{formatPeso(p.annual)}</td>
+                    <td className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary text-xs md:text-sm hidden sm:table-cell">{formatPeso(p.semiAnnual)}</td>
+                    <td className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary text-xs md:text-sm hidden sm:table-cell">{formatPeso(p.quarterly)}</td>
+                    <td className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary text-xs md:text-sm hidden sm:table-cell">{formatPeso(p.monthly)}</td>
                   </tr>
                 ))}
               </tbody>
