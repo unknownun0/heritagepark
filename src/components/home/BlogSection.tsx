@@ -52,7 +52,7 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((post) => (
             <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-              <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
+              <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full border-l-2 border-transparent hover:border-gold">
                 <div className="p-5">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded">{post.topic}</span>
