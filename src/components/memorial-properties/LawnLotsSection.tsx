@@ -16,6 +16,9 @@ const tiers = [
   },
 ]
 
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { lawnLotData } from '@/data/pricing'
+
 export default function LawnLotsSection() {
   return (
     <>
@@ -111,6 +114,8 @@ export default function LawnLotsSection() {
           </p>
         </div>
       </section>
+
+      <FinanceCalculator mode="property" data={lawnLotData} title="Lawn Lot Payment Calculator" />
 
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">

@@ -1,3 +1,6 @@
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { estateLotData } from '@/data/pricing'
+
 export default function EstateLotsSection() {
   return (
     <>
@@ -78,6 +81,8 @@ export default function EstateLotsSection() {
           </div>
         </div>
       </section>
+
+      <FinanceCalculator mode="property" data={estateLotData} title="Estate Lot Payment Calculator" />
 
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">

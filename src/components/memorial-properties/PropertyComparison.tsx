@@ -1,3 +1,8 @@
+'use client'
+
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { lawnLotData, gardenLotData, memoryPlaceData, estateLotData } from '@/data/pricing'
+
 const cards = [
   {
     name: 'Lawn Lots',
@@ -100,6 +105,8 @@ export default function PropertyComparison() {
           <p className="text-xs text-primary/40 mt-4 text-center">Starting from ₱300K range. Prices vary by tier and availability. Contact us for current pricing.</p>
         </div>
       </section>
+
+      <FinanceCalculator mode="property" data={[...lawnLotData, ...gardenLotData, ...memoryPlaceData, ...estateLotData]} title="Explore Your Payment Options" />
 
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">

@@ -1,3 +1,6 @@
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { memoryPlaceData } from '@/data/pricing'
+
 export default function MemoryPlaceSection() {
   return (
     <>
@@ -63,6 +66,8 @@ export default function MemoryPlaceSection() {
           </p>
         </div>
       </section>
+
+      <FinanceCalculator mode="property" data={memoryPlaceData} title="Memory Place Payment Calculator" />
 
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">

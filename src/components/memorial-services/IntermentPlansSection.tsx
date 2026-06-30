@@ -1,4 +1,4 @@
-const intermentPlans = [
+const intermentDisplayPlans = [
   {
     name: 'Interment 1st',
     serviceType: '1st Depth Full Body',
@@ -24,6 +24,9 @@ const intermentPlans = [
     vaultType: 'Urn Vault',
   },
 ]
+
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { intermentPlans } from '@/data/pricing'
 
 export default function IntermentPlansSection() {
   return (
@@ -54,7 +57,7 @@ export default function IntermentPlansSection() {
                 </tr>
               </thead>
               <tbody>
-                {intermentPlans.map((plan) => (
+                {intermentDisplayPlans.map((plan) => (
                   <tr key={plan.name} className="border-b border-primary/5">
                     <td className="py-4 px-3 font-bold text-primary">{plan.name}</td>
                     <td className="py-4 px-3 text-primary/70">{plan.serviceType}</td>
@@ -80,6 +83,8 @@ export default function IntermentPlansSection() {
           </div>
         </div>
       </section>
+
+      <FinanceCalculator mode="service" data={intermentPlans} title="Interment Plan Pricing" />
 
       <section className="py-16 bg-cream">
         <div className="max-w-3xl mx-auto px-4 text-center">

@@ -9,6 +9,9 @@ const tiers = [
   },
 ]
 
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { gardenLotData } from '@/data/pricing'
+
 export default function GardenLotsSection() {
   return (
     <>
@@ -102,6 +105,8 @@ export default function GardenLotsSection() {
           </p>
         </div>
       </section>
+
+      <FinanceCalculator mode="property" data={gardenLotData} title="Garden Lot Payment Calculator" />
 
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">

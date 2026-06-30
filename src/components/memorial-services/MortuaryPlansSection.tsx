@@ -1,4 +1,4 @@
-const mortuaryPlans = [
+const mortuaryDisplayPlans = [
   {
     name: 'Cremation',
     priceRange: '₱149K range',
@@ -70,7 +70,10 @@ const inclusionLabels = [
   { key: 'casketUrn', label: 'Casket / Urn' },
 ] as const
 
-type InclusionKey = keyof typeof mortuaryPlans[number]['inclusions']
+type InclusionKey = keyof typeof mortuaryDisplayPlans[number]['inclusions']
+
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { mortuaryPlans } from '@/data/pricing'
 
 export default function MortuaryPlansSection() {
   return (
@@ -95,8 +98,8 @@ export default function MortuaryPlansSection() {
               <thead>
                 <tr className="border-b-2 border-primary/10">
                   <th className="text-left py-4 px-3 text-primary font-bold w-44">Inclusions</th>
-                  {mortuaryPlans.map((plan) => (
-                    <th key={plan.name} className="text-center py-4 px-3 text-primary font-bold">{plan.name}</th>
+                  {mortuaryDisplayPlans.map((plan) => (
+                  <th key={plan.name} className="text-center py-4 px-3 text-primary font-bold">{plan.name}</th>
                   ))}
                 </tr>
               </thead>
@@ -104,7 +107,7 @@ export default function MortuaryPlansSection() {
                 {inclusionLabels.map(({ key, label }) => (
                   <tr key={key} className="border-b border-primary/5">
                     <td className="py-3 px-3 text-primary/70 font-medium">{label}</td>
-                    {mortuaryPlans.map((plan) => {
+                    {mortuaryDisplayPlans.map((plan) => {
                       const value = plan.inclusions[key as InclusionKey]
                       return (
                         <td key={plan.name} className="text-center py-3 px-3 text-primary/70">
@@ -126,7 +129,7 @@ export default function MortuaryPlansSection() {
                 ))}
                 <tr className="border-t-2 border-primary/10">
                   <td className="py-4 px-3 text-primary font-bold">Price Range</td>
-                  {mortuaryPlans.map((plan) => (
+                  {mortuaryDisplayPlans.map((plan) => (
                     <td key={plan.name} className="text-center py-4 px-3">
                       <span className="text-gold font-bold text-sm">{plan.priceRange}</span>
                     </td>
@@ -137,6 +140,8 @@ export default function MortuaryPlansSection() {
           </div>
         </div>
       </section>
+
+      <FinanceCalculator mode="service" data={mortuaryPlans} title="Mortuary Plan Pricing" />
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
