@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 interface Feedback {
   name: string
@@ -47,6 +48,17 @@ export default function FeedbackFeatured() {
               <p className="text-xs font-semibold text-primary">&mdash; {fb.name}</p>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-10">
+          <Link
+            href="/feedback"
+            className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:text-gold transition-colors"
+          >
+            Share Your Feedback
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

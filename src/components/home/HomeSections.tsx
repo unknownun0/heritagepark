@@ -6,8 +6,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import BlogSection from './BlogSection'
 import FeedbackFeatured from './FeedbackFeatured'
-import FeedbackForm from './FeedbackForm'
-
 const values = [
   {
     title: 'Peace of Mind',
@@ -193,24 +191,7 @@ export default function HomeSections() {
 
       <FeedbackFeatured key={feedbackKey} />
 
-      {/* SECTION 7 - Feedback Form */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Share Your Experience</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">We&apos;d Love to Hear From You</h2>
-              <p className="text-primary/60 text-sm leading-relaxed">
-                Your feedback helps us serve families better. Whether you visited the park, attended a service, or
-                simply spoke with our team — tell us about your experience.
-              </p>
-            </div>
-            <div className="bg-cream rounded-lg p-6 md:p-8">
-              <FeedbackForm onSubmitted={() => setFeedbackKey((k) => k + 1)} />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* SECTION 8 - Footer CTA */}
       <section className="py-20 bg-primary">
