@@ -2,65 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-
-const topics = [
-  { id: 'all', label: 'All Topics' },
-  { id: 'planning', label: 'Planning Basics' },
-  { id: 'properties', label: 'Memorial Properties' },
-  { id: 'costs', label: 'Costs & Payment' },
-  { id: 'grief', label: 'Grief & Support' },
-  { id: 'culture', label: 'Culture & Tradition' },
-]
-
-const posts = [
-  {
-    title: 'What You Need to Know About Pre-Need Plans',
-    excerpt: 'A comprehensive guide to understanding pre-need memorial plans and how they protect your family.',
-    topic: 'planning',
-    lang: 'EN',
-    image: '/images/blog-planning.jpg',
-  },
-  {
-    title: 'Gabay sa Pagpili ng Tamang Memorial Lot',
-    excerpt: 'Mga dapat isaalang-alang sa pagpili ng memorial lot para sa inyong pamilya.',
-    topic: 'properties',
-    lang: 'TL',
-    image: '/images/blog-lot.jpg',
-  },
-  {
-    title: 'Cost Comparison: Pre-Need vs. At-Need Arrangements',
-    excerpt: 'Understand the financial impact of planning ahead versus unexpected expenses.',
-    topic: 'costs',
-    lang: 'EN',
-    image: '/images/blog-costs.jpg',
-  },
-  {
-    title: 'Paano Makakayanan ang Pagdadalamhati',
-    excerpt: 'Mga paraan upang harapin ang pagdadalamhati at suportahan ang bawat isa bilang pamilya.',
-    topic: 'grief',
-    lang: 'TL',
-    image: '/images/blog-grief.jpg',
-  },
-  {
-    title: 'Filipino Traditions of Remembering Our Loved Ones',
-    excerpt: 'Exploring the rich cultural heritage of remembrance practices in the Philippines.',
-    topic: 'culture',
-    lang: 'EN',
-    image: '/images/blog-culture.jpg',
-  },
-  {
-    title: 'The True Cost of Memorial Services in the Philippines',
-    excerpt: 'A transparent breakdown of memorial service costs and payment options available.',
-    topic: 'costs',
-    lang: 'EN',
-    image: '/images/blog-costs2.jpg',
-  },
-]
+import { topicFilters, getFilteredPosts } from '@/data/blog-posts'
 
 export default function BlogSection() {
   const [activeTopic, setActiveTopic] = useState('all')
 
-  const filtered = activeTopic === 'all' ? posts : posts.filter((p) => p.topic === activeTopic)
+  const filtered = getFilteredPosts(activeTopic)
 
   return (
     <section className="py-20 bg-cream">
@@ -77,7 +24,7 @@ export default function BlogSection() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {topics.map((topic) => (
+          {topicFilters.map((topic) => (
             <button
               key={topic.id}
               onClick={() => setActiveTopic(topic.id)}
@@ -94,26 +41,25 @@ export default function BlogSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((post) => (
-            <article
-              key={post.title}
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="aspect-video bg-moss/10 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-moss/30">
-                  <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+            <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
+              <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
+                <div className="aspect-video bg-moss/10 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-moss/30 group-hover:scale-110 transition-transform duration-500">
+                    <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded">{post.topic}</span>
-                  <span className="text-xs font-semibold text-gold uppercase">{post.lang}</span>
+                <div className="p-5">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded">{post.topic}</span>
+                    <span className="text-xs font-semibold text-gold uppercase">{post.lang}</span>
+                  </div>
+                  <h3 className="text-base font-semibold text-primary mb-2 line-clamp-2 group-hover:text-gold transition-colors">{post.title}</h3>
+                  <p className="text-sm text-primary/60 line-clamp-2">{post.excerpt}</p>
                 </div>
-                <h3 className="text-base font-semibold text-primary mb-2 line-clamp-2">{post.title}</h3>
-                <p className="text-sm text-primary/60 line-clamp-2">{post.excerpt}</p>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
 

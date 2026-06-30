@@ -1,28 +1,15 @@
 'use client'
 
 import { useState } from 'react'
-
-const topicFilters = [
-  'All Topics',
-  'Planning Basics',
-  'Memorial Properties',
-  'Costs & Payment',
-  'Grief & Support',
-  'Culture & Tradition',
-]
-
-const posts = [
-  { title: 'Understanding Memorial Trust Funds', excerpt: 'How trust funds protect your pre-need investment and ensure funds are used as intended.', topic: 'Planning Basics', lang: 'EN' },
-  { title: 'Mga Karapatan ng Mamimili sa Pre-Need Plans', excerpt: 'Alamin ang inyong mga karapatan bilang mamimili ng pre-need memorial plans.', topic: 'Planning Basics', lang: 'TL' },
-  { title: 'The Healing Power of Nature in Grief', excerpt: 'How spending time in natural settings can support the grieving process.', topic: 'Grief & Support', lang: 'EN' },
-  { title: 'Choosing Between Burial and Cremation', excerpt: 'A balanced look at the considerations for each option.', topic: 'Planning Basics', lang: 'EN' },
-  { title: 'The Role of Memorials in Filipino Culture', excerpt: 'How our traditions of remembering shape modern memorial practices.', topic: 'Culture & Tradition', lang: 'EN' },
-  { title: 'Pagpili ng Tamang Memorial Lot para sa Pamilya', excerpt: 'Gabay sa pagpili ng loteng babagay sa pangangailangan ng inyong pamilya.', topic: 'Memorial Properties', lang: 'TL' },
-]
+import Link from 'next/link'
+import { topicFilters, getAllPosts } from '@/data/blog-posts'
+import type { BlogPost } from '@/data/blog-posts'
 
 export default function LearnSections() {
   const [activeTopic, setActiveTopic] = useState('All Topics')
   const [searchQuery, setSearchQuery] = useState('')
+
+  const posts = getAllPosts()
 
   const filtered = posts.filter((p) => {
     const matchTopic = activeTopic === 'All Topics' || p.topic === activeTopic
@@ -58,38 +45,40 @@ export default function LearnSections() {
       <section className="py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap items-center gap-3 mb-10">
-            {topicFilters.map((topic) => (
+            {topicFilters.filter((t) => t.id !== 'all').map((topic) => (
               <button
-                key={topic}
-                onClick={() => setActiveTopic(topic)}
+                key={topic.id}
+                onClick={() => setActiveTopic(topic.label)}
                 className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
-                  activeTopic === topic
+                  activeTopic === topic.label
                     ? 'bg-gold text-primary'
                     : 'bg-white text-primary/70 border border-primary/10 hover:border-gold/30'
                 }`}
               >
-                {topic}
+                {topic.label}
               </button>
             ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((post) => (
-              <article key={post.title} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="aspect-video bg-moss/10 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-moss/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
-                    <span className="text-[10px] font-semibold text-gold uppercase">{post.lang}</span>
+              <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
+                <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
+                  <div className="aspect-video bg-moss/10 flex items-center justify-center">
+                    <svg className="w-10 h-10 text-moss/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
                   </div>
-                  <h3 className="text-sm font-semibold text-primary mb-1.5">{post.title}</h3>
-                  <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>
-                </div>
-              </article>
+                  <div className="p-5">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
+                      <span className="text-[10px] font-semibold text-gold uppercase">{post.lang}</span>
+                    </div>
+                    <h3 className="text-sm font-semibold text-primary mb-1.5 group-hover:text-gold transition-colors">{post.title}</h3>
+                    <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
 

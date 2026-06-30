@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import BlogSection from './BlogSection'
 
 const values = [
   {
@@ -74,6 +75,8 @@ export default function HomeSections() {
           </div>
         </div>
       </section>
+
+      <BlogSection />
 
       {/* SECTION 2 - Why Families Choose Heritage Park */}
       <section className="py-20 bg-white">
