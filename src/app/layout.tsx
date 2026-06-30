@@ -54,6 +54,20 @@ export default function RootLayout({
 
         <Header />
         <main className="flex-1">{children}</main>
+        <section className="bg-primary">
+          <div className="w-full h-72 md:h-80 relative">
+            <iframe
+              src="https://www.google.com/maps?q=Heritage+Park+Memorial+Taguig&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Heritage Park Location"
+            />
+          </div>
+        </section>
         <Footer />
       </body>
     </html>

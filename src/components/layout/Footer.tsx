@@ -42,11 +42,11 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/heritage_logo.png"
                 alt="Heritage Park"
                 width={160}
                 height={48}
-                className="h-10 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <p className="text-sm text-white/70 leading-relaxed">
@@ -86,8 +86,8 @@ export default function Footer() {
             <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
             <div className="space-y-3 text-sm text-white/70">
               <p>Heritage Park Memorial</p>
-              <p>123 Peaceful Valley Road</p>
-              <p>Manila, Philippines</p>
+              <p>Lawton Ave, Taguig</p>
+              <p>Metro Manila, Philippines</p>
               <p className="pt-2">
                 <a href="tel:+1234567890" className="text-gold hover:text-gold/80 transition-colors">(02) 8123 4567</a>
               </p>
@@ -119,20 +119,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-primary-light py-10">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-xl font-semibold text-gold mb-3">Ready to talk?</p>
-          <p className="text-sm text-white/70 mb-6 max-w-xl mx-auto">
-            Book a private, no-pressure consultation with one of our memorial planning professionals.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
-          >
-            Book a Consultation
-          </a>
-        </div>
-      </div>
     </footer>
   )
 }
