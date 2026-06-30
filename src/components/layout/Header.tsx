@@ -74,8 +74,8 @@ export default function Header() {
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-cream/95 backdrop-blur shadow-sm`}
       >
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center">
+          <div className="relative flex items-center justify-center h-16">
+            <Link href="/" className="absolute left-0 flex items-center">
               <Image
                 src="/images/logo.png"
                 alt="Heritage Park"
@@ -126,7 +126,7 @@ export default function Header() {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden p-2"
+              className="absolute right-0 lg:hidden p-2"
               aria-label="Open menu"
             >
               <svg className="w-6 h-6 transition-colors text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
