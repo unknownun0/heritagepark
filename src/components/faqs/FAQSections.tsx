@@ -1,4 +1,4 @@
-﻿const categories = [
+const categories = [
   {
     title: 'Planning Ahead',
     questions: [
@@ -42,7 +42,7 @@ export default function FAQSections() {
   return (
     <>
       <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center bg-primary">
-        <div className="absolute inset-0 bg-[url(/images/faq-hero.jpg)] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Have Questions?</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Frequently Asked Questions</h1>
