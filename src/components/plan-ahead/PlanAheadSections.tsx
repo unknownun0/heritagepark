@@ -52,6 +52,7 @@ export default function PlanAheadSections() {
     <>
       {/* HERO */}
       <section className="relative h-[70vh] min-h-[450px] flex items-center justify-center bg-primary overflow-hidden">
+        <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06)_0%,_transparent_70%)]" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">Plan Ahead</p>
