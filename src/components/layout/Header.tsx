@@ -90,7 +90,7 @@ export default function Header() {
               {navLinks.map((link) => {
                 const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
                 return (
-                  <Link key={link.href} href={link.href} className={navLinkClass(isActive)}>
+                  <Link key={link.href} href={link.href} className={navLinkClass(isActive)} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     {link.label}
                   </Link>
                 )
