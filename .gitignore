@@ -34,7 +34,6 @@ yarn-error.log*
 .env*
 
 # large video files
-public/videos/*.mp4
 public/videos/*.mov
 public/videos/*.avi
 
