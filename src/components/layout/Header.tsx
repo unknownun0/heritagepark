@@ -75,7 +75,7 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Image
                 src="/images/logo.png"
                 alt="Heritage Park"
