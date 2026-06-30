@@ -15,6 +15,7 @@ const navLinks = [
   { label: 'Learn', href: '/learn' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Feedback', href: '/feedback' },
 ]
 
 const atNeedLinks = [

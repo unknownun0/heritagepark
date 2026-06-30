@@ -1,11 +1,5 @@
-'use client'
-
-'use client'
-
-import { useState } from 'react'
 import Link from 'next/link'
 import BlogSection from './BlogSection'
-import FeedbackFeatured from './FeedbackFeatured'
 const values = [
   {
     title: 'Peace of Mind',
@@ -40,8 +34,6 @@ const properties = [
 ]
 
 export default function HomeSections() {
-  const [feedbackKey, setFeedbackKey] = useState(0)
-
   return (
     <>
       {/* SECTION 1 - The Two Paths */}
@@ -188,9 +180,6 @@ export default function HomeSections() {
           <p className="text-white/40 text-xs mt-4">No pressure. Just a conversation.</p>
         </div>
       </section>
-
-      <FeedbackFeatured key={feedbackKey} />
-
 
 
       {/* SECTION 8 - Footer CTA */}
