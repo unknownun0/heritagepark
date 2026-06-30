@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
 
         <Header />
+        <ScrollToTop />
         <main className="flex-1">{children}</main>
         <section className="bg-primary">
           <div className="w-full h-72 md:h-80 relative">
