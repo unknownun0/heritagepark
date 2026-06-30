@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation'
 import MobileMenu from './MobileMenu'
 
 const navLinks = [
-  { label: 'Home', href: '/' },
   { label: 'Plan Ahead', href: '/plan-ahead' },
   { label: 'Memorial Properties', href: '/memorial-properties' },
   { label: 'Memorial Services', href: '/memorial-services' },
