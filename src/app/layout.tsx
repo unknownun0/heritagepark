@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Montserrat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
-import ActionBar from "@/components/layout/ActionBar";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -51,7 +51,7 @@ export default function RootLayout({
       className={`${cinzel.variable} ${montserrat.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ActionBar />
+
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
