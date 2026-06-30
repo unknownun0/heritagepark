@@ -49,6 +49,9 @@ const chapels = [
   },
 ]
 
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { mortuaryPlans, intermentPlans, comboPlans } from '@/data/pricing'
+
 export default function ServicePlans() {
   return (
     <>
@@ -120,6 +123,8 @@ export default function ServicePlans() {
           </div>
         </div>
       </section>
+
+      <FinanceCalculator mode="service" data={[...mortuaryPlans, ...intermentPlans, ...comboPlans]} title="All Service Plans — Compare Pricing" />
 
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4">
