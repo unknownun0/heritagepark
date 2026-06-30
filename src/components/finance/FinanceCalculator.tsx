@@ -111,39 +111,125 @@ export default function FinanceCalculator(props: Props) {
   const sData = (props as ServiceProps).data
   if (!sData.length) return null
 
+  const [selectedPlan, setSelectedPlan] = useState(0)
+  const [selectedPayMode, setSelectedPayMode] = useState<'spot' | 'installment'>('spot')
+  const [selectedFreqSvc, setSelectedFreqSvc] = useState(0)
+
+  const plan = sData[selectedPlan] || sData[0]
+
+  const installmentOptions = [
+    { label: 'Annual (5 yrs)', payment: plan.annual, installments: 5 },
+    { label: 'Semi-Annual (5 yrs)', payment: plan.semiAnnual, installments: 10 },
+    { label: 'Quarterly (5 yrs)', payment: plan.quarterly, installments: 20 },
+    { label: 'Monthly (5 yrs)', payment: plan.monthly, installments: 50 },
+  ]
+
+  const freqSvc = installmentOptions[selectedFreqSvc] || installmentOptions[0]
+
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-10">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Finance Calculator</p>
           <h2 className="text-3xl md:text-4xl font-bold text-primary">{title || 'Plan Your Payments'}</h2>
         </div>
+
         <div className="bg-cream rounded-xl p-6 md:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div>
+              <label className="block text-xs font-semibold text-primary mb-1.5 uppercase tracking-wider">Plan</label>
+              <select
+                value={selectedPlan}
+                onChange={(e) => { setSelectedPlan(Number(e.target.value)); setSelectedPayMode('spot'); setSelectedFreqSvc(0) }}
+                className="w-full px-3 py-2.5 rounded text-sm bg-white border border-primary/10 text-primary focus:outline-none focus:border-gold"
+              >
+                {sData.map((p, i) => <option key={p.name} value={i}>{p.name}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="block text-xs font-semibold text-primary mb-1.5 uppercase tracking-wider">Payment Mode</label>
+              <select
+                value={selectedPayMode}
+                onChange={(e) => setSelectedPayMode(e.target.value as 'spot' | 'installment')}
+                className="w-full px-3 py-2.5 rounded text-sm bg-white border border-primary/10 text-primary focus:outline-none focus:border-gold"
+              >
+                <option value="spot">Spot Cash</option>
+                <option value="installment">Installment</option>
+              </select>
+            </div>
+          </div>
+
+          {selectedPayMode === 'spot' ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-lg p-5 text-center border border-primary/5">
+                <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">Contract Price</p>
+                <p className="text-2xl font-bold text-primary">{formatPeso(plan.contractPrice)}</p>
+              </div>
+              <div className="bg-white rounded-lg p-5 text-center border border-gold/20 ring-1 ring-gold/30">
+                <p className="text-xs text-gold uppercase tracking-wider mb-1">Recommended — Spot Cash (10% off)</p>
+                <p className="text-2xl font-bold text-gold">{formatPeso(plan.spotCash)}</p>
+                <p className="text-xs text-primary/40 mt-1">Save {formatPeso(plan.contractPrice - plan.spotCash)}</p>
+              </div>
+              <div className="bg-white rounded-lg p-5 text-center border border-primary/5">
+                <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">Family Spot Cash (15% off)</p>
+                <p className="text-2xl font-bold text-primary">{formatPeso(plan.familySpotCash)}</p>
+                <p className="text-xs text-primary/40 mt-1">Save {formatPeso(plan.contractPrice - plan.familySpotCash)}</p>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="mb-6">
+                <label className="block text-xs font-semibold text-primary mb-1.5 uppercase tracking-wider">Frequency</label>
+                <select
+                  value={selectedFreqSvc}
+                  onChange={(e) => setSelectedFreqSvc(Number(e.target.value))}
+                  className="w-full px-3 py-2.5 rounded text-sm bg-white border border-primary/10 text-primary focus:outline-none focus:border-gold"
+                >
+                  {installmentOptions.map((o, i) => <option key={o.label} value={i}>{o.label}</option>)}
+                </select>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-white rounded-lg p-4 text-center">
+                  <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">Contract Price</p>
+                  <p className="text-lg font-bold text-primary">{formatPeso(plan.contractPrice)}</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 text-center">
+                  <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">
+                    {freqSvc.label.split(' (')[0]} ({freqSvc.installments}x)
+                  </p>
+                  <p className="text-lg font-bold text-gold">{formatPeso(freqSvc.payment)}</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 text-center">
+                  <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">Total Paid</p>
+                  <p className="text-lg font-bold text-primary">{formatPeso(freqSvc.payment * freqSvc.installments)}</p>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className="bg-cream rounded-xl p-6 md:p-8 mt-6">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b-2 border-primary/10">
                   <th className="text-left py-3 px-3 text-primary font-bold">Plan</th>
                   <th className="text-center py-3 px-3 text-primary font-bold">Contract Price</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Spot Cash (10%)</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Family Spot Cash (15%)</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Annual</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Semi-Annual</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Quarterly</th>
-                  <th className="text-center py-3 px-3 text-primary font-bold">Monthly</th>
+                  <th className="text-center py-3 px-3 text-primary font-bold">Annual (5 yrs)</th>
+                  <th className="text-center py-3 px-3 text-primary font-bold">Semi-Annual (5 yrs)</th>
+                  <th className="text-center py-3 px-3 text-primary font-bold">Quarterly (5 yrs)</th>
+                  <th className="text-center py-3 px-3 text-primary font-bold">Monthly (5 yrs)</th>
                 </tr>
               </thead>
               <tbody>
-                {sData.map((plan) => (
-                  <tr key={plan.name} className="border-b border-primary/5 hover:bg-white/50 transition-colors">
-                    <td className="py-3 px-3 font-bold text-primary">{plan.name}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(plan.contractPrice)}</td>
-                    <td className="text-center py-3 px-3 text-gold font-semibold">{formatPeso(plan.spotCash)}</td>
-                    <td className="text-center py-3 px-3 text-gold font-semibold">{formatPeso(plan.familySpotCash)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(plan.annual)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(plan.semiAnnual)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(plan.quarterly)}</td>
-                    <td className="text-center py-3 px-3 text-primary">{formatPeso(plan.monthly)}</td>
+                {sData.map((p) => (
+                  <tr key={p.name} className={`border-b border-primary/5 hover:bg-white/50 transition-colors ${p.name === plan.name ? 'bg-gold/5' : ''}`}>
+                    <td className="py-3 px-3 font-bold text-primary">{p.name}</td>
+                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.contractPrice)}</td>
+                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.annual)}</td>
+                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.semiAnnual)}</td>
+                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.quarterly)}</td>
+                    <td className="text-center py-3 px-3 text-primary">{formatPeso(p.monthly)}</td>
                   </tr>
                 ))}
               </tbody>
