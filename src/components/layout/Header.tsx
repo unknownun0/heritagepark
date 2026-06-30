@@ -64,7 +64,7 @@ export default function Header() {
   }, [])
 
   const navLinkClass = (isActive: boolean) =>
-    `px-3 py-2 text-xs font-medium tracking-wide uppercase rounded transition-colors ${
+    `px-1.5 py-2 text-[10px] font-medium tracking-wide uppercase rounded transition-colors ${
       isActive ? 'text-gold' : 'text-primary/80 hover:text-primary'
     }`
 
@@ -86,7 +86,7 @@ export default function Header() {
               />
             </Link>
 
-            <nav className="hidden xl:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-0">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
                 return (
@@ -98,7 +98,7 @@ export default function Header() {
               <div className="relative ml-2" ref={dropdownRef}>
                 <button
                   onClick={() => setAtNeedOpen(!atNeedOpen)}
-                  className="flex items-center gap-1 px-3 py-2 text-xs font-semibold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
+                  className="flex items-center gap-1 px-1.5 py-2 text-[10px] font-semibold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
                 >
                   AT NEED
                   <svg className={`w-3 h-3 transition-transform ${atNeedOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -126,7 +126,7 @@ export default function Header() {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className="xl:hidden p-2"
+              className="lg:hidden p-2"
               aria-label="Open menu"
             >
               <svg className="w-6 h-6 transition-colors text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
