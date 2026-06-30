@@ -1,7 +1,7 @@
 export default function HeroSection() {
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-primary/50 z-10" />
+      <div className="absolute inset-0 bg-primary/[0.88] z-10" />
       <video
         autoPlay
         muted
