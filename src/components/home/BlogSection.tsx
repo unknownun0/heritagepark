@@ -52,13 +52,13 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((post) => (
             <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-              <article className="bg-primary rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full border-l-2 border-transparent hover:border-gold">
+              <article className="rounded-lg overflow-hidden hover:bg-primary hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full border-l-2 border-transparent hover:border-gold">
                 <div className="p-5">
                   <div className="mb-3">
-                    <span className="text-xs bg-white/10 text-white/70 px-2 py-1 rounded">{post.topic}</span>
+                    <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded group-hover:bg-white/10 group-hover:text-white/70 transition-colors">{post.topic}</span>
                   </div>
-                  <h3 className="text-base font-semibold text-white mb-2 line-clamp-2 group-hover:text-gold transition-colors">{post.title}</h3>
-                  <p className="text-sm text-white/60 line-clamp-2">{post.excerpt}</p>
+                  <h3 className="text-base font-semibold text-primary mb-2 line-clamp-2 group-hover:text-gold transition-colors">{post.title}</h3>
+                  <p className="text-sm text-primary/60 line-clamp-2 group-hover:text-white/60 transition-colors">{post.excerpt}</p>
                 </div>
               </article>
             </Link>
