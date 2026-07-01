@@ -40,12 +40,12 @@ export default function BlogSection() {
             <h3 className="text-xl font-bold text-primary mb-8">{group.topic}</h3>
 
             <Link href={`/learn/${group.posts[0].slug}`} className="group block mb-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-white rounded-lg overflow-hidden hover:bg-primary transition-colors">
                 <div className="aspect-[16/10] md:aspect-auto md:h-full md:min-h-[260px] bg-cover bg-center" style={{ backgroundImage: `url(${group.posts[0].image})` }} />
                 <div className="p-6 md:p-8">
-                  <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded inline-block mb-3">{group.posts[0].topic}</span>
-                  <h4 className="text-lg font-bold text-primary mb-2 group-hover:text-gold transition-colors">{group.posts[0].title}</h4>
-                  <p className="text-sm text-primary/60 leading-relaxed">{group.posts[0].excerpt}</p>
+                  <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded inline-block mb-3 group-hover:bg-white/10 group-hover:text-white/70 transition-colors">{group.posts[0].topic}</span>
+                  <h4 className="text-lg font-bold text-primary mb-2 group-hover:text-white transition-colors">{group.posts[0].title}</h4>
+                  <p className="text-sm text-primary/60 leading-relaxed group-hover:text-white/60 transition-colors">{group.posts[0].excerpt}</p>
                 </div>
               </div>
             </Link>
@@ -56,10 +56,10 @@ export default function BlogSection() {
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {group.posts.slice(1).map((post) => (
-                    <Link key={post.slug} href={`/learn/${post.slug}`} className="group block bg-white rounded-lg p-6 hover:shadow-md transition-shadow border-l-2 border-transparent hover:border-gold">
-                      <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded inline-block mb-2">{post.topic}</span>
-                      <h4 className="text-base font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{post.title}</h4>
-                      <p className="text-sm text-primary/60 line-clamp-2">{post.excerpt}</p>
+                    <Link key={post.slug} href={`/learn/${post.slug}`} className="group block bg-white rounded-lg p-6 hover:bg-primary transition-colors border-l-2 border-transparent hover:border-gold">
+                      <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded inline-block mb-2 group-hover:bg-white/10 group-hover:text-white/70 transition-colors">{post.topic}</span>
+                      <h4 className="text-base font-semibold text-primary mb-1 group-hover:text-white transition-colors">{post.title}</h4>
+                      <p className="text-sm text-primary/60 line-clamp-2 group-hover:text-white/60 transition-colors">{post.excerpt}</p>
                     </Link>
                   ))}
                 </div>
