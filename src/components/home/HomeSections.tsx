@@ -191,9 +191,9 @@ export default function HomeSections() {
       </div>
 
       {/* SECTION 8 - Footer CTA */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-cream">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
             Ready to talk? Book a private, no-pressure consultation.
           </h2>
           <Link
@@ -206,7 +206,7 @@ export default function HomeSections() {
       </section>
 
       {/* SECTION 9 - Map */}
-      <section className="bg-primary">
+      <section className="bg-primary border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
