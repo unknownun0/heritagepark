@@ -207,7 +207,7 @@ export default function HomeSections() {
 
       {/* SECTION 9 - Map */}
       <section className="bg-primary border-b border-white/10">
-        <div className="w-full h-72 md:h-80 relative">
+        <div className="w-full h-96 md:h-[450px] relative">
           <iframe
             src="https://www.google.com/maps?q=Heritage+Park+Memorial+Taguig&output=embed"
             width="100%"
