@@ -43,11 +43,11 @@ export default function HomeSections() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-10">
-              <div className="w-12 h-12 bg-moss/10 rounded-full flex items-center justify-center mb-5">
+              <Link href="/plan-ahead" className="w-12 h-12 bg-moss/10 rounded-full flex items-center justify-center mb-5 hover:bg-moss/20 transition-colors">
                 <svg className="w-6 h-6 text-moss" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                 </svg>
-              </div>
+              </Link>
               <h3 className="text-2xl font-bold text-primary mb-3">Planning for the Future</h3>
               <p className="text-primary/60 text-sm leading-relaxed mb-6">
                 Give your family the gift of preparation. A pre-need memorial plan locks in today&apos;s prices and ensures your wishes are honored with dignity.
@@ -57,11 +57,11 @@ export default function HomeSections() {
               </Link>
             </div>
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-10">
-              <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mb-5">
+              <Link href="/immediate-need" className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mb-5 hover:bg-gold/20 transition-colors">
                 <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-              </div>
+              </Link>
               <h3 className="text-2xl font-bold text-primary mb-3">We Need Help Now</h3>
               <p className="text-primary/60 text-sm leading-relaxed mb-4">
                 We&apos;re here for your family in this moment. Call our 24/7 support line for immediate assistance.
