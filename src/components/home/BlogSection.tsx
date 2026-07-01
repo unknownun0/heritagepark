@@ -52,30 +52,18 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((post) => (
             <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-              <article className="rounded-lg overflow-hidden hover:bg-primary hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full border-l-2 border-transparent hover:border-gold">
+              <article className="rounded-lg overflow-hidden bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
+                <div className="aspect-[16/9] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
                 <div className="p-5">
-                  <div className="mb-3">
-                    <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded group-hover:bg-white/10 group-hover:text-white/70 transition-colors">{post.topic}</span>
+                  <div className="mb-2">
+                    <span className="text-xs bg-primary/5 text-primary/70 px-2 py-1 rounded">{post.topic}</span>
                   </div>
                   <h3 className="text-base font-semibold text-primary mb-2 line-clamp-2 group-hover:text-gold transition-colors">{post.title}</h3>
-                  <p className="text-sm text-primary/60 line-clamp-2 group-hover:text-white/60 transition-colors">{post.excerpt}</p>
+                  <p className="text-sm text-primary/60 line-clamp-3">{post.excerpt}</p>
                 </div>
               </article>
             </Link>
           ))}
-        </div>
-
-        <div className="mt-12 bg-primary rounded-lg p-8 md:p-10 text-center">
-          <h3 className="text-2xl font-bold text-white mb-3">Download Your Free Family Planning Guide</h3>
-          <p className="text-white/70 mb-6 max-w-xl mx-auto">
-            Our comprehensive guide walks you through every step of memorial planning with clarity and compassion.
-          </p>
-          <a
-            href="#"
-            className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
-          >
-            Download the Guide
-          </a>
         </div>
 
         <div className="text-center mt-10">

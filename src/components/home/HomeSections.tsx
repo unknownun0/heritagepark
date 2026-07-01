@@ -45,7 +45,7 @@ export default function HomeSections() {
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-10">
               <div className="w-12 h-12 bg-moss/10 rounded-full flex items-center justify-center mb-5">
                 <svg className="w-6 h-6 text-moss" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-primary mb-3">Planning for the Future</h3>
@@ -184,6 +184,12 @@ export default function HomeSections() {
       </section>
 
 
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-primary/10" />
+        </div>
+      </div>
+
       {/* SECTION 8 - Footer CTA */}
       <section className="py-20 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">
@@ -196,6 +202,48 @@ export default function HomeSections() {
           >
             Schedule a Visit
           </Link>
+        </div>
+      </section>
+
+      {/* SECTION 9 - Map */}
+      <section className="bg-primary">
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-4">Visit Heritage Park</h2>
+              <div className="space-y-4 text-sm text-white/70">
+                <div>
+                  <p className="font-semibold text-gold mb-1">Address</p>
+                  <p>Heritage Park Memorial</p>
+                  <p>Taguig, Metro Manila</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-gold mb-1">Contact</p>
+                  <p>Phone: (02) 8888-8888</p>
+                  <p>Email: info@heritagepark.com</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-gold mb-1">Hours</p>
+                  <p>Open daily, 6:00 AM – 6:00 PM</p>
+                </div>
+                <Link href="/contact" className="inline-block mt-4 bg-gold text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-gold/90 transition-colors">
+                  Contact the Heritage Park Team
+                </Link>
+              </div>
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps?q=Heritage+Park+Memorial+Taguig&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Heritage Park Location"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
