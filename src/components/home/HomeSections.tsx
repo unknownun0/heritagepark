@@ -205,7 +205,40 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* SECTION 9 - Map */}
+      {/* SECTION 9 - FaQ featured */}
+      <section className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Have Questions?</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions</h2>
+          </div>
+          <div className="space-y-3 mb-10">
+            {[
+              { q: "Isn\u2019t this something I should think about later?", a: "Many families wish they had planned sooner. Planning ahead locks in today\u2019s prices, spares your loved ones from difficult decisions during grief, and ensures your wishes are honored exactly as you envisioned." },
+              { q: "Can I visit before deciding?", a: "Absolutely. We encourage all families to visit Heritage Park in person. Our consultants are happy to give you a guided tour so you can experience the park\u2019s beauty and serenity firsthand." },
+              { q: "Are payment plans available?", a: "Yes. We offer flexible, zero-interest installment plans designed to fit your budget. Our consultants will work with you to find a plan that works for your family." },
+              { q: "What are your hours?", a: "Heritage Park is open Monday through Saturday from 8:00 AM to 5:00 PM, and Sunday from 9:00 AM to 3:00 PM. Special arrangements can be made for after-hours visits." },
+            ].map((faq) => (
+              <details key={faq.q} className="bg-cream rounded-lg group">
+                <summary className="px-6 py-4 cursor-pointer font-semibold text-primary flex items-center justify-between group-open:border-b border-primary/5">
+                  {faq.q}
+                  <svg className="w-4 h-4 text-gold transition-transform group-open:rotate-180 shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <p className="px-6 py-4 text-sm text-primary/60">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link href="/faqs" className="text-primary font-semibold text-sm underline underline-offset-4 hover:text-gold transition-colors">
+              View All FAQs &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 10 - Map */}
       <section className="bg-primary border-b border-white/10">
         <div className="w-full h-96 md:h-[650px] relative">
           <iframe
