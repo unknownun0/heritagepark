@@ -2,6 +2,7 @@ export default function AeternumSections() {
   return (
     <>
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-[url(/images/aeternum.jpg)] bg-cover bg-center opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-light z-10" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 bg-gold rounded-full blur-3xl" />

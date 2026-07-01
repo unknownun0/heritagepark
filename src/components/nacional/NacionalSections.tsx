@@ -28,7 +28,7 @@ export default function NacionalSections() {
   return (
     <>
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-[url(/images/nacional-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/40 to-transparent" />
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Nacional Memorial Homes</p>

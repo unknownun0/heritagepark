@@ -26,6 +26,7 @@ export default function ImmediateNeedSection() {
   return (
     <>
       <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden">
+        <div className="absolute inset-0 bg-[url(/images/chapel.jpg)] bg-cover bg-center opacity-20" />
         <div
           className="absolute inset-0 opacity-10"
           style={{

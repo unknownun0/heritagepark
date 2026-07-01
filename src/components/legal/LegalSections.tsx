@@ -72,7 +72,7 @@ export default function LegalSections({ type }: { type: 'privacy' | 'terms' }) {
   return (
     <>
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-primary">
-        <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-[url(/images/legal-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Legal</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white">{data.title}</h1>

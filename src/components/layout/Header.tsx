@@ -24,9 +24,9 @@ const navItems: NavItem[] = [
     label: 'Plan Ahead',
     href: '/plan-ahead',
     children: [
-      { label: 'Why Plan Ahead', href: '/plan-ahead' },
-      { label: 'What Planning Looks Like', href: '/plan-ahead' },
-      { label: 'Common Questions', href: '/plan-ahead' },
+      { label: 'Why Plan Ahead', href: '/plan-ahead#why-plan-ahead' },
+      { label: 'What Planning Looks Like', href: '/plan-ahead#what-planning-looks-like' },
+      { label: 'Common Questions', href: '/plan-ahead#common-questions' },
     ],
   },
   {

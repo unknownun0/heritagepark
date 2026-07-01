@@ -26,7 +26,7 @@ export default function ComboPlansSection() {
   return (
     <>
       <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center bg-primary">
-        <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-[url(/images/combo-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Combo Plans</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">One Decision, Fully Covered</h1>
