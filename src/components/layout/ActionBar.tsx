@@ -4,7 +4,7 @@ export default function ActionBar() {
       <div className="max-w-7xl mx-auto px-4 py-1 flex items-center justify-end gap-4">
         <span>Mon–Sat 8AM–5PM</span>
         <span className="hidden sm:inline">|</span>
-        <a href="tel:+1234567890" className="hidden sm:inline hover:text-gold transition-colors">(02) 8123 4567</a>
+        <a href="tel:+639178841009" className="hidden sm:inline hover:text-gold transition-colors">0917 884 1009</a>
       </div>
     </div>
   )

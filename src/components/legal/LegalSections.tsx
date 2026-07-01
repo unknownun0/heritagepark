@@ -27,7 +27,7 @@ const privacyContent = {
     },
     {
       heading: 'Contact Us',
-      body: 'For questions about this Privacy Policy or to exercise your data privacy rights, you may reach us at: info@heritagepark.ph or (02) 1234 5678. You may also write to our Data Protection Officer at Heritage Park, Quezon City, Philippines.',
+      body: 'For questions about this Privacy Policy or to exercise your data privacy rights, you may reach us at: sales@heritageparktaguig.com or 0917 884 1009. You may also write to our Data Protection Officer at Heritage Park, Quezon City, Philippines.',
     },
   ],
 }
@@ -61,7 +61,7 @@ const termsContent = {
     },
     {
       heading: 'Contact Information',
-      body: 'For questions or concerns regarding these Terms of Use, please contact us at info@heritagepark.ph or (02) 1234 5678.',
+      body: 'For questions or concerns regarding these Terms of Use, please contact us at sales@heritageparktaguig.com or 0917 884 1009.',
     },
   ],
 }

@@ -49,16 +49,16 @@ export default function ContactSections() {
 
     switch (channel) {
       case 'gmail':
-        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=info@heritagepark.ph&su=Inquiry%20from%20${encodeURIComponent(name)}&body=${fullMsg}`, '_blank')
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=sales@heritageparktaguig.com&su=Inquiry%20from%20${encodeURIComponent(name)}&body=${fullMsg}`, '_blank')
         break
       case 'whatsapp':
-        window.open(`https://wa.me/639178423741?text=${fullMsg}`, '_blank')
+        window.open(`https://wa.me/639178841009?text=${fullMsg}`, '_blank')
         break
       case 'viber':
         window.open(`viber://pa?chatURI=heritagepark&text=${fullMsg}`, '_blank')
         break
       case 'messenger':
-        window.open(`https://m.me/heritageparkph?text=${fullMsg}`, '_blank')
+        window.open(`https://m.me/heritageparktaguigph?text=${fullMsg}`, '_blank')
         break
     }
   }
@@ -203,11 +203,11 @@ export default function ContactSections() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Phone</h3>
-                    <a href="tel:+1234567890" className="text-gold hover:text-gold/80 transition-colors">(02) 8123 4567</a>
+                    <a href="tel:+639178841009" className="text-gold hover:text-gold/80 transition-colors">0917 884 1009</a>
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Email</h3>
-                    <a href="mailto:info@heritagepark.ph" className="text-gold hover:text-gold/80 transition-colors">info@heritagepark.ph</a>
+                    <a href="mailto:sales@heritageparktaguig.com" className="text-gold hover:text-gold/80 transition-colors">sales@heritageparktaguig.com</a>
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Hours</h3>

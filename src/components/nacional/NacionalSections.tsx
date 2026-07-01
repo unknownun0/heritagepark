@@ -118,8 +118,8 @@ export default function NacionalSections() {
                 </div>
                 <div>
                   <p className="font-semibold text-gold mb-1">Contact</p>
-                  <p>Phone: (02) 1234-5678</p>
-                  <p>Email: nacional@heritagepark.com</p>
+                  <p>Phone: 0917 884 1009</p>
+                  <p>Email: sales@heritageparktaguig.com</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gold mb-1">Hours</p>

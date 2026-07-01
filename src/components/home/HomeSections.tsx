@@ -66,7 +66,7 @@ export default function HomeSections() {
               <p className="text-primary/60 text-sm leading-relaxed mb-4">
                 We&apos;re here for your family in this moment. Call our 24/7 support line for immediate assistance.
               </p>
-              <p className="text-gold font-bold text-lg mb-4">(02) 8888-8888</p>
+              <p className="text-gold font-bold text-lg mb-4">0917 884 1009</p>
               <Link href="/immediate-need" className="inline-block bg-gold text-primary font-semibold px-6 py-3 rounded text-sm hover:bg-gold/90 transition-colors">
                 Get Help Now
               </Link>

@@ -41,7 +41,7 @@ export default function ImmediateNeedSection() {
             If you&apos;ve experienced a loss, our team is ready to assist you immediately — every step of the way.
           </p>
           <a
-            href="tel:+1234567890"
+            href="tel:+639178841009"
             className="inline-flex items-center gap-2 bg-gold text-primary font-bold text-lg px-10 py-4 rounded hover:bg-gold/90 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,7 +95,7 @@ export default function ImmediateNeedSection() {
           </p>
           <div className="mt-8">
             <a
-              href="tel:+1234567890"
+              href="tel:+639178841009"
               className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
             >
               Call Us Now

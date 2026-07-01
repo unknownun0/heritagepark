@@ -46,7 +46,7 @@ export default function MobileMenu({ open, onClose, links }: MobileMenuProps) {
           })}
         </nav>
         <div className="p-4 border-t border-primary/10">
-          <a href="tel:+1234567890" className="block w-full bg-gold text-primary text-center font-semibold py-3 rounded text-sm hover:bg-gold/90 transition-colors">
+          <a href="tel:+639178841009" className="block w-full bg-gold text-primary text-center font-semibold py-3 rounded text-sm hover:bg-gold/90 transition-colors">
             Call Us Now
           </a>
         </div>
