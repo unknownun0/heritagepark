@@ -170,7 +170,7 @@ export default function Header() {
   }, [])
 
   const navLinkClass = (isActive: boolean) =>
-    `px-1.5 py-2 text-[10px] font-medium tracking-wide uppercase border-b-2 transition-all ${
+    `px-2 py-3 text-sm font-bold tracking-wide uppercase border-b-2 transition-all ${
       isActive
         ? 'text-white border-gold'
         : 'text-white/70 border-transparent hover:text-white hover:border-gold/50'
