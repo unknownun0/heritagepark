@@ -207,43 +207,17 @@ export default function HomeSections() {
 
       {/* SECTION 9 - Map */}
       <section className="bg-primary border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-4">Visit Heritage Park</h2>
-              <div className="space-y-4 text-sm text-white/70">
-                <div>
-                  <p className="font-semibold text-gold mb-1">Address</p>
-                  <p>Heritage Park Memorial</p>
-                  <p>Taguig, Metro Manila</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gold mb-1">Contact</p>
-                  <p>Phone: (02) 8888-8888</p>
-                  <p>Email: info@heritagepark.com</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gold mb-1">Hours</p>
-                  <p>Open daily, 6:00 AM – 6:00 PM</p>
-                </div>
-                <Link href="/contact" className="inline-block mt-4 bg-gold text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-gold/90 transition-colors">
-                  Contact the Heritage Park Team
-                </Link>
-              </div>
-            </div>
-            <div className="aspect-square rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps?q=Heritage+Park+Memorial+Taguig&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Heritage Park Location"
-              />
-            </div>
-          </div>
+        <div className="w-full h-72 md:h-80 relative">
+          <iframe
+            src="https://www.google.com/maps?q=Heritage+Park+Memorial+Taguig&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Heritage Park Location"
+          />
         </div>
       </section>
     </>
