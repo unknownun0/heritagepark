@@ -19,6 +19,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1920px) {
+  html { font-size: 17px; }
+}
+
+@media (min-width: 2500px) {
+  html { font-size: 19px; }
+}
+
+@media (min-width: 3000px) {
+  html { font-size: 21px; }
+}
+
 body {
   background: var(--color-cream);
   color: var(--color-primary);
