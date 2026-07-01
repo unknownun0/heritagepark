@@ -246,7 +246,7 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => setAtNeedOpen(!atNeedOpen)}
-                  className="flex items-center gap-1 px-1.5 py-2 text-[10px] font-semibold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
+                  className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
                 >
                   AT NEED
                   <svg className={`w-3 h-3 transition-transform ${atNeedOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
