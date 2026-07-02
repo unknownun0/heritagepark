@@ -190,4 +190,8 @@ export function getFeaturedPosts(): BlogPost[] {
   return blogPosts.filter((p) => p.featured)
 }
 
+export function getPostsByTopic(topicId: string): BlogPost[] {
+  return blogPosts.filter((p) => p.topicId === topicId && !p.featured)
+}
+
 export default blogPosts

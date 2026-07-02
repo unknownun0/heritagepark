@@ -1,13 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { topicFilters, getAllPosts } from '@/data/blog-posts'
+import { useSearchParams } from 'next/navigation'
+import { topicFilters, topicMap, getAllPosts } from '@/data/blog-posts'
 import type { BlogPost } from '@/data/blog-posts'
 
 export default function LearnSections() {
+  const searchParams = useSearchParams()
   const [activeTopic, setActiveTopic] = useState('All Topics')
   const [searchQuery, setSearchQuery] = useState('')
+
+  useEffect(() => {
+    const topicParam = searchParams.get('topic')
+    if (topicParam && topicMap[topicParam]) {
+      setActiveTopic(topicMap[topicParam])
+    }
+  }, [searchParams])
 
   const posts = getAllPosts()
 
