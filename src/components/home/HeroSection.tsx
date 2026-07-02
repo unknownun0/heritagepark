@@ -5,17 +5,8 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center" />
       <div className="absolute inset-0 bg-primary/[0.88] z-10" />
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 py-24">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
-            A Place <span className="text-gold">Worth</span> Planning For
-          </h1>
-          <p className="text-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-            Heritage Park helps Filipino families plan ahead with dignity, peace of mind, and lasting protection — for generations to come.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white/10 backdrop-blur rounded-lg p-8 md:p-10 border border-white/10 hover:bg-white/15 transition-colors">
             <Link href="/plan-ahead" className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center mb-5 hover:bg-gold/30 transition-colors">
               <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
