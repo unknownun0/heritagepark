@@ -37,13 +37,13 @@ export default function BlogSection() {
               </div>
 
               {featured && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 bg-white rounded-xl overflow-hidden shadow-sm">
+                <div className="bg-white rounded-xl overflow-hidden shadow-sm mb-8">
                   <Link
                     href={`/learn/${featured.slug}`}
-                    className="min-h-[280px] bg-cover bg-center"
+                    className="block min-h-[200px] bg-cover bg-center"
                     style={{ backgroundImage: `url(${featured.image})` }}
                   />
-                  <div className="flex flex-col justify-center px-6 md:px-8 py-8">
+                  <div className="px-6 py-6">
                     <span className="bg-gold text-primary text-[10px] font-bold px-2.5 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-3">Featured</span>
                     <h4 className="text-xl md:text-2xl font-bold text-primary mb-3">{featured.title}</h4>
                     <p className="text-sm text-primary/60 leading-relaxed mb-5">{featured.excerpt}</p>
