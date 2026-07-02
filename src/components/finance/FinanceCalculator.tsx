@@ -90,7 +90,7 @@ export default function FinanceCalculator(props: Props) {
               </div>
               <div className="bg-white rounded-lg p-4 text-center">
                 <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">
-                  {freq.label} ({row.installments}x)
+                  {freq.label} ({row.installments}check)
                 </p>
                 <p className="text-lg font-bold text-primary">{formatPeso(row.payment)}</p>
               </div>
@@ -195,7 +195,7 @@ export default function FinanceCalculator(props: Props) {
                 </div>
                 <div className="bg-white rounded-lg p-4 text-center">
                   <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">
-                    {freqSvc.label.split(' (')[0]} ({freqSvc.installments}x)
+                    {freqSvc.label.split(' (')[0]} ({freqSvc.installments}check)
                   </p>
                   <p className="text-lg font-bold text-gold">{formatPeso(freqSvc.payment)}</p>
                 </div>
