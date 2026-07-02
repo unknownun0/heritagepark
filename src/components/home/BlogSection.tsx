@@ -1,13 +1,6 @@
 import Link from 'next/link'
 import { getFeaturedPosts, getPostsByTopic } from '@/data/blog-posts'
 
-const topicLabels: Record<string, string> = {
-  planning: 'Planning Basics',
-  costs: 'Costs & Payment',
-  grief: 'Grief & Support',
-  culture: 'Culture & Tradition',
-}
-
 export default function BlogSection() {
   const featured = getFeaturedPosts()
 
