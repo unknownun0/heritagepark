@@ -18,8 +18,6 @@ export default function BlogSection() {
 
         {topics.map((topic) => {
           const posts = allPosts.filter((p) => p.topicId === topic.id)
-          const featured = posts.find((p) => p.featured)
-          const others = posts.filter((p) => !p.featured)
 
           return (
             <div key={topic.id} className="mb-16 last:mb-0">
@@ -36,24 +34,8 @@ export default function BlogSection() {
                 </Link>
               </div>
 
-              {featured && (
-                <div className="bg-white rounded-xl overflow-hidden shadow-sm mb-8">
-                  <Link
-                    href={`/learn/${featured.slug}`}
-                    className="block min-h-[200px] bg-cover bg-center"
-                    style={{ backgroundImage: `url(${featured.image})` }}
-                  />
-                  <div className="px-6 py-6">
-                    <span className="bg-gold text-primary text-[10px] font-bold px-2.5 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-3">Featured</span>
-                    <h4 className="text-xl md:text-2xl font-bold text-primary mb-3">{featured.title}</h4>
-                    <p className="text-sm text-primary/60 leading-relaxed mb-5">{featured.excerpt}</p>
-                    <Link href={`/learn/${featured.slug}`} className="bg-gold text-primary font-semibold px-5 py-2.5 rounded text-sm hover:bg-gold/90 transition-colors w-fit">Read More</Link>
-                  </div>
-                </div>
-              )}
-
               <div className="space-y-5">
-                {(others.length > 0 ? others : posts).map((post) => (
+                {posts.map((post) => (
                   <Link key={post.slug} href={`/learn/${post.slug}`} className="group block">
                     <article className="flex gap-5 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow">
                       <div className="w-48 shrink-0 min-h-[120px] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
