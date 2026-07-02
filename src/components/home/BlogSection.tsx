@@ -18,6 +18,8 @@ export default function BlogSection() {
 
         {topics.map((topic) => {
           const posts = allPosts.filter((p) => p.topicId === topic.id)
+          const featured = posts.filter((p) => p.featured)
+          const others = posts.filter((p) => !p.featured)
 
           return (
             <div key={topic.id} className="mb-16 last:mb-0">
@@ -34,13 +36,41 @@ export default function BlogSection() {
                 </Link>
               </div>
 
-              <div className="space-y-2">
-                {posts.map((post) => (
-                  <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
-                    {post.title}
+              {featured.map((post) => (
+                <div key={post.slug}>
+                  <Link href={`/learn/${post.slug}`} className="block group">
+                    <article className="flex gap-5 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow">
+                      <div className="w-48 shrink-0 min-h-[120px] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
+                      <div className="py-4 pr-4 flex-1">
+                        <span className="bg-gold text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-2">Featured</span>
+                        <h4 className="text-sm font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{post.title}</h4>
+                        <p className="text-xs text-primary/60 leading-relaxed line-clamp-2">{post.excerpt}</p>
+                      </div>
+                    </article>
                   </Link>
-                ))}
-              </div>
+                  <hr className="my-4 border-primary/10" />
+                </div>
+              ))}
+
+              {others.length > 0 && (
+                <div className="space-y-3">
+                  {others.map((post) => (
+                    <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
+                      {post.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {featured.length === 0 && others.length === 0 && posts.length > 0 && (
+                <div className="space-y-3">
+                  {posts.map((post) => (
+                    <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
+                      {post.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           )
         })}
