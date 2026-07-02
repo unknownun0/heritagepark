@@ -52,7 +52,7 @@ export default function BlogSection() {
                 </div>
               )}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 gap-5">
                 {(others.length > 0 ? others : posts).map((post) => (
                   <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
                     <article className="rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow h-full">
