@@ -118,10 +118,10 @@ export default function FinanceCalculator(props: Props) {
   const plan = sData[selectedPlan] || sData[0]
 
   const installmentOptions = [
-    { label: 'Annual (5 yrs)', payment: plan.annual, installments: 5 },
-    { label: 'Semi-Annual (5 yrs)', payment: plan.semiAnnual, installments: 10 },
-    { label: 'Quarterly (5 yrs)', payment: plan.quarterly, installments: 20 },
-    { label: 'Monthly (5 yrs)', payment: plan.monthly, installments: 50 },
+    { label: 'Annual (5check)', payment: plan.annual, installments: 5 },
+    { label: 'Semi-Annual (5check)', payment: plan.semiAnnual, installments: 10 },
+    { label: 'Quarterly (5check)', payment: plan.quarterly, installments: 20 },
+    { label: 'Monthly (5check)', payment: plan.monthly, installments: 50 },
   ]
 
   const freqSvc = installmentOptions[selectedFreqSvc] || installmentOptions[0]
@@ -215,10 +215,10 @@ export default function FinanceCalculator(props: Props) {
                 <tr className="border-b-2 border-primary/10">
                   <th className="text-left py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm">Plan</th>
                   <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm">Contract Price</th>
-                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm">Annual (5 yrs)</th>
-                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Semi-Annual (5 yrs)</th>
-                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Quarterly (5 yrs)</th>
-                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Monthly (5 yrs)</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm">Annual (5check)</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Semi-Annual (5check)</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Quarterly (5check)</th>
+                  <th className="text-center py-2 px-1.5 md:py-3 md:px-3 text-primary font-bold text-xs md:text-sm hidden sm:table-cell">Monthly (5check)</th>
                 </tr>
               </thead>
               <tbody>

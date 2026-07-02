@@ -54,7 +54,7 @@ export default function LearnSections() {
       <section className="py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap items-center gap-3 mb-10">
-            {topicFilters.filter((t) => t.id !== 'all').map((topic) => (
+            {topicFilters.map((topic) => (
               <button
                 key={topic.id}
                 onClick={() => setActiveTopic(topic.label)}
@@ -73,6 +73,7 @@ export default function LearnSections() {
             {filtered.map((post) => (
               <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
                 <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
+                  <div className="aspect-[16/9] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
                   <div className="p-5">
                     <div className="mb-2">
                       <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>

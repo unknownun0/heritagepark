@@ -39,6 +39,26 @@ export default function AboutSections() {
       <section className="py-20 bg-cream">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
+            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Our Vision</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">A Master-Planned Memorial Community</h2>
+          </div>
+          <div className="text-primary/60 text-sm leading-relaxed space-y-5 max-w-3xl mx-auto">
+            <p>
+              Heritage Park was designed from the ground up as a master-planned memorial community — not a traditional cemetery. Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
+            </p>
+            <p>
+              The park is organized into distinct sections connected by a network of paved roads and walking paths. Landscaped gardens with indigenous flowering trees provide shade and color throughout the year. Each zone has its own character — from the open lawns of the Garden lots to the intimate garden settings of our estate areas.
+            </p>
+            <p>
+              Central to the park is the Aeternum columbary complex, an indoor sanctuary of elegance, and the Heritage Chapel, designed for intimate family services. The Nacional Memorial section stands as a tribute to the nation&apos;s heritage, while Reflection Lake offers a quiet place for contemplation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Our Philosophy</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Guided by Education, Never Pressure</h2>
           </div>

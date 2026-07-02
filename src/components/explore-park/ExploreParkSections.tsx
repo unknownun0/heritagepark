@@ -1,10 +1,10 @@
 const galleryAreas = [
-  { label: 'Gardens', image: '/images/garden-lot/garden%20lot.jpg' },
-  { label: 'Chapels', image: '/images/mortuary/20250219_144912.jpg' },
-  { label: 'Estate Areas', image: '/images/estate-lot/IMG_9427.JPG' },
-  { label: 'Memory Place', image: '/images/mortuary/20250219_145000.jpg' },
-  { label: 'Walking Paths', image: '/images/estate-lot/IMG_9221.JPG' },
-  { label: 'Reflection Lake', image: '/images/garden-lot/photo%2011.jpg' },
+  { label: 'Gardens', image: '/images/garden-lot/garden%20lot.jpg', desc: 'Beautifully landscaped gardens with indigenous flowering trees that provide shade and color throughout the year.' },
+  { label: 'Chapels', image: '/images/mortuary/20250219_144912.jpg', desc: 'The Heritage Chapel is designed for intimate family services, offering a peaceful setting for remembrance and prayer.' },
+  { label: 'Estate Areas', image: '/images/estate-lot/IMG_9427.JPG', desc: 'Spacious estate-sized lots for families who want room to honor their loved ones in a private, dignified setting.' },
+  { label: 'Memory Place', image: '/images/mortuary/20250219_145000.jpg', desc: 'A dedicated sanctuary within the park for quiet reflection and lasting tribute to those who have passed.' },
+  { label: 'Walking Paths', image: '/images/estate-lot/IMG_9221.JPG', desc: 'Paved walking paths connect the park&apos;s distinct sections, allowing families to stroll through the serene landscape.' },
+  { label: 'Reflection Lake', image: '/images/garden-lot/photo%2011.jpg', desc: 'A tranquil water feature that serves as a quiet place for contemplation and peaceful moments of remembrance.' },
 ]
 
 const visitInfo = [
@@ -51,17 +51,14 @@ export default function ExploreParkSections() {
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Gallery</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Wander Through the Park</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {galleryAreas.map((item) => (
-              <div key={item.label} className="group relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
-                <div
-                  className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
-                  style={{ backgroundImage: `url(${item.image})` }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                <p className="absolute bottom-0 left-0 right-0 p-5 text-white font-semibold text-lg">
-                  {item.label}
-                </p>
+              <div key={item.label} className="flex flex-col sm:flex-row gap-5 bg-white rounded-lg overflow-hidden shadow-sm">
+                <div className="sm:w-56 h-44 shrink-0 bg-cover bg-center" style={{ backgroundImage: `url(${item.image})` }} />
+                <div className="py-4 pr-4 flex-1">
+                  <h3 className="font-bold text-primary mb-2">{item.label}</h3>
+                  <p className="text-sm text-primary/60 leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
