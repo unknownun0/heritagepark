@@ -1,70 +1,70 @@
 import Link from 'next/link'
-import { getFeaturedPosts, getAllPosts } from '@/data/blog-posts'
+import { getFeaturedPosts, getPostsByTopic } from '@/data/blog-posts'
+
+const topicLabels: Record<string, string> = {
+  planning: 'Planning Basics',
+  costs: 'Costs & Payment',
+  grief: 'Grief & Support',
+  culture: 'Culture & Tradition',
+}
 
 export default function BlogSection() {
   const featured = getFeaturedPosts()
-  const rest = getAllPosts().filter((p) => !p.featured)
 
   return (
     <section className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-14">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase">Educational</p>
           <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2">Answers, Before You Need Them.</h2>
-          <p className="text-primary/60 max-w-2xl mx-auto mt-3">Knowledge is comfort. Explore our library of helpful guides written with your family&apos;s peace of mind in mind — no sales pitch, just clarity.</p>
+          <p className="text-primary/60 max-w-2xl mx-auto mt-3">Knowledge is comfort. Explore our library of helpful guides written with your family&apos;s peace of mind in mind.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-          {rest.map((post) => (
-            <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-              <article className="rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow h-full">
-                <div className="aspect-[16/10] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-                <div className="p-4">
-                  <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
-                  <h3 className="text-sm font-semibold text-primary mt-2 mb-1 group-hover:text-gold transition-colors">{post.title}</h3>
-                  <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
+        {featured.map((post) => {
+          const related = getPostsByTopic(post.topicId)
 
-        <div className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-primary">Featured Blogs</h3>
-          <p className="text-primary/60 text-sm mt-2">Handpicked guides to help you get started</p>
-        </div>
+          return (
+            <div key={post.slug} className="mb-16 last:mb-0">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="w-1 h-6 bg-gold rounded-full" />
+                <h3 className="text-lg font-bold text-primary">{post.topic}</h3>
+              </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-          {featured.map((post) => (
-            <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-              <article className="rounded-lg overflow-hidden bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full border border-gold/20">
-                <div className="aspect-[16/10] bg-cover bg-center relative" style={{ backgroundImage: `url(${post.image})` }}>
-                  <span className="absolute top-2 left-2 bg-gold text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Featured</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 bg-white rounded-xl overflow-hidden shadow-sm">
+                <Link
+                  href={`/learn/${post.slug}`}
+                  className="min-h-[280px] bg-cover bg-center"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                />
+                <div className="flex flex-col justify-center px-6 md:px-8 py-8">
+                  <span className="bg-gold text-primary text-[10px] font-bold px-2.5 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-3">Featured</span>
+                  <h4 className="text-xl md:text-2xl font-bold text-primary mb-3">{post.title}</h4>
+                  <p className="text-sm text-primary/60 leading-relaxed mb-5">{post.excerpt}</p>
+                  <div className="flex gap-3">
+                    <Link href={`/learn/${post.slug}`} className="bg-gold text-primary font-semibold px-5 py-2.5 rounded text-sm hover:bg-gold/90 transition-colors">Read More</Link>
+                    <Link href={`/learn?topic=${post.topicId}`} className="border border-primary/20 text-primary font-semibold px-5 py-2.5 rounded text-sm hover:bg-primary/5 transition-colors">View All {post.topic} &rarr;</Link>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
-                  <h3 className="text-sm font-semibold text-primary mt-2 mb-1 group-hover:text-gold transition-colors">{post.title}</h3>
-                  <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
+              </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {rest.map((post) => (
-            <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-              <article className="rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow h-full">
-                <div className="aspect-[16/10] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-                <div className="p-4">
-                  <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
-                  <h3 className="text-sm font-semibold text-primary mt-2 mb-1 group-hover:text-gold transition-colors">{post.title}</h3>
-                  <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>
+              {related.length > 0 && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {related.map((r) => (
+                    <Link key={r.slug} href={`/learn/${r.slug}`} className="group">
+                      <article className="rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow h-full">
+                        <div className="aspect-[16/10] bg-cover bg-center" style={{ backgroundImage: `url(${r.image})` }} />
+                        <div className="p-4">
+                          <h4 className="text-sm font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{r.title}</h4>
+                          <p className="text-xs text-primary/60 leading-relaxed line-clamp-2">{r.excerpt}</p>
+                        </div>
+                      </article>
+                    </Link>
+                  ))}
                 </div>
-              </article>
-            </Link>
-          ))}
-        </div>
+              )}
+            </div>
+          )
+        })}
       </div>
     </section>
   )
