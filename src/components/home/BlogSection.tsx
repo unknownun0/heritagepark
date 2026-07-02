@@ -52,12 +52,12 @@ export default function BlogSection() {
                 </div>
               )}
 
-              <div className="grid grid-cols-1 gap-5">
+              <div className="space-y-5">
                 {(others.length > 0 ? others : posts).map((post) => (
-                  <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-                    <article className="rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow h-full">
-                      <div className="aspect-[16/10] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-                      <div className="p-4">
+                  <Link key={post.slug} href={`/learn/${post.slug}`} className="group block">
+                    <article className="flex gap-5 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow">
+                      <div className="w-48 shrink-0 bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
+                      <div className="py-4 pr-4 flex-1">
                         <h4 className="text-sm font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{post.title}</h4>
                         <p className="text-xs text-primary/60 leading-relaxed line-clamp-2">{post.excerpt}</p>
                       </div>
