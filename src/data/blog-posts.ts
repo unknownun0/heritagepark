@@ -9,6 +9,7 @@ export interface BlogPost {
   readTime: string
   content: string[]
   relatedSlugs: string[]
+  featured?: boolean
 }
 
 export const topicFilters: { id: string; label: string }[] = [
@@ -36,6 +37,7 @@ const blogPosts: BlogPost[] = [
     topicId: 'planning',
     topic: 'Planning Basics',
     lang: 'EN',
+    featured: true,
     image: '/images/blog-planning.jpg',
     readTime: '6 min read',
     content: [
@@ -53,6 +55,7 @@ const blogPosts: BlogPost[] = [
     topicId: 'costs',
     topic: 'Costs & Payment',
     lang: 'EN',
+    featured: true,
     image: '/images/blog-costs.jpg',
     readTime: '7 min read',
     content: [
@@ -70,6 +73,7 @@ const blogPosts: BlogPost[] = [
     topicId: 'culture',
     topic: 'Culture & Tradition',
     lang: 'EN',
+    featured: true,
     image: '/images/blog-culture.jpg',
     readTime: '6 min read',
     content: [
@@ -136,6 +140,7 @@ const blogPosts: BlogPost[] = [
     topicId: 'grief',
     topic: 'Grief & Support',
     lang: 'EN',
+    featured: true,
     image: '/images/blog-grief.jpg',
     readTime: '4 min read',
     content: [
@@ -179,6 +184,10 @@ export function getFilteredPosts(topicId: string): BlogPost[] {
 
 export function getAllPosts(): BlogPost[] {
   return blogPosts
+}
+
+export function getFeaturedPosts(): BlogPost[] {
+  return blogPosts.filter((p) => p.featured)
 }
 
 export default blogPosts

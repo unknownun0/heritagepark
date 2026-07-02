@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { getAllPosts } from '@/data/blog-posts'
+import { getFeaturedPosts } from '@/data/blog-posts'
 
 export default function BlogSection() {
-  const posts = getAllPosts()
+  const posts = getFeaturedPosts()
 
   return (
     <section className="py-20 bg-cream">
@@ -22,7 +22,9 @@ export default function BlogSection() {
           {posts.map((post) => (
             <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
               <article className="rounded-lg overflow-hidden bg-white hover:bg-primary hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
-                <div className="aspect-[16/9] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
+                <div className="aspect-[16/9] bg-cover bg-center relative" style={{ backgroundImage: `url(${post.image})` }}>
+                  <span className="absolute top-2 left-2 bg-gold text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Featured</span>
+                </div>
                 <div className="p-4">
                   <span className="text-xs bg-primary/5 text-primary/70 px-2 py-0.5 rounded inline-block mb-2 group-hover:bg-white/10 group-hover:text-white/70 transition-colors">{post.topic}</span>
                   <h3 className="text-sm font-semibold text-primary mb-1.5 line-clamp-2 group-hover:text-white transition-colors">{post.title}</h3>
