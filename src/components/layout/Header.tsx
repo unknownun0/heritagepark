@@ -170,7 +170,7 @@ export default function Header() {
   }, [])
 
   const navLinkClass = (isActive: boolean) =>
-    `px-2 py-3 text-sm font-bold tracking-wide uppercase border-b-2 transition-all ${
+    `px-1.5 py-3 text-[11px] font-semibold tracking-wide uppercase border-b-2 transition-all ${
       isActive
         ? 'text-white border-gold'
         : 'text-white/70 border-transparent hover:text-white hover:border-gold/50'
@@ -194,7 +194,7 @@ export default function Header() {
               />
             </Link>
 
-            <nav ref={navRef} className="hidden lg:flex flex-1 items-center justify-between ml-6">
+            <nav ref={navRef} className="hidden lg:flex flex-1 items-center justify-start ml-2 gap-0.5">
               {navItems.map((item) => {
                 const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
                 return (
@@ -246,7 +246,7 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => setAtNeedOpen(!atNeedOpen)}
-                  className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
+                  className="flex items-center gap-1 px-3 py-2 text-[11px] font-bold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
                 >
                   AT NEED
                   <svg className={`w-3 h-3 transition-transform ${atNeedOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">

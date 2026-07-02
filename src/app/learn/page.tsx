@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import LearnSections from "@/components/learn/LearnSections"
 
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 }
 
 export default function LearnPage() {
-  return <LearnSections />
+  return (
+    <Suspense fallback={<div className="py-20 text-center text-primary/50">Loading...</div>}>
+      <LearnSections />
+    </Suspense>
+  )
 }
