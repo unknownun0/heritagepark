@@ -40,7 +40,7 @@ export default function BlogSection() {
                 <div key={post.slug}>
                   <Link href={`/learn/${post.slug}`} className="block group">
                     <article className="flex gap-5 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow">
-                      <div className="w-48 shrink-0 min-h-[120px] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
+                      <div className="w-64 shrink-0 min-h-[160px] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
                       <div className="py-4 pr-4 flex-1">
                         <span className="bg-gold text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-2">Featured</span>
                         <h4 className="text-sm font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{post.title}</h4>
