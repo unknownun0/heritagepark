@@ -24,6 +24,7 @@ const navItems: NavItem[] = [
     label: 'Plan Ahead',
     href: '/plan-ahead',
     children: [
+      { label: 'Plan Ahead', href: '/plan-ahead' },
       { label: 'Why Plan Ahead', href: '/plan-ahead#why-plan-ahead' },
       { label: 'What Planning Looks Like', href: '/plan-ahead#what-planning-looks-like' },
       { label: 'Common Questions', href: '/plan-ahead#common-questions' },
@@ -34,6 +35,7 @@ const navItems: NavItem[] = [
     label: 'Memorial Properties',
     href: '/memorial-properties',
     children: [
+      { label: 'Memorial Properties', href: '/memorial-properties' },
       { label: 'Lawn Lots', href: '/memorial-properties/lawn-lots' },
       { label: 'Garden Lots', href: '/memorial-properties/garden-lots' },
       { label: 'Estate Lots', href: '/memorial-properties/estate-lots' },
@@ -45,6 +47,7 @@ const navItems: NavItem[] = [
     label: 'Memorial Services',
     href: '/memorial-services',
     children: [
+      { label: 'Memorial Services', href: '/memorial-services' },
       { label: 'Mortuary Plans', href: '/memorial-services/mortuary-plans' },
       { label: 'Interment Plans', href: '/memorial-services/interment-plans' },
       { label: 'Combo Plans', href: '/memorial-services/combo-plans' },
@@ -55,6 +58,7 @@ const navItems: NavItem[] = [
     label: 'Explore the Park',
     href: '/explore-the-park',
     children: [
+      { label: 'Explore the Park', href: '/explore-the-park' },
       { label: 'Park Highlights', href: '/explore-the-park' },
       { label: 'Aeternum Columbary', href: '/aeternum' },
       { label: 'Schedule a Visit', href: '/contact' },
@@ -65,6 +69,7 @@ const navItems: NavItem[] = [
     label: 'Nacional',
     href: '/nacional',
     children: [
+      { label: 'Nacional', href: '/nacional' },
       { label: 'Cremation Plans', href: '/nacional' },
       { label: 'Cremation with Viewing', href: '/nacional' },
       { label: 'Viewing then Cremation', href: '/nacional' },
@@ -76,6 +81,7 @@ const navItems: NavItem[] = [
     label: 'Learn',
     href: '/learn',
     children: [
+      { label: 'Learn', href: '/learn' },
       { label: 'Planning Basics', href: '/learn' },
       { label: 'Memorial Properties', href: '/learn' },
       { label: 'Costs & Payment', href: '/learn' },
@@ -88,6 +94,7 @@ const navItems: NavItem[] = [
     label: 'Internom',
     href: '/internom',
     children: [
+      { label: 'Internom', href: '/internom' },
       { label: 'Personalized Memorials', href: '/internom#personalized' },
       { label: 'Digital Tributes', href: '/internom#digital' },
       { label: 'Expert Guidance', href: '/internom#expert' },
