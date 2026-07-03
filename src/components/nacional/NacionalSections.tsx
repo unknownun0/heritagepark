@@ -17,6 +17,9 @@ const nacionalDisplayPlans = [
   },
 ]
 
+import FinanceCalculator from '@/components/finance/FinanceCalculator'
+import { nacionalPlans } from '@/data/pricing'
+
 export default function NacionalSections() {
   return (
     <>
@@ -94,6 +97,8 @@ export default function NacionalSections() {
           </div>
         </div>
       </section>
+
+      <FinanceCalculator mode="service" data={nacionalPlans} title="Nacional Plan Pricing" />
 
       <section className="py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4">
