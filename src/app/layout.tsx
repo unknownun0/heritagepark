@@ -60,6 +60,8 @@ export default function RootLayout({
         <hr className="border-t border-primary/10" />
         <Footer />
         <FloatingChat />
+        <script dangerouslySetInnerHTML={{
+          __html: `document.addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('keydown',e=>{if(e.key==='F12'||(e.ctrlKey&&e.shiftKey&&['I','J','C'].includes(e.key.toUpperCase()))||(e.ctrlKey&&e.key==='u')){e.preventDefault();e.stopPropagation()}});(function(){const d=()=>{const w=window.outerWidth-window.innerWidth;const h=window.outerHeight-window.innerHeight;if(w>160||h>160){document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#1F3A2D;background:#F6F1E7;text-align:center;padding:2rem;"><div><h1 style="font-size:1.5rem;margin-bottom:1rem;">Developer tools detected</h1><p style="color:#666;">Please close all developer tools and refresh the page.</p></div></div>'}};setInterval(d,1e3)})()`}} />
       </body>
     </html>
   );
