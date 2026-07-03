@@ -100,39 +100,18 @@ export default function NacionalSections() {
 
       <FinanceCalculator mode="service" data={nacionalPlans} title="Nacional Plan Pricing" />
 
-      <section className="py-20 bg-primary">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-4">Visit Nacional Memorial Homes</h2>
-              <div className="space-y-4 text-sm text-white/70">
-                <div>
-                  <p className="font-semibold text-gold mb-1">Address</p>
-                  <p>Nacional Memorial Homes</p>
-                  <p>Quezon City, Metro Manila</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gold mb-1">Contact</p>
-                  <p>Phone: 0917 884 1009</p>
-                  <p>Email: sales@heritageparktaguig.com</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gold mb-1">Hours</p>
-                  <p>Open daily, 6:00 AM – 6:00 PM</p>
-                </div>
-                <a href="/contact" className="inline-block mt-4 bg-gold text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-gold/90 transition-colors">Contact the Nacional Team</a>
-              </div>
-            </div>
-            <div className="aspect-square bg-primary-light rounded-lg flex items-center justify-center">
-              <div className="text-center text-white/20">
-                <svg className="w-24 h-24 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-sm">Nacional Memorial — Quezon City</p>
-              </div>
-            </div>
-          </div>
+      <section className="bg-primary">
+        <div className="w-full h-72 md:h-[400px]">
+          <iframe
+            src="https://www.google.com/maps?q=Nacional+Memorial+Homes+Quezon+City&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Nacional Memorial Homes Location"
+          />
         </div>
       </section>
     </>
