@@ -1,28 +1,21 @@
 const nacionalDisplayPlans = [
   {
     name: 'Cremation',
-    price: '₱74K range',
     features: ['Pickup service', 'Crematory Chapel', 'Basic Urn', 'Cremation certificate'],
   },
   {
     name: 'Cremation with Viewing',
-    price: '₱159K range',
     features: ['Pickup service', 'Regular Chapel (4D/3N)', 'Basic Urn', 'Wake coordination'],
   },
   {
     name: 'Viewing then Cremation',
-    price: '₱175K range',
     features: ['Pickup service', 'Preservation included', 'Regular Chapel (4D/3N)', 'Basic Urn + Presentation Casket'],
   },
   {
     name: 'Regular',
-    price: '₱175K range',
     features: ['Full pickup & preservation', 'Hearse service', 'Regular Chapel (4D/3N)', 'Metal Non-Gasketted Casket'],
   },
 ]
-
-import FinanceCalculator from '@/components/finance/FinanceCalculator'
-import { nacionalPlans } from '@/data/pricing'
 
 export default function NacionalSections() {
   return (
@@ -84,8 +77,7 @@ export default function NacionalSections() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {nacionalDisplayPlans.map((plan) => (
               <div key={plan.name} className="bg-cream rounded-lg p-6 border border-primary/5 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-primary mb-1">{plan.name}</h3>
-                <p className="text-2xl font-bold text-gold mb-5">{plan.price}</p>
+                <h3 className="text-lg font-bold text-primary mb-4">{plan.name}</h3>
                 <ul className="space-y-2.5 mb-6">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-xs text-primary/60">
@@ -102,8 +94,6 @@ export default function NacionalSections() {
           </div>
         </div>
       </section>
-
-      <FinanceCalculator mode="service" data={nacionalPlans} title="Nacional Plan Pricing" />
 
       <section className="py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4">
