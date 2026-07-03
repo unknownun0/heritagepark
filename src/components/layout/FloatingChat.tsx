@@ -48,15 +48,13 @@ export default function FloatingChat() {
     setMessage('')
   }
 
-  return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-      {open && (
-        <div className="bg-white rounded-2xl shadow-2xl w-80 overflow-hidden animate-slide-up border border-gray-100">
-          <div className="bg-primary px-5 py-4 text-white">
-            <p className="font-semibold text-sm">Chat with us</p>
-            <p className="text-xs text-white/80">We&apos;d love to hear from you</p>
-          </div>
-          <div className="p-4 space-y-3">
+  const panel = (
+    <div className="bg-white rounded-2xl shadow-2xl w-80 overflow-hidden animate-slide-up border border-gray-100">
+      <div className="bg-primary px-5 py-4 text-white">
+        <p className="font-semibold text-sm">Chat with us</p>
+        <p className="text-xs text-white/80">We&apos;d love to hear from you</p>
+      </div>
+      <div className="p-4 space-y-3">
             <input
               type="text"
               placeholder="Your name"
@@ -122,12 +120,45 @@ export default function FloatingChat() {
               ))}
             </div>
           </div>
-        </div>
+      </div>
+    </div>
+  )
+
+  return (
+    <>
+      {open && (
+        <>
+          <div className="fixed inset-0 z-50 bg-black/50 sm:hidden" onClick={() => setOpen(false)} />
+          <div className="sm:hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="w-full max-w-sm">
+              {panel}
+            </div>
+          </div>
+        </>
       )}
+
+      <div className="fixed bottom-6 right-6 z-50 hidden sm:flex flex-col items-end gap-3">
+        {open && panel}
+        <button
+          onClick={() => setOpen(!open)}
+          className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+          aria-label={open ? 'Close chat' : 'Contact us'}
+        >
+          {open ? (
+            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          )}
+        </button>
+      </div>
 
       <button
         onClick={() => setOpen(!open)}
-        className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+        className="sm:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
         aria-label={open ? 'Close chat' : 'Contact us'}
       >
         {open ? (
@@ -140,6 +171,6 @@ export default function FloatingChat() {
           </svg>
         )}
       </button>
-    </div>
+    </>
   )
 }
