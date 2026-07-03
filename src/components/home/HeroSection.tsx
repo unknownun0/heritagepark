@@ -3,7 +3,11 @@ import Link from 'next/link'
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row">
-      <div className="absolute inset-0 bg-[url(/videos/HERITAGEPARK-ezgif.com-video-to-gif-converter.gif)] bg-cover bg-center" />
+      <div className="absolute inset-0 overflow-hidden">
+        <video autoPlay muted loop playsInline poster="/images/chapel.jpg" className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/heritagepark_bg.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className="absolute inset-0 bg-primary/90 z-10" />
 
       <Link
