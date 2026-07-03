@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Modal from '@/components/ui/Modal'
 
 const channels = [
   { value: 'gmail', label: 'Gmail', icon: 'gmail' },
@@ -40,27 +41,33 @@ export default function ContactSections() {
   const [interest, setInterest] = useState('')
   const [message, setMessage] = useState('')
   const [contactTime, setContactTime] = useState('')
+  const [showConfirm, setShowConfirm] = useState(false)
+
+  const getChannelUrl = (ch: string, msg: string) => {
+    switch (ch) {
+      case 'gmail':
+        return `https://mail.google.com/mail/?view=cm&fs=1&to=sales@heritageparktaguig.com&su=Inquiry%20from%20${encodeURIComponent(name)}&body=${msg}`
+      case 'whatsapp':
+        return `https://wa.me/639178841009?text=${msg}`
+      case 'viber':
+        return `viber://pa?chatURI=heritagepark&text=${msg}`
+      case 'messenger':
+        return `https://m.me/heritageparktaguigph?text=${msg}`
+      default:
+        return '#'
+    }
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    setShowConfirm(true)
+  }
 
+  const handleProceed = () => {
     const intro = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AInterest: ${interest}%0APreferred Time: ${contactTime}%0A%0A`
     const fullMsg = `${intro}${message}`
-
-    switch (channel) {
-      case 'gmail':
-        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=sales@heritageparktaguig.com&su=Inquiry%20from%20${encodeURIComponent(name)}&body=${fullMsg}`, '_blank')
-        break
-      case 'whatsapp':
-        window.open(`https://wa.me/639178841009?text=${fullMsg}`, '_blank')
-        break
-      case 'viber':
-        window.open(`viber://pa?chatURI=heritagepark&text=${fullMsg}`, '_blank')
-        break
-      case 'messenger':
-        window.open(`https://m.me/heritageparktaguigph?text=${fullMsg}`, '_blank')
-        break
-    }
+    window.open(getChannelUrl(channel, fullMsg), '_blank')
+    setShowConfirm(false)
   }
 
   return (
@@ -233,6 +240,63 @@ export default function ContactSections() {
           </div>
         </div>
       </section>
+
+      <Modal open={showConfirm} onClose={() => setShowConfirm(false)} title="Confirm Your Inquiry">
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-cream rounded-lg p-3">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-wider mb-0.5">Name</p>
+              <p className="font-medium text-primary break-words">{name}</p>
+            </div>
+            <div className="bg-cream rounded-lg p-3">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-wider mb-0.5">Email</p>
+              <p className="font-medium text-primary break-words">{email}</p>
+            </div>
+            <div className="bg-cream rounded-lg p-3">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-wider mb-0.5">Phone</p>
+              <p className="font-medium text-primary break-words">{phone}</p>
+            </div>
+            <div className="bg-cream rounded-lg p-3">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-wider mb-0.5">Interest</p>
+              <p className="font-medium text-primary break-words">{interest}</p>
+            </div>
+            <div className="bg-cream rounded-lg p-3 sm:col-span-2">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-wider mb-0.5">Preferred Contact Time</p>
+              <p className="font-medium text-primary break-words">{contactTime}</p>
+            </div>
+            {message && (
+              <div className="bg-cream rounded-lg p-3 sm:col-span-2">
+                <p className="text-xs font-semibold text-primary/50 uppercase tracking-wider mb-0.5">Message</p>
+                <p className="font-medium text-primary break-words whitespace-pre-wrap">{message}</p>
+              </div>
+            )}
+          </div>
+
+          <div className="bg-gold/5 rounded-lg p-3 border border-gold/10">
+            <p className="text-xs font-semibold text-primary/50 uppercase tracking-wider mb-0.5">Sending via</p>
+            <p className="font-semibold text-gold text-sm capitalize">{channel}</p>
+          </div>
+
+          <p className="text-xs text-primary/60 italic">
+            You&apos;ll be redirected to {channel === 'gmail' ? 'Gmail' : channel === 'whatsapp' ? 'WhatsApp' : channel === 'viber' ? 'Viber' : 'Messenger'} to send your message. No data is stored on our server.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 pt-1">
+            <button
+              onClick={handleProceed}
+              className="flex-1 bg-gold text-primary font-semibold py-3 rounded-lg text-sm hover:bg-gold/90 transition-colors"
+            >
+              Proceed
+            </button>
+            <button
+              onClick={() => setShowConfirm(false)}
+              className="flex-1 bg-cream text-primary font-medium py-3 rounded-lg text-sm hover:bg-primary/5 transition-colors"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </Modal>
     </>
   )
 }
