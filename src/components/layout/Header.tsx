@@ -187,6 +187,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-primary/95 backdrop-blur shadow-sm`}
+        style={{ fontSize: 16 }}
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -239,7 +240,7 @@ export default function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-2.5 text-xs text-primary hover:bg-cream transition-colors border-b border-primary/5 last:border-0"
+                            className="block px-4 py-2.5 text-[12px] text-primary hover:bg-cream transition-colors border-b border-primary/5 last:border-0"
                             onClick={() => setActiveDropdown(null)}
                           >
                             {child.label}
