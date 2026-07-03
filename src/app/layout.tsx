@@ -57,6 +57,7 @@ export default function RootLayout({
         <Header />
         <ScrollToTop />
         <main className="flex-1">{children}</main>
+        <hr className="border-t border-primary/10" />
         <Footer />
         <FloatingChat />
       </body>
