@@ -99,7 +99,7 @@ export default function ServicePlans() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {chapels.map((chapel) => (
               <div key={chapel.name} className="bg-cream rounded-lg overflow-hidden">
-                <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(/images/chapels/${chapel.name.toLowerCase().replace(/\s+/g, '-')}-chapel.jpg)` }} />
+                <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(/images/chapels/${chapel.name.toLowerCase().replace(/\s+/g, '-')}.jpg)` }} />
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-primary mb-1">{chapel.name}</h3>
                   <p className="text-xs text-gold font-medium mb-3">{chapel.capacity}</p>
