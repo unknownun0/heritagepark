@@ -120,7 +120,6 @@ export default function FloatingChat() {
               ))}
             </div>
           </div>
-      </div>
     </div>
   )
 
