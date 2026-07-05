@@ -46,3 +46,15 @@ public/videos/*.avi
 next-env.d.ts
 
 .vercel
+
+# local database (sql.js)
+/data/*.db
+/data/*.db-wal
+/data/*.db-shm
+
+# uploaded media
+public/uploads/*
+!public/uploads/.gitkeep
+
+# corrupted build cache
+.next-corrupt/

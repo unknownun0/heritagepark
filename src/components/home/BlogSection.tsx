@@ -1,8 +1,40 @@
 import Link from 'next/link'
-import { getAllPosts, topicFilters } from '@/data/blog-posts'
+import { getAllPostsFromDb } from '@/lib/content'
+import { getAllPosts, topicFilters, BlogPost } from '@/data/blog-posts'
 
-export default function BlogSection() {
-  const allPosts = getAllPosts()
+async function getMergedPosts(): Promise<BlogPost[]> {
+  const staticPosts = getAllPosts()
+  try {
+    const dbPosts = await getAllPostsFromDb()
+    if (!dbPosts.length) return staticPosts
+    const merged: BlogPost[] = [...staticPosts]
+    for (const dbp of dbPosts) {
+      const idx = merged.findIndex((p) => p.slug === dbp.slug)
+      const post: BlogPost = {
+        slug: dbp.slug,
+        title: dbp.title,
+        excerpt: dbp.excerpt,
+        topicId: dbp.topic_id,
+        topic: dbp.topic,
+        lang: dbp.lang,
+        image: dbp.image || '/images/blog-planning.jpg',
+        readTime: dbp.read_time,
+        content: dbp.content ? dbp.content.split('\n\n').filter(Boolean) : [],
+        relatedSlugs: [],
+        featured: Boolean(dbp.featured),
+        fromDb: true,
+      }
+      if (idx >= 0) merged[idx] = post
+      else merged.push(post)
+    }
+    return merged
+  } catch {
+    return staticPosts
+  }
+}
+
+export default async function BlogSection() {
+  const allPosts = await getMergedPosts()
   const topics = topicFilters.filter(
     (t) => t.id !== 'all' && allPosts.some((p) => p.topicId === t.id)
   )

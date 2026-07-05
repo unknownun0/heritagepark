@@ -3,13 +3,15 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import { topicFilters, topicMap, getAllPosts } from '@/data/blog-posts'
+import { topicFilters, topicMap } from '@/data/blog-posts'
 import type { BlogPost } from '@/data/blog-posts'
 
 export default function LearnSections() {
   const searchParams = useSearchParams()
   const [activeTopic, setActiveTopic] = useState('All Topics')
   const [searchQuery, setSearchQuery] = useState('')
+  const [posts, setPosts] = useState<BlogPost[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const topicParam = searchParams.get('topic')
@@ -18,7 +20,13 @@ export default function LearnSections() {
     }
   }, [searchParams])
 
-  const posts = getAllPosts()
+  useEffect(() => {
+    fetch('/api/public/blog-posts')
+      .then((r) => r.json())
+      .then((data) => { if (Array.isArray(data)) setPosts(data) })
+      .catch(() => {})
+      .finally(() => setLoading(false))
+  }, [])
 
   const filtered = posts.filter((p) => {
     const matchTopic = activeTopic === 'All Topics' || p.topic === activeTopic
@@ -69,24 +77,30 @@ export default function LearnSections() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map((post) => (
-              <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
-                <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
-                  <div className="aspect-[16/9] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-                  <div className="p-5">
-                    <div className="mb-2">
-                      <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
+          {loading ? (
+            <div className="text-center py-16">
+              <p className="text-primary/40">Loading articles...</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map((post) => (
+                <Link key={post.slug} href={`/learn/${post.slug}`} className="group">
+                  <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
+                    <div className="aspect-[16/9] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
+                    <div className="p-5">
+                      <div className="mb-2">
+                        <span className="text-[10px] font-medium bg-primary/5 text-primary/60 px-2 py-0.5 rounded">{post.topic}</span>
+                      </div>
+                      <h3 className="text-sm font-semibold text-primary mb-1.5 group-hover:text-gold transition-colors">{post.title}</h3>
+                      <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>
                     </div>
-                    <h3 className="text-sm font-semibold text-primary mb-1.5 group-hover:text-gold transition-colors">{post.title}</h3>
-                    <p className="text-xs text-primary/60 leading-relaxed">{post.excerpt}</p>
-                  </div>
-                </article>
-              </Link>
-            ))}
-          </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          )}
 
-          {filtered.length === 0 && (
+          {!loading && filtered.length === 0 && (
             <div className="text-center py-16">
               <p className="text-primary/40 text-lg">No articles match your search.</p>
             </div>

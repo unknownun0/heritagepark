@@ -1,12 +1,20 @@
-export default function AboutSections() {
+import { getPageContent } from '@/lib/content'
+
+export default async function AboutSections() {
+  const subtitle = await getPageContent('about', 'subtitle', 'A Legacy of Dignity & Peace')
+  const heroDesc = await getPageContent('about', 'hero_desc', 'For generations, Heritage Park has stood as a sanctuary where families find comfort, beauty, and lasting remembrance.')
+  const storyTitle = await getPageContent('about', 'story_title', 'More Than a Cemetery — A Master-Planned Memorial Community')
+  const visionTitle = await getPageContent('about', 'vision_title', 'A Master-Planned Memorial Community')
+  const philosophyTitle = await getPageContent('about', 'philosophy_title', 'Guided by Education, Never Pressure')
+
   return (
     <>
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
         <div className="absolute inset-0 bg-[url(/images/about-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">About Heritage Park</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Legacy of Dignity &amp; Peace</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">For generations, Heritage Park has stood as a sanctuary where families find comfort, beauty, and lasting remembrance.</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{subtitle}</h1>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">{heroDesc}</p>
         </div>
       </section>
 
@@ -14,7 +22,7 @@ export default function AboutSections() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Our Story</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">More Than a Cemetery — A Master-Planned Memorial Community</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">{storyTitle}</h2>
           </div>
           <div className="space-y-6 text-primary/70 leading-relaxed">
             <p>
@@ -40,7 +48,7 @@ export default function AboutSections() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Our Vision</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">A Master-Planned Memorial Community</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">{visionTitle}</h2>
           </div>
           <div className="text-primary/60 text-sm leading-relaxed space-y-5 max-w-3xl mx-auto">
             <p>
@@ -60,7 +68,7 @@ export default function AboutSections() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Our Philosophy</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">Guided by Education, Never Pressure</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">{philosophyTitle}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-white rounded-lg p-8 border border-primary/5">

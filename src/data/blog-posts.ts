@@ -4,12 +4,13 @@ export interface BlogPost {
   excerpt: string
   topicId: string
   topic: string
-  lang: 'EN'
+  lang: 'EN' | string
   image: string
   readTime: string
   content: string[]
   relatedSlugs: string[]
   featured?: boolean
+  fromDb?: boolean
 }
 
 export const topicFilters: { id: string; label: string }[] = [

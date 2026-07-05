@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { getPageContent } from '@/lib/content'
 
 const quickLinks = [
   { label: 'Plan Ahead', href: '/plan-ahead' },
@@ -11,8 +12,8 @@ const quickLinks = [
 ]
 
 const legalLinks = [
-  { label: 'Terms of Service', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: 'Terms of Service', href: '/terms-of-use' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'FAQs', href: '/faqs' },
 ]
 
@@ -34,7 +35,11 @@ const socialLinks = [
   },
 ]
 
-export default function Footer() {
+export default async function Footer() {
+  const address = await getPageContent('footer', 'address', 'Heritage Park, Quezon City, Philippines')
+  const phone = await getPageContent('contact', 'phone', '0917 884 1009')
+  const email = await getPageContent('contact', 'email', 'sales@heritageparktaguig.com')
+
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 py-16">
@@ -85,14 +90,12 @@ export default function Footer() {
           <div>
             <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
             <div className="space-y-3 text-sm text-white/70">
-              <p>Heritage Park Memorial</p>
-              <p>Lawton Ave, Taguig</p>
-              <p>Metro Manila, Philippines</p>
+              <p>{address}</p>
               <p className="pt-2">
-                <a href="tel:+639178841009" className="text-gold hover:text-gold/80 transition-colors">0917 884 1009</a>
+                <a href={`tel:${phone}`} className="text-gold hover:text-gold/80 transition-colors">{phone}</a>
               </p>
               <p>
-                <a href="mailto:sales@heritageparktaguig.com" className="text-gold hover:text-gold/80 transition-colors">sales@heritageparktaguig.com</a>
+                <a href={`mailto:${email}`} className="text-gold hover:text-gold/80 transition-colors">{email}</a>
               </p>
               <div className="pt-2">
                 <p className="font-semibold text-white/90 text-xs">Office Hours</p>
