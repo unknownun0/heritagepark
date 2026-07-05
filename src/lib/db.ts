@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const DB_PATH = path.join(process.cwd(), "data", "heritagepark.db");
+const IS_VERCEL = !!process.env.VERCEL;
 
 let db: SqlJsDatabase | null = null;
 
@@ -56,10 +57,45 @@ function createSchema(db: SqlJsDatabase) {
   `);
 }
 
+async function seedDefaults(db: SqlJsDatabase) {
+  const existing = db.exec("SELECT id FROM admins LIMIT 1");
+  if (existing.length && existing[0].values.length) return;
+
+  const { hashPassword } = await import("./auth");
+  const password = await hashPassword("admin123");
+  db.run("INSERT INTO admins (username, email, password) VALUES (?, ?, ?)", ["admin", "admin@heritagepark.com", password]);
+
+  const defaults: [string, string, string, string][] = [
+    ["home", "hero_title", "A Place Worth Planning For", "text"],
+    ["home", "hero_subtitle", "Plan ahead with dignity and peace of mind.", "text"],
+    ["home", "hero_left_label", "Planning for the Future", "text"],
+    ["home", "hero_right_label", "We Need Help Now", "text"],
+    ["about", "title", "About Heritage Park", "text"],
+    ["contact", "email", "sales@heritageparktaguig.com", "text"],
+    ["contact", "phone", "0917 884 1009", "text"],
+    ["footer", "address", "Heritage Park, Quezon City, Philippines", "text"],
+  ];
+  for (const [page, key, value, type] of defaults) {
+    db.run("INSERT OR IGNORE INTO page_contents (page_name, section_key, content_value, content_type) VALUES (?, ?, ?, ?)", [page, key, value, type]);
+  }
+}
+
 export async function getDb(): Promise<SqlJsDatabase> {
   if (db) return db;
 
-  const SQL = await initSqlJs();
+  const SQL = await initSqlJs({
+    locateFile: (file: string) => {
+      if (IS_VERCEL) return `/wasm/${file}`;
+      return path.join(process.cwd(), "node_modules", "sql.js", "dist", file);
+    },
+  });
+
+  if (IS_VERCEL) {
+    db = new SQL.Database();
+    createSchema(db);
+    await seedDefaults(db);
+    return db;
+  }
 
   const dir = path.dirname(DB_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -72,17 +108,14 @@ export async function getDb(): Promise<SqlJsDatabase> {
   }
 
   createSchema(db);
+  await seedDefaults(db);
   saveDb();
   return db;
 }
 
 export function saveDb() {
-  if (!db) return;
+  if (!db || IS_VERCEL) return;
   const data = db.export();
   const buffer = Buffer.from(data);
   fs.writeFileSync(DB_PATH, buffer);
-}
-
-export function closeDb() {
-  if (db) { db.close(); db = null; }
 }
