@@ -1,6 +1,5 @@
-'use client'
-
 import Link from 'next/link'
+import BlogSection from './BlogSection'
 
 const values = [
   {
@@ -87,6 +86,8 @@ export default function HomeSections() {
         </Link>
       </section>
 
+      <BlogSection />
+
       {/* Value Proposition: Why families choose us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -138,7 +139,7 @@ export default function HomeSections() {
           <p className="text-white/60 text-sm mb-8 max-w-xl mx-auto">
             A gentle introduction to pre-need memorial planning, written for Filipino families who want to prepare with confidence.
           </p>
-          <form className="max-w-lg mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="max-w-lg mx-auto space-y-4">
             <input
               type="text"
               placeholder="Your full name"
