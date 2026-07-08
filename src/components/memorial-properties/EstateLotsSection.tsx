@@ -51,7 +51,7 @@ export default function EstateLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Capacity</h3>
-                <p className="text-sm text-primary/70">Designed to accommodate <strong>32 full-body interments</strong> plus <strong>2 above-ground crypts</strong>, ensuring space for generations to come.</p>
+                <p className="text-sm text-primary/70">Designed to accommodate <strong>32 full-body interments</strong> plus <strong>2 aboveground crypts</strong>, ensuring space for generations to come.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">

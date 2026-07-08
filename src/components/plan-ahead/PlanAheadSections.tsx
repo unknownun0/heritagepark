@@ -22,7 +22,7 @@ const benefits = [
 ]
 
 const steps = [
-  { num: '01', title: 'Understand', desc: 'Learn how pre-need memorial planning works and why Filipino families are choosing to plan ahead.' },
+  { num: '01', title: 'Understand', desc: 'Learn how preneed memorial planning works and why Filipino families are choosing to plan ahead.' },
   { num: '02', title: 'Learn', desc: 'Explore our properties, services, and payment options at your own pace no obligation.' },
   { num: '03', title: 'Visit', desc: 'Tour Heritage Park with a consultant. See the grounds, chapels, and memorial spaces firsthand.' },
   { num: '04', title: 'Decide', desc: 'When you\'re ready, choose a plan that fits your family. We\'ll be with you every step of the way.' },
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: 'Will my family actually need this?',
-    a: 'Every family will eventually face this moment. A pre-need plan means your family can focus on honoring your life rather than scrambling for arrangements. It\'s a gift of time, clarity, and peace.',
+    a: 'Every family will eventually face this moment. A preneed plan means your family can focus on honoring your life rather than scrambling for arrangements. It\'s a gift of time, clarity, and peace.',
   },
   {
     q: 'What happens if I can\'t finish payments?',
@@ -113,7 +113,7 @@ export default function PlanAheadSections() {
           <div className="text-primary/60 text-sm leading-relaxed space-y-4 max-w-2xl mx-auto">
             <p>
               We understand that cost is an important consideration for every family. At Heritage Park, we believe in 
-              complete transparency no hidden fees, no surprise charges. Our pre-need plans are designed to offer 
+              complete transparency no hidden fees, no surprise charges. Our preneed plans are designed to offer 
               exceptional value, locking in today&apos;s prices so your family is protected from future increases.
             </p>
             <p>

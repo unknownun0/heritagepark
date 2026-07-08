@@ -3,7 +3,7 @@ import { getPageContent } from '@/lib/content'
 
 export default async function HeroSection() {
   const leftLabel = await getPageContent('home', 'hero_left_label', 'Planning for the Future')
-  const leftDesc = await getPageContent('home', 'hero_left_desc', 'Give your family the gift of preparation. A pre-need memorial plan locks in today\'s prices and ensures your wishes are honored with dignity.')
+  const leftDesc = await getPageContent('home', 'hero_left_desc', 'Give your family the gift of preparation. A preneed memorial plan locks in today\'s prices and ensures your wishes are honored with dignity.')
   const leftBtn = await getPageContent('home', 'hero_left_btn', 'Explore Plan Ahead')
   const leftHref = await getPageContent('home', 'hero_left_href', '/plan-ahead')
   const rightLabel = await getPageContent('home', 'hero_right_label', 'We Need Help Now')

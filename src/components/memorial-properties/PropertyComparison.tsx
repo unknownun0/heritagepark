@@ -25,7 +25,7 @@ const cards = [
   {
     name: 'Memory Place',
     href: '/memorial-properties/memory-place',
-    desc: 'An above-ground solution that combines dignity with structure. Memory Place offers beautifully designed crypts for families who prefer a vertical memorial.',
+    desc: 'An aboveground solution that combines dignity with structure. Memory Place offers beautifully designed crypts for families who prefer a vertical memorial.',
     image: '/images/memory-place-hero.jpg',
   },
 ]
@@ -34,7 +34,7 @@ const tableRows = [
   { property: 'Lawn Lot', size: '2.44 sqm', capacity: '2 full body / 8 cremains', bestFor: 'First-time planners, young families' },
   { property: 'Garden Lot', size: '19.52 sqm', capacity: '16 full body / 64 cremains', bestFor: 'Multi-generational families' },
   { property: 'Estate Lot', size: '39.04 sqm', capacity: '32 full body + crypts', bestFor: 'Private mausoleum, ultimate legacy' },
-  { property: 'Memory Place', size: '19.52 sqm', capacity: '22 total burials', bestFor: 'Above-ground crypts, structured solution' },
+  { property: 'Memory Place', size: '19.52 sqm', capacity: '22 total burials', bestFor: 'aboveground crypts, structured solution' },
 ]
 
 export default function PropertyComparison() {
@@ -86,7 +86,7 @@ export default function PropertyComparison() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Side-by-Side Comparison</p>
+            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">sidebyside Comparison</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Find What Fits Your Family</h2>
           </div>
           <div className="overflow-x-auto">

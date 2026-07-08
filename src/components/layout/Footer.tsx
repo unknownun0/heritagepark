@@ -58,7 +58,7 @@ export default async function Footer() {
             </div>
             <p className="text-sm text-white/70 leading-relaxed">
               For generations, Heritage Park has been a sanctuary of peace, beauty, and remembrance.
-              As a master-planned memorial community, we are committed to providing Filipino families
+              As a masterplanned memorial community, we are committed to providing Filipino families
               with dignified, compassionate memorial solutions in an environment of natural splendor.
             </p>
           </div>

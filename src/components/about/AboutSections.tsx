@@ -3,8 +3,8 @@ import { getPageContent } from '@/lib/content'
 export default async function AboutSections() {
   const subtitle = await getPageContent('about', 'subtitle', 'A Legacy of Dignity & Peace')
   const heroDesc = await getPageContent('about', 'hero_desc', 'For generations, Heritage Park has stood as a sanctuary where families find comfort, beauty, and lasting remembrance.')
-  const storyTitle = await getPageContent('about', 'story_title', 'More Than a Cemetery A Master-Planned Memorial Community')
-  const visionTitle = await getPageContent('about', 'vision_title', 'A Master-Planned Memorial Community')
+  const storyTitle = await getPageContent('about', 'story_title', 'More Than a Cemetery A masterplanned Memorial Community')
+  const visionTitle = await getPageContent('about', 'vision_title', 'A masterplanned Memorial Community')
   const philosophyTitle = await getPageContent('about', 'philosophy_title', 'Guided by Education, Never Pressure')
 
   return (
@@ -31,7 +31,7 @@ export default async function AboutSections() {
               planned with the intention of creating a space that honors life while offering solace to those who visit.
             </p>
             <p>
-              Unlike traditional cemeteries, Heritage Park is a master-planned memorial park. Wide landscaped avenues,
+              Unlike traditional cemeteries, Heritage Park is a masterplanned memorial park. Wide landscaped avenues,
               serene water features, and meticulously maintained gardens set the tone for a place that feels more like a
               botanical park than a burial ground. Families are invited to walk, reflect, and connect with their heritage
               in an environment of lasting beauty.
@@ -52,7 +52,7 @@ export default async function AboutSections() {
           </div>
           <div className="text-primary/60 text-sm leading-relaxed space-y-5 max-w-3xl mx-auto">
             <p>
-              Heritage Park was designed from the ground up as a master-planned memorial community not a traditional cemetery. Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
+              Heritage Park was designed from the ground up as a masterplanned memorial community not a traditional cemetery. Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
             </p>
             <p>
               The park is organized into distinct sections connected by a network of paved roads and walking paths. Landscaped gardens with indigenous flowering trees provide shade and color throughout the year. Each zone has its own character from the open lawns of the Garden lots to the intimate garden settings of our estate areas.

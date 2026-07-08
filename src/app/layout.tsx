@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "plan ahead",
     "memorial lots",
     "memorial services",
-    "pre-need plan",
+    "preneed plan",
     "Philippines",
   ],
 };

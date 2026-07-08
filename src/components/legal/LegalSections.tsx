@@ -57,7 +57,7 @@ const termsContent = {
     },
     {
       heading: 'Payments and Installment Plans',
-      body: 'Payment terms for memorial properties and pre-need plans are governed by the specific contract entered into between the client and Heritage Park. All payments are subject to the terms outlined in the plan agreement, including schedule, interest rates (if any), and penalties for late or missed payments. Full payment of the plan ensures delivery of the contracted services and properties. Pre-need plans are trust-funded in accordance with Insurance Commission regulations.',
+      body: 'Payment terms for memorial properties and preneed plans are governed by the specific contract entered into between the client and Heritage Park. All payments are subject to the terms outlined in the plan agreement, including schedule, interest rates (if any), and penalties for late or missed payments. Full payment of the plan ensures delivery of the contracted services and properties. preneed plans are trust-funded in accordance with Insurance Commission regulations.',
     },
     {
       heading: 'Limitations of Liability',

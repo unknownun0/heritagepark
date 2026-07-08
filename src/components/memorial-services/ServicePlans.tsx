@@ -16,7 +16,7 @@ const planFamilies = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
       </svg>
     ),
-    desc: 'Burial and cremains interment services for Heritage Park lots. Choose between first-depth or second-depth placement with appropriate vaulting for lasting peace of mind.',
+    desc: 'Burial and cremains interment services for Heritage Park lots. Choose between firstdepth or seconddepth placement with appropriate vaulting for lasting peace of mind.',
     href: '/memorial-services/interment-plans',
   },
   {
@@ -45,7 +45,7 @@ const chapels = [
   {
     name: 'Crematory Chapel',
     capacity: '20 30 guests',
-    features: ['On-site crematory', 'Private viewing area', 'Direct cremation access'],
+    features: ['onsite crematory', 'Private viewing area', 'Direct cremation access'],
   },
 ]
 

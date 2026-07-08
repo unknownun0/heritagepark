@@ -20,7 +20,7 @@ const nacionalDisplayPlans = [
   {
     name: 'Regular',
     image: '/images/regular-plan.jpg',
-    features: ['Full pickup & preservation', 'Hearse service', 'Regular Chapel (4D/3N)', 'Metal Non-Gasketted Casket'],
+    features: ['Full pickup & preservation', 'Hearse service', 'Regular Chapel (4D/3N)', 'Metal nongasketted Casket'],
     href: '/contact',
   },
 ]

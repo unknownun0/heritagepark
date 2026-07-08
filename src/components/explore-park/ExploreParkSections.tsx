@@ -55,7 +55,7 @@ export default function ExploreParkSections() {
             Discover a Place of Uncommon Beauty
           </h1>
           <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
-            Heritage Park is a master-planned memorial community acres of landscaped gardens, modern sanctuaries, and peaceful spaces designed for reflection and remembrance.
+            Heritage Park is a masterplanned memorial community acres of landscaped gardens, modern sanctuaries, and peaceful spaces designed for reflection and remembrance.
           </p>
         </div>
       </section>
@@ -98,11 +98,11 @@ export default function ExploreParkSections() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Our Vision</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">A Master-Planned Memorial Community</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">A masterplanned Memorial Community</h2>
           </div>
           <div className="text-primary/60 text-sm leading-relaxed space-y-5 max-w-3xl mx-auto">
             <p>
-              Heritage Park was designed from the ground up as a master-planned memorial community not a traditional cemetery. 
+              Heritage Park was designed from the ground up as a masterplanned memorial community not a traditional cemetery. 
               Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
             </p>
             <p>

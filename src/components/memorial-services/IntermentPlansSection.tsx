@@ -79,7 +79,7 @@ export default function IntermentPlansSection() {
           <div className="bg-cream rounded-lg p-6 text-sm text-primary/70 space-y-3 leading-relaxed">
             <p><strong className="text-primary">First depth</strong> is the upper burial level in a memorial lot. It is typically used for the first interment and allows for a second interment below.</p>
             <p><strong className="text-primary">Second depth</strong> is the lower burial level. It may be used for a subsequent family member or chosen from the start for specific planning needs.</p>
-            <p>Both depths provide the same structural integrity and perpetual care. Your consultant will help you decide which arrangement best serves your family's long-term plans.</p>
+            <p>Both depths provide the same structural integrity and perpetual care. Your consultant will help you decide which arrangement best serves your family's longterm plans.</p>
           </div>
         </div>
       </section>

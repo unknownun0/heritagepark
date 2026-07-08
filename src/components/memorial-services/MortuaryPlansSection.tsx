@@ -17,12 +17,12 @@ const mortuaryDisplayPlans = [
   {
     name: 'Regular',
     priceRange: 'From ₱426K',
-    features: ['Full pickup & preservation', 'Hearse service', 'Regular Chapel (4D/3N)', 'Metal Non-Gasketted Casket'],
+    features: ['Full pickup & preservation', 'Hearse service', 'Regular Chapel (4D/3N)', 'Metal nongasketted Casket'],
   },
   {
     name: 'Premier',
     priceRange: 'From ₱426K',
-    features: ['Full pickup & preservation', 'Hearse service', 'Premier Chapel (4D/3N)', 'Metal Non-Gasketted Casket'],
+    features: ['Full pickup & preservation', 'Hearse service', 'Premier Chapel (4D/3N)', 'Metal nongasketted Casket'],
   },
 ]
 

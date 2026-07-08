@@ -29,7 +29,7 @@ const parkPreviews = [
 ]
 
 const properties = [
-  { title: 'Lawn Lots', desc: 'Affordable, well-maintained lawn plots in peaceful garden settings.', href: '/memorial-properties', image: '/images/lawn-lot-hero.jpg' },
+  { title: 'Lawn Lots', desc: 'Affordable, wellmaintained lawn plots in peaceful garden settings.', href: '/memorial-properties', image: '/images/lawn-lot-hero.jpg' },
   { title: 'Garden Lots', desc: 'Premium garden plots with landscaping and personalization options.', href: '/memorial-properties', image: '/images/garden-lot-hero.jpg' },
   { title: 'Estate Lots', desc: 'Spacious estate-sized lots for families who want room to honor.', href: '/memorial-properties', image: '/images/estate-lot-hero.jpg' },
   { title: 'Memory Place', desc: 'Indoor columbary niches in the elegant Aeternum sanctuary.', href: '/aeternum', image: '/images/memory-place-hero.jpg' },
@@ -119,7 +119,7 @@ export default function HomeSections() {
             Get Your Free Heritage Park Family Planning Guide
           </h2>
           <p className="text-white/60 text-sm mb-8 max-w-xl mx-auto">
-            A gentle introduction to pre-need memorial planning written for Filipino families who want to prepare with confidence.
+            A gentle introduction to preneed memorial planning written for Filipino families who want to prepare with confidence.
           </p>
           <form className="max-w-lg mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
             <input
@@ -160,7 +160,7 @@ export default function HomeSections() {
       <section className="py-20 bg-cream">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-            Ready to talk? Book a private, no-pressure consultation.
+            Ready to talk? Book a private, nopressure consultation.
           </h2>
           <Link
             href="/contact"

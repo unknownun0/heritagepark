@@ -59,7 +59,7 @@ export default function LawnLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size</h3>
-                <p className="text-sm text-primary/70">1.00m �- 2.44m (2.44 sqm) a single interment lot in a well-maintained lawn setting.</p>
+                <p className="text-sm text-primary/70">1.00m �- 2.44m (2.44 sqm) a single interment lot in a wellmaintained lawn setting.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">

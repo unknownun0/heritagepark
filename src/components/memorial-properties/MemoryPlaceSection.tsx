@@ -17,10 +17,10 @@ export default function MemoryPlaceSection() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Who It&apos;s For</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">Above-Ground Elegance</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">aboveground Elegance</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-            <p>Memory Place is for families who prefer an <strong>above-ground memorial</strong> a structured, dignified solution that offers easy access and a clear sense of place. It combines the privacy of individual crypts with the beauty of a shared memorial structure.</p>
+            <p>Memory Place is for families who prefer an <strong>aboveground memorial</strong> a structured, dignified solution that offers easy access and a clear sense of place. It combines the privacy of individual crypts with the beauty of a shared memorial structure.</p>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function MemoryPlaceSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size</h3>
-                <p className="text-sm text-primary/70"><strong>8 plots</strong> within a 4.00m �- 4.88m (19.52 sqm) area, designed specifically for above-ground crypt structures.</p>
+                <p className="text-sm text-primary/70"><strong>8 plots</strong> within a 4.00m �- 4.88m (19.52 sqm) area, designed specifically for aboveground crypt structures.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
@@ -62,7 +62,7 @@ export default function MemoryPlaceSection() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Flexible Payment Options</h2>
           <p className="text-primary/70 text-base leading-relaxed">
-            Memory Place offers a distinct payment structure designed for your convenience. Enjoy <strong>0% interest on a 1-year term</strong>, making it easier to secure your family&apos;s above-ground memorial without financial strain. Contact our team for full details on terms and conditions.
+            Memory Place offers a distinct payment structure designed for your convenience. Enjoy <strong>0% interest on a 1-year term</strong>, making it easier to secure your family&apos;s aboveground memorial without financial strain. Contact our team for full details on terms and conditions.
           </p>
         </div>
       </section>

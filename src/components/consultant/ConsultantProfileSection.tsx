@@ -2,7 +2,7 @@ const expertise = [
   'Family Planning',
   'OFW Clients',
   'Estate Lots',
-  'Pre-Need Plans',
+  'preneed Plans',
   'Garden & Lawn Lots',
   'Memorial Services Bundling',
 ]

@@ -4,14 +4,14 @@ const categories = [
     questions: [
       { q: 'Isn\u2019t this something I should think about later?', a: 'Many families wish they had planned sooner. Planning ahead locks in today\u2019s prices, spares your loved ones from difficult decisions during grief, and ensures your wishes are honored exactly as you envisioned.' },
       { q: 'What\u2019s actually included with a lot?', a: 'Each memorial lot includes the land itself, perpetual care, and access to all park amenities. Additional services such as interment, markers, and chapel use can be bundled with your purchase.' },
-      { q: 'Why do I need a pre-need plan with my lot?', a: 'A pre-need plan guarantees that the services you want will be available at today\u2019s rates. It also ensures your family will not face unexpected expenses or difficult decisions at the time of need.' },
+      { q: 'Why do I need a preneed plan with my lot?', a: 'A preneed plan guarantees that the services you want will be available at today\u2019s rates. It also ensures your family will not face unexpected expenses or difficult decisions at the time of need.' },
     ],
   },
   {
     title: 'Memorial Properties',
     questions: [
       { q: 'Can I visit before deciding?', a: 'Absolutely. We encourage all families to visit Heritage Park in person. Our consultants are happy to give you a guided tour so you can experience the park\u2019s beauty and serenity firsthand.' },
-      { q: 'What happens if I move abroad?', a: 'Your lot and pre-need plan remain fully valid. All arrangements can be managed remotely, and we assist families from anywhere in the world with coordination and transfers if needed.' },
+      { q: 'What happens if I move abroad?', a: 'Your lot and preneed plan remain fully valid. All arrangements can be managed remotely, and we assist families from anywhere in the world with coordination and transfers if needed.' },
       { q: 'Are payment plans available?', a: 'Yes. We offer flexible, zero-interest installment plans designed to fit your budget. Our consultants will work with you to find a plan that works for your family.' },
     ],
   },
@@ -26,7 +26,7 @@ const categories = [
     title: 'Memorial Services',
     questions: [
       { q: 'What services are available?', a: 'We offer a full range of memorial services including cremation, traditional viewing and wake, chapel services, and complete burial arrangements. Every service can be customized.' },
-      { q: 'Can I bundle with my lot purchase?', a: 'Yes. Bundling your memorial lot with pre-arranged services is the most cost-effective approach. Our consultants will help you build a package that fits your needs and budget.' },
+      { q: 'Can I bundle with my lot purchase?', a: 'Yes. Bundling your memorial lot with pre-arranged services is the most costeffective approach. Our consultants will help you build a package that fits your needs and budget.' },
     ],
   },
   {
