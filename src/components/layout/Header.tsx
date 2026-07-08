@@ -101,7 +101,7 @@ export default function Header() {
   const closeDropdown = useCallback(() => setOpenDropdown(null), [])
 
   const navLinkClass = (isActive: boolean) =>
-    `px-2.5 py-3 text-[11px] font-semibold tracking-wider uppercase border-b-2 transition-all duration-200 ${
+    `px-2.5 py-3 text-[13px] font-semibold tracking-wider uppercase border-b-2 transition-all duration-200 ${
       isActive
         ? 'text-white border-gold'
         : 'text-white/70 border-transparent hover:text-white hover:border-gold/50'
