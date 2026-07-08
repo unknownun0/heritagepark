@@ -101,7 +101,7 @@ export default function Header() {
   const closeDropdown = useCallback(() => setOpenDropdown(null), [])
 
   const navLinkClass = (isActive: boolean) =>
-    `px-1.5 py-3 text-[11px] font-semibold tracking-wide uppercase border-b-2 transition-all duration-200 ${
+    `px-2.5 py-3 text-[11px] font-semibold tracking-wider uppercase border-b-2 transition-all duration-200 ${
       isActive
         ? 'text-white border-gold'
         : 'text-white/70 border-transparent hover:text-white hover:border-gold/50'
@@ -126,7 +126,7 @@ export default function Header() {
               />
             </Link>
 
-            <nav className="hidden lg:flex flex-1 items-center justify-start ml-2 gap-0">
+            <nav className="hidden lg:flex flex-1 items-center justify-center gap-0.5">
               {navItems.map((item) => {
                 const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
                 const hasChildren = item.children && item.children.length > 0
