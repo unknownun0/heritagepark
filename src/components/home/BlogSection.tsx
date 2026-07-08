@@ -1,111 +1,55 @@
 import Link from 'next/link'
-import { getAllPostsFromDb } from '@/lib/content'
-import { getAllPosts, topicFilters, BlogPost } from '@/data/blog-posts'
 
-async function getMergedPosts(): Promise<BlogPost[]> {
-  const staticPosts = getAllPosts()
-  try {
-    const dbPosts = await getAllPostsFromDb()
-    if (!dbPosts.length) return staticPosts
-    const merged: BlogPost[] = [...staticPosts]
-    for (const dbp of dbPosts) {
-      const idx = merged.findIndex((p) => p.slug === dbp.slug)
-      const post: BlogPost = {
-        slug: dbp.slug,
-        title: dbp.title,
-        excerpt: dbp.excerpt,
-        topicId: dbp.topic_id,
-        topic: dbp.topic,
-        lang: dbp.lang,
-        image: dbp.image || '/images/blog-planning.jpg',
-        readTime: dbp.read_time,
-        content: dbp.content ? dbp.content.split('\n\n').filter(Boolean) : [],
-        relatedSlugs: [],
-        featured: Boolean(dbp.featured),
-        fromDb: true,
-      }
-      if (idx >= 0) merged[idx] = post
-      else merged.push(post)
-    }
-    return merged
-  } catch {
-    return staticPosts
-  }
-}
+const topics = [
+  {
+    title: 'Planning Ahead',
+    description: 'Learn why planning ahead gives you peace of mind, locks in today\'s pricing, and spares your loved ones from difficult decisions during a time of grief.',
+    href: '/learn?topic=planning-basics',
+    image: '/images/blog-planning.jpg',
+  },
+  {
+    title: 'Understanding Memorial Options',
+    description: 'Explore the differences between burial and cremation, memorial properties, service plans, and payment options so you can make an informed choice.',
+    href: '/learn?topic=costs-payment',
+    image: '/images/chapel.jpg',
+  },
+  {
+    title: 'Filipino Traditions & Grief Support',
+    description: 'Discover how Filipino cultural traditions shape the way we remember our loved ones, and find resources to support your family through grief.',
+    href: '/learn?topic=culture-tradition',
+    image: '/images/gardens.jpg',
+  },
+]
 
-export default async function BlogSection() {
-  const allPosts = await getMergedPosts()
-  const topics = topicFilters.filter(
-    (t) => t.id !== 'all' && allPosts.some((p) => p.topicId === t.id)
-  )
-
+export default function BlogSection() {
   return (
     <section className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase">Educational</p>
+          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase">Guidance</p>
           <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2">Answers, Before You Need Them.</h2>
           <p className="text-primary/60 max-w-2xl mx-auto mt-3">Knowledge is comfort. Explore our library of helpful guides written with your family&apos;s peace of mind in mind.</p>
         </div>
 
-        {topics.map((topic) => {
-          const posts = allPosts.filter((p) => p.topicId === topic.id)
-          const featured = posts.filter((p) => p.featured)
-          const others = posts.filter((p) => !p.featured)
-
-          return (
-            <div key={topic.id} className="mb-16 last:mb-0">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <span className="w-1 h-6 bg-gold rounded-full" />
-                  <h3 className="text-3xl font-bold text-primary">{topic.label}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {topics.map((topic) => (
+            <Link key={topic.title} href={topic.href} className="group block">
+              <article className="bg-white rounded-lg overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${topic.image})` }} />
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-primary mb-3 group-hover:text-gold transition-colors">{topic.title}</h3>
+                  <p className="text-sm text-primary/60 leading-relaxed">{topic.description}</p>
                 </div>
-                <Link
-                  href={`/learn?topic=${topic.id}`}
-                  className="text-primary/50 text-sm hover:text-gold transition-colors"
-                >
-                  View All &rarr;
-                </Link>
-              </div>
+              </article>
+            </Link>
+          ))}
+        </div>
 
-              {featured.map((post) => (
-                <div key={post.slug}>
-                  <Link href={`/learn/${post.slug}`} className="block group">
-                    <article className="grid grid-cols-2 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow">
-                      <div className="min-h-[240px] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-                      <div className="py-5 px-5">
-                        <span className="bg-gold text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-2">Featured</span>
-                        <h4 className="text-sm font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{post.title}</h4>
-                        <p className="text-xs text-primary/60 leading-relaxed line-clamp-2">{post.excerpt}</p>
-                      </div>
-                    </article>
-                  </Link>
-                  <hr className="my-4 border-primary/10" />
-                </div>
-              ))}
-
-              {others.length > 0 && (
-                <div className="space-y-3">
-                  {others.map((post) => (
-                    <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
-                      {post.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-
-              {featured.length === 0 && others.length === 0 && posts.length > 0 && (
-                <div className="space-y-3">
-                  {posts.map((post) => (
-                    <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
-                      {post.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          )
-        })}
+        <div className="text-center mt-10">
+          <Link href="/learn" className="text-primary font-semibold text-sm underline underline-offset-4 hover:text-gold transition-colors">
+            View All Guides &rarr;
+          </Link>
+        </div>
       </div>
     </section>
   )
