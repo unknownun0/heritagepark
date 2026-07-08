@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import MobileMenu from './MobileMenu'
 
 interface NavItem {
@@ -78,22 +78,14 @@ const mobileLinks = [
   ...navItems.map((item) => ({ label: item.label === '__' ? 'Learn' : item.label, href: item.href })),
 ]
 
-function isTouchDevice() {
-  if (typeof window === 'undefined') return false
-  return 'ontouchstart' in window || navigator.maxTouchPoints > 0
-}
-
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const pathname = usePathname()
-  const router = useRouter()
   const headerRef = useRef<HTMLDivElement>(null)
-  const touchCount = useRef<Map<string, number>>(new Map())
 
   useEffect(() => {
     setMobileOpen(false)
-    setOpenDropdown(null)
   }, [pathname])
 
   useEffect(() => {
@@ -107,23 +99,6 @@ export default function Header() {
   }, [])
 
   const closeDropdown = useCallback(() => setOpenDropdown(null), [])
-
-  const handleParentClick = useCallback((e: React.MouseEvent, item: NavItem) => {
-    if (!item.children?.length) return
-
-    if (isTouchDevice()) {
-      const key = item.key
-      const current = touchCount.current.get(key) || 0
-      if (current === 0) {
-        e.preventDefault()
-        setOpenDropdown(key)
-        touchCount.current.set(key, 1)
-        setTimeout(() => touchCount.current.set(key, 0), 500)
-      } else {
-        touchCount.current.set(key, 0)
-      }
-    }
-  }, [])
 
   const navLinkClass = (isActive: boolean) =>
     `px-1.5 py-3 text-[11px] font-semibold tracking-wide uppercase border-b-2 transition-all duration-200 ${
@@ -155,19 +130,19 @@ export default function Header() {
               {navItems.map((item) => {
                 const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
                 const hasChildren = item.children && item.children.length > 0
-                const isOpen = openDropdown === item.key
+                const isOpen = openDropdown === item.key || (hasChildren && isActive)
 
                 return (
                   <div
                     key={item.key}
                     className="relative"
-                    onMouseEnter={() => { if (!isTouchDevice()) setOpenDropdown(item.key) }}
-                    onMouseLeave={() => { if (!isTouchDevice()) setOpenDropdown(null) }}
+                    onMouseEnter={() => setOpenDropdown(item.key)}
+                    onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <Link
                       href={item.href}
                       className={`flex items-center gap-1 ${navLinkClass(isActive)}`}
-                      onClick={(e) => { handleParentClick(e, item); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                       {item.label}
                       {hasChildren && (
