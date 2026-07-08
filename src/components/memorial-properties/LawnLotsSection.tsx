@@ -38,7 +38,7 @@ export default function LawnLotsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Thoughtful Planning for Life&apos;s Next Chapter</h2>
           </div>
           <div className="space-y-6 text-primary/70 text-base leading-relaxed max-w-3xl mx-auto">
-            <p>A lawn lot is for the <strong>first-time planner</strong> who wants to begin their memorial journey with a meaningful, manageable step. It&apos;s designed for <strong>young families</strong> starting out, <strong>OFWs</strong> securing their family&apos;s future from abroad, and <strong>professionals</strong> who want the peace of mind that comes with planning early.</p>
+            <p>A lawn lot is for the <strong>first time planner</strong> who wants to begin their memorial journey with a meaningful, manageable step. It&apos;s designed for <strong>young families</strong> starting out, <strong>OFWs</strong> securing their family&apos;s future from abroad, and <strong>professionals</strong> who want the peace of mind that comes with planning early.</p>
             <p>You don&apos;t need to have everything figured out. A lawn lot is the starting point a decision your future self will thank you for.</p>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function LawnLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Capacity</h3>
-                <p className="text-sm text-primary/70">Designed for up to <strong>2 full-body interments</strong> or <strong>8 cremains</strong>, giving your family flexibility for the future.</p>
+                <p className="text-sm text-primary/70">Designed for up to <strong>2 full body interments</strong> or <strong>8 cremains</strong>, giving your family flexibility for the future.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">

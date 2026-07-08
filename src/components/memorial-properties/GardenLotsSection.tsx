@@ -62,7 +62,7 @@ export default function GardenLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Capacity</h3>
-                <p className="text-sm text-primary/70">Accommodates up to <strong>16 full-body interments</strong> or <strong>64 cremains</strong>, giving a growing family plenty of room across generations.</p>
+                <p className="text-sm text-primary/70">Accommodates up to <strong>16 full body interments</strong> or <strong>64 cremains</strong>, giving a growing family plenty of room across generations.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">

@@ -32,9 +32,9 @@ export const topicMap: Record<string, string> = {
 
 const blogPosts: BlogPost[] = [
   {
-    slug: 'what-you-need-to-know-about-pre-need-plans',
-    title: 'What You Need to Know About Pre-Need Plans',
-    excerpt: 'A comprehensive guide to understanding pre-need memorial plans and how they protect your family.',
+    slug: 'what-you-need-to-know-about-preneed-plans',
+    title: 'What You Need to Know About Preneed Plans',
+    excerpt: 'A comprehensive guide to understanding preneed memorial plans and how they protect your family.',
     topicId: 'planning',
     topic: 'Planning Basics',
     lang: 'EN',
@@ -43,15 +43,15 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     content: [
       'Pre-need memorial plans are one of the most thoughtful gifts you can give your family. By planning ahead, you lock in today&apos;s prices, ensure your wishes are honored, and spare your loved ones the burden of making difficult decisions during a time of grief.',
-      'In the Philippines, pre-need plans are regulated by the Insurance Commission, providing strong consumer protections. Every plan is backed by a trust fund that guarantees the delivery of services and properties as promised, regardless of economic changes.',
-      'When you purchase a pre-need plan at Heritage Park, you are not just buying a memorial lot or service - you are investing in peace of mind. Flexible payment terms make it accessible for every family, with terms ranging from 1 to 5 years.',
+      'In the Philippines, preneed plans are regulated by the Insurance Commission, providing strong consumer protections. Every plan is backed by a trust fund that guarantees the delivery of services and properties as promised, regardless of economic changes.',
+      'When you purchase a preneed plan at Heritage Park, you are not just buying a memorial lot or service - you are investing in peace of mind. Flexible payment terms make it accessible for every family, with terms ranging from 1 to 5 years.',
       'Whether you choose a lawn lot, garden lot, estate lot, or a complete service package, planning ahead ensures that your family will never have to worry about unexpected expenses or rushed decisions.',
     ],
-    relatedSlugs: ['cost-comparison-pre-need-vs-at-need', 'understanding-memorial-trust-funds'],
+    relatedSlugs: ['cost-comparison-preneed-vs-at need', 'understanding-memorial-trust-funds'],
   },
   {
-    slug: 'cost-comparison-pre-need-vs-at-need',
-    title: 'Cost Comparison: Pre-Need vs. At-Need Arrangements',
+    slug: 'cost-comparison-preneed-vs-at need',
+    title: 'Cost Comparison: Preneed vs. At Need Arrangements',
     excerpt: 'Understand the financial impact of planning ahead versus unexpected expenses.',
     topicId: 'costs',
     topic: 'Costs & Payment',
@@ -60,12 +60,12 @@ const blogPosts: BlogPost[] = [
     image: '/images/blog-costs.jpg',
     readTime: '7 min read',
     content: [
-      'The difference between pre-need and at-need pricing can be substantial. When you plan ahead, you lock in today&apos;s rates and protect your family from annual price increases that typically range from 5% to 10% per year.',
+      'The difference between preneed and at need pricing can be substantial. When you plan ahead, you lock in today&apos;s rates and protect your family from annual price increases that typically range from 5% to 10% per year.',
       'Pre-need plans at Heritage Park offer 0% interest on 1-year terms, making it possible to secure your family&apos;s memorial arrangements with no additional cost beyond the current price. Longer terms of 2 to 5 years carry minimal interest that is still far less than the annual price increases.',
-      'In contrast, at-need arrangements mean your family pays the full current price at the time of need, with no opportunity to lock in lower rates. This can result in significantly higher costs, especially if several years have passed since the family first considered planning.',
-      'Beyond the financial aspect, pre-need planning gives your family the gift of time - time to grieve without the pressure of making hurried decisions and time to focus on honoring your life rather than worrying about expenses.',
+      'In contrast, at need arrangements mean your family pays the full current price at the time of need, with no opportunity to lock in lower rates. This can result in significantly higher costs, especially if several years have passed since the family first considered planning.',
+      'Beyond the financial aspect, preneed planning gives your family the gift of time - time to grieve without the pressure of making hurried decisions and time to focus on honoring your life rather than worrying about expenses.',
     ],
-    relatedSlugs: ['what-you-need-to-know-about-pre-need-plans', 'the-true-cost-of-memorial-services'],
+    relatedSlugs: ['what-you-need-to-know-about-preneed-plans', 'the-true-cost-of-memorial-services'],
   },
   {
     slug: 'filipino-traditions-of-remembering',
@@ -83,7 +83,7 @@ const blogPosts: BlogPost[] = [
       'Pasyon, or the chanting of the passion of Christ, is another tradition that some families incorporate into their remembrance practices. Nine-day novenas, monthly prayers, and annual memorial masses are also common ways Filipino families honor their departed.',
       'At Heritage Park, we honor these traditions by providing spaces that accommodate family gatherings, prayer services, and annual remembrance activities. Our memorial parks are designed to be places of living memory - where families can gather, reflect, and celebrate the lives of their loved ones.',
     ],
-    relatedSlugs: ['what-you-need-to-know-about-pre-need-plans', 'the-role-of-memorials-in-filipino-culture'],
+    relatedSlugs: ['what-you-need-to-know-about-preneed-plans', 'the-role-of-memorials-in-filipino-culture'],
   },
   {
     slug: 'the-true-cost-of-memorial-services',
@@ -97,26 +97,26 @@ const blogPosts: BlogPost[] = [
     content: [
       'Understanding the true cost of memorial services helps families make informed decisions. In the Philippines, memorial costs can vary widely depending on the type of service, location, and inclusions.',
       'A typical memorial service package may include chapel rental, memorial service coordination, basic casket or urn, embalming and preparation, use of hearsay vehicle, and documentation assistance. Premium packages may offer additional features such as floral arrangements, catering, and memorial markers.',
-      'At Heritage Park, we believe in full transparency. Our service plans are designed with clear inclusions and no hidden fees. Payment options include spot cash with discounts, annual, semi-annual, quarterly, and monthly installments to accommodate every family&apos;s budget.',
-      'By choosing a pre-need memorial service plan, you protect your family from future price increases and ensure that all arrangements are exactly as you envisioned them.',
+      'At Heritage Park, we believe in full transparency. Our service plans are designed with clear inclusions and no hidden fees. Payment options include spot cash with discounts, annual, semi annual, quarterly, and monthly installments to accommodate every family&apos;s budget.',
+      'By choosing a preneed memorial service plan, you protect your family from future price increases and ensure that all arrangements are exactly as you envisioned them.',
     ],
-    relatedSlugs: ['cost-comparison-pre-need-vs-at-need', 'understanding-memorial-trust-funds'],
+    relatedSlugs: ['cost-comparison-preneed-vs-at need', 'understanding-memorial-trust-funds'],
   },
   {
     slug: 'understanding-memorial-trust-funds',
     title: 'Understanding Memorial Trust Funds',
-    excerpt: 'How trust funds protect your pre-need investment and ensure funds are used as intended.',
+    excerpt: 'How trust funds protect your preneed investment and ensure funds are used as intended.',
     topicId: 'planning',
     topic: 'Planning Basics',
     lang: 'EN',
     image: '/images/blog-planning.jpg',
     readTime: '5 min read',
     content: [
-      'When planning for the future, one of the most important questions Filipino families ask is how their pre-need investment will be protected. Memorial trust funds are designed to do exactly that - they safeguard the money you set aside so that it is available exactly when your family needs it.',
-      'In the Philippines, memorial trust funds are regulated by the Insurance Commission and operate under strict guidelines. Every pre-need plan you purchase is required by law to have a corresponding trust fund that covers the full cost of the services and properties promised.',
+      'When planning for the future, one of the most important questions Filipino families ask is how their preneed investment will be protected. Memorial trust funds are designed to do exactly that - they safeguard the money you set aside so that it is available exactly when your family needs it.',
+      'In the Philippines, memorial trust funds are regulated by the Insurance Commission and operate under strict guidelines. Every preneed plan you purchase is required by law to have a corresponding trust fund that covers the full cost of the services and properties promised.',
       'What does this mean for you? It means peace of mind. When you choose a trusted memorial park like Heritage Park, your payments go into a trust that ensures your chosen lot, service plan, or columbary niche will be delivered as promised.',
     ],
-    relatedSlugs: ['what-you-need-to-know-about-pre-need-plans', 'cost-comparison-pre-need-vs-at-need'],
+    relatedSlugs: ['what-you-need-to-know-about-preneed-plans', 'cost-comparison-preneed-vs-at need'],
   },
   {
     slug: 'choosing-between-burial-and-cremation',
@@ -165,7 +165,7 @@ const blogPosts: BlogPost[] = [
       'The Filipino value of utang na loob (debt of gratitude) extends even beyond death. Families feel a deep sense of responsibility to honor their departed loved ones with dignity, and memorials are a physical expression of this commitment.',
       'Modern memorial practices in the Philippines blend traditional Catholic and indigenous customs with contemporary design. Heritage Park embraces this cultural richness by offering spaces that honor both tradition and modernity.',
     ],
-    relatedSlugs: ['filipino-traditions-of-remembering', 'what-you-need-to-know-about-pre-need-plans'],
+    relatedSlugs: ['filipino-traditions-of-remembering', 'what-you-need-to-know-about-preneed-plans'],
   },
 ]
 

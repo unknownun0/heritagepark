@@ -33,7 +33,7 @@ const categories = [
     title: 'Visiting the Park',
     questions: [
       { q: 'What are your hours?', a: 'Heritage Park is open Monday through Saturday from 8:00 AM to 5:00 PM, and Sunday from 9:00 AM to 3:00 PM. Special arrangements can be made for after-hours visits.' },
-      { q: 'Is the park accessible?', a: 'Yes. The park features paved walkways, gentle slopes, and wheelchair-accessible paths throughout. We strive to ensure every visitor can navigate the park comfortably.' },
+      { q: 'Is the park accessible?', a: 'Yes. The park features paved walkways, gentle slopes, and wheelchair accessible paths throughout. We strive to ensure every visitor can navigate the park comfortably.' },
     ],
   },
 ]

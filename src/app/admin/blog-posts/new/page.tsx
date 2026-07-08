@@ -60,7 +60,7 @@ export default function NewBlogPost() {
         <div>
           <label className="block text-xs font-medium text-[#1F3A2D]/60 mb-1.5">Slug</label>
           <input value={form.slug} onChange={(e) => setForm({ ...form, slug: e.target.value })} className="w-full px-3 py-2.5 border border-[#ECE9E2] rounded-lg text-sm text-[#1F3A2D]/60 focus:outline-none focus:border-[#C89B3C]" />
-          <p className="text-[10px] text-[#1F3A2D]/30 mt-1">Auto-generated from title, but editable</p>
+          <p className="text-[10px] text-[#1F3A2D]/30 mt-1">Auto generated from title, but editable</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

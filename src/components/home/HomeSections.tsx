@@ -23,7 +23,7 @@ const values = [
 const properties = [
   { title: 'Lawn Lots', desc: 'A dignified and affordable memorial lot for individuals and families planning ahead.', href: '/memorial-properties/lawn-lots', image: '/images/lawn-lot-hero.jpg' },
   { title: 'Garden Lots', desc: 'A spacious memorial lot ideal for families who want room to grow together, today and for the next generation.', href: '/memorial-properties/garden-lots', image: '/images/garden-lot-hero.jpg' },
-  { title: 'Memory Place', desc: 'Private above-ground family crypts offering comfort, accessibility, and lasting remembrance.', href: '/memorial-properties/memory-place', image: '/images/memory-place-hero.jpg' },
+  { title: 'Memory Place', desc: 'Private above ground family crypts offering comfort, accessibility, and lasting remembrance.', href: '/memorial-properties/memory-place', image: '/images/memory-place-hero.jpg' },
   { title: 'Estate Lots', desc: 'Our most prestigious memorial property, expansive, private, and designed for families who wish to build a legacy spanning generations.', href: '/memorial-properties/estate-lots', image: '/images/estate-lot-hero.jpg' },
 ]
 
@@ -69,7 +69,7 @@ export default function HomeSections() {
             </svg>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Planning for the Future</h2>
-          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md">Give your family the gift of preparation. A pre-need memorial plan locks in today&apos;s prices and ensures your wishes are honored with dignity.</p>
+          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md">Give your family the gift of preparation. A preneed memorial plan locks in today&apos;s prices and ensures your wishes are honored with dignity.</p>
         </Link>
         <Link
           href="/immediate-need"
@@ -137,7 +137,7 @@ export default function HomeSections() {
             Get Your Free Heritage Park Family Planning Guide
           </h2>
           <p className="text-white/60 text-sm mb-8 max-w-xl mx-auto">
-            A gentle introduction to pre-need memorial planning, written for Filipino families who want to prepare with confidence.
+            A gentle introduction to preneed memorial planning, written for Filipino families who want to prepare with confidence.
           </p>
           <form className="max-w-lg mx-auto space-y-4">
             <input

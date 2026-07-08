@@ -51,7 +51,7 @@ export default function EstateLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Capacity</h3>
-                <p className="text-sm text-primary/70">Designed to accommodate <strong>32 full-body interments</strong> plus <strong>2 aboveground crypts</strong>, ensuring space for generations to come.</p>
+                <p className="text-sm text-primary/70">Designed to accommodate <strong>32 full body interments</strong> plus <strong>2 aboveground crypts</strong>, ensuring space for generations to come.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
@@ -77,7 +77,7 @@ export default function EstateLotsSection() {
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto space-y-4">
             <p>Your private mausoleum is a separate, guided construction process that begins after you secure your estate lot. Our team will walk you through every step from design consultation with our architects to material selection, permitting, and construction management.</p>
-            <p>The result is a one-of-a-kind family memorial that reflects your values, your story, and your legacy. Whether you envision classic marble, modern stone, or a custom architectural design, we help bring it to life.</p>
+            <p>The result is a one of a kind family memorial that reflects your values, your story, and your legacy. Whether you envision classic marble, modern stone, or a custom architectural design, we help bring it to life.</p>
           </div>
         </div>
       </section>

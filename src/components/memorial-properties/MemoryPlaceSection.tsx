@@ -51,7 +51,7 @@ export default function MemoryPlaceSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Total Capacity</h3>
-                <p className="text-sm text-primary/70"><strong>22 total burials</strong>: 2 full-body crypts + 4 below-ground burials + 16 urn burials. Each crypt measures <strong>2.44m �- 2.00m �- 1.00m</strong>. <em>The crypt is not included.</em></p>
+                <p className="text-sm text-primary/70"><strong>22 total burials</strong>: 2 full body crypts + 4 below ground burials + 16 urn burials. Each crypt measures <strong>2.44m �- 2.00m �- 1.00m</strong>. <em>The crypt is not included.</em></p>
               </div>
             </div>
           </div>

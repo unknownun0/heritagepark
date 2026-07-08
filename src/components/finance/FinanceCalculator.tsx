@@ -127,7 +127,7 @@ export default function FinanceCalculator(props: Props) {
 
   const installmentOptions = [
     { label: 'Annual (5 checks)', payment: plan.annual, installments: 5 },
-    { label: 'Semi-Annual (10 checks)', payment: plan.semiAnnual, installments: 10 },
+    { label: 'Semi Annual (10 checks)', payment: plan.semiAnnual, installments: 10 },
     { label: 'Quarterly (20 checks)', payment: plan.quarterly, installments: 20 },
     { label: 'Monthly (50 checks)', payment: plan.monthly, installments: 50 },
   ]
