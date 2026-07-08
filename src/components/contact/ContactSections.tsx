@@ -177,8 +177,8 @@ export default function ContactSections() {
                         onClick={() => setChannel(ch.value)}
                         className={`flex flex-col items-center gap-1.5 px-3 py-3 rounded-lg border text-xs font-medium transition-all ${
                           channel === ch.value
-                            ? 'bg-gold/10 border-gold text-primary'
-                            : 'bg-cream border-primary/10 text-primary/60 hover:border-gold/30'
+                            ? 'bg-[#e2af43]/10 border-[#e2af43] text-primary'
+                            : 'bg-cream border-primary/10 text-primary/60 hover:border-[#e2af43]/30'
                         }`}
                       >
                     {icons[ch.icon]}
@@ -191,7 +191,7 @@ export default function ContactSections() {
                 <p className="text-xs text-moss italic font-accent">No pressure, ever. Just a conversation.</p>
                 <button
                   type="submit"
-                  className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors w-full sm:w-auto"
+                  className="bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors w-full sm:w-auto"
                 >
                   Send Message
                 </button>
@@ -200,14 +200,8 @@ export default function ContactSections() {
 
             <div>
               <div className="bg-cream rounded-lg p-8 mb-8">
-                <h2 className="text-2xl font-bold text-primary mb-6">Visit or Reach Us</h2>
+                <h2 className="text-2xl font-bold text-primary mb-6">Reach Us</h2>
                 <div className="space-y-5 text-sm text-primary/70">
-                  <div>
-                    <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Address</h3>
-                    <p>Heritage Park Memorial</p>
-                    <p>Lawton Ave, Taguig</p>
-                    <p>Metro Manila, Philippines</p>
-                  </div>
                   <div>
                     <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Phone</h3>
                     <a href="tel:+639178841009" className="text-gold hover:text-gold/80 transition-colors">0917 884 1009</a>
@@ -215,11 +209,6 @@ export default function ContactSections() {
                   <div>
                     <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Email</h3>
                     <a href="mailto:sales@heritageparktaguig.com" className="text-gold hover:text-gold/80 transition-colors">sales@heritageparktaguig.com</a>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-primary uppercase tracking-wider text-xs mb-1">Hours</h3>
-                    <p>Mon–Sat: 8:00 AM – 5:00 PM</p>
-                    <p>Sun: 9:00 AM – 3:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -284,7 +273,7 @@ export default function ContactSections() {
           <div className="flex flex-col sm:flex-row gap-3 pt-1">
             <button
               onClick={handleProceed}
-              className="flex-1 bg-gold text-primary font-semibold py-3 rounded-lg text-sm hover:bg-gold/90 transition-colors"
+              className="flex-1 bg-[#e2af43] text-primary font-semibold py-3 rounded-lg text-sm hover:bg-[#e2af43]/90 transition-colors"
             >
               Proceed
             </button>

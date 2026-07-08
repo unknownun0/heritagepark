@@ -12,7 +12,7 @@ const benefits = [
   {
     icon: '🌳',
     title: 'Family Legacy',
-    desc: 'Create a lasting place of honor that future generations can visit — a meaningful connection to your family\'s story.',
+    desc: 'Create a lasting place of honor that future generations can visit - a meaningful connection to your family\'s story.',
   },
   {
     icon: '📋',
@@ -23,7 +23,7 @@ const benefits = [
 
 const steps = [
   { num: '01', title: 'Understand', desc: 'Learn how pre-need memorial planning works and why Filipino families are choosing to plan ahead.' },
-  { num: '02', title: 'Learn', desc: 'Explore our properties, services, and payment options at your own pace — no obligation.' },
+  { num: '02', title: 'Learn', desc: 'Explore our properties, services, and payment options at your own pace - no obligation.' },
   { num: '03', title: 'Visit', desc: 'Tour Heritage Park with a consultant. See the grounds, chapels, and memorial spaces firsthand.' },
   { num: '04', title: 'Decide', desc: 'When you\'re ready, choose a plan that fits your family. We\'ll be with you every step of the way.' },
 ]
@@ -31,7 +31,7 @@ const steps = [
 const faqs = [
   {
     q: 'Isn\'t this something I should think about later?',
-    a: 'Many families feel that way — and it\'s completely understandable. But planning ahead is one of the most caring decisions you can make. It ensures your wishes are honored and spares your loved ones from making hurried, expensive decisions during a time of grief.',
+    a: 'Many families feel that way - and it\'s completely understandable. But planning ahead is one of the most caring decisions you can make. It ensures your wishes are honored and spares your loved ones from making hurried, expensive decisions during a time of grief.',
   },
   {
     q: 'Will my family actually need this?',
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: 'What happens if I can\'t finish payments?',
-    a: 'We work with families. Heritage Park offers flexible payment options and grace periods. Our consultants can help adjust your plan if your circumstances change — no judgment, just support.',
+    a: 'We work with families. Heritage Park offers flexible payment options and grace periods. Our consultants can help adjust your plan if your circumstances change - no judgment, just support.',
   },
   {
     q: 'Is it expensive to plan ahead?',
@@ -60,7 +60,7 @@ export default function PlanAheadSections() {
             The Best Time to Plan Is Before You Have To
           </h1>
           <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
-            Thoughtful preparation is a quiet act of love. Heritage Park helps you plan with confidence — not fear.
+            Thoughtful preparation is a quiet act of love. Heritage Park helps you plan with confidence - not fear.
           </p>
         </div>
       </section>
@@ -113,13 +113,13 @@ export default function PlanAheadSections() {
           <div className="text-primary/60 text-sm leading-relaxed space-y-4 max-w-2xl mx-auto">
             <p>
               We understand that cost is an important consideration for every family. At Heritage Park, we believe in 
-              complete transparency — no hidden fees, no surprise charges. Our pre-need plans are designed to offer 
+              complete transparency - no hidden fees, no surprise charges. Our pre-need plans are designed to offer 
               exceptional value, locking in today&apos;s prices so your family is protected from future increases.
             </p>
             <p>
               More importantly, we believe the true value of planning ahead goes far beyond pesos and centavos. 
               It&apos;s the peace of knowing your family will be cared for, your wishes will be honored, and your legacy 
-              will endure — no matter what the future holds.
+              will endure - no matter what the future holds.
             </p>
           </div>
           <div className="mt-8">
@@ -160,7 +160,7 @@ export default function PlanAheadSections() {
             Ready to Take the First Step?
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/memorial-properties" className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+            <a href="/memorial-properties" className="bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">
               See Our Memorial Properties
             </a>
             <a href="#" className="border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">

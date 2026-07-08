@@ -20,7 +20,7 @@ export default function GardenLotsSection() {
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Garden Lots</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Lasting Place for Your Whole Family</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Generous space, timeless elegance — designed for families who plan together.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">Generous space, timeless elegance - designed for families who plan together.</p>
         </div>
       </section>
 
@@ -31,7 +31,7 @@ export default function GardenLotsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Built for Generations</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-            <p>A garden lot is for the family that thinks ahead — not just for themselves, but for their children and grandchildren. It&apos;s for those who want a <strong>single, beautiful space</strong> where multiple generations can be honored together, surrounded by nature and cared for in perpetuity.</p>
+            <p>A garden lot is for the family that thinks ahead - not just for themselves, but for their children and grandchildren. It&apos;s for those who want a <strong>single, beautiful space</strong> where multiple generations can be honored together, surrounded by nature and cared for in perpetuity.</p>
           </div>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function GardenLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size &amp; Layout</h3>
-                <p className="text-sm text-primary/70">Each garden lot spans <strong>4.00m × 4.88m (19.52 sqm)</strong> and comprises <strong>8 individual plots</strong> — enough space for a full family memorial.</p>
+                <p className="text-sm text-primary/70">Each garden lot spans <strong>4.00m �- 4.88m (19.52 sqm)</strong> and comprises <strong>8 individual plots</strong> - enough space for a full family memorial.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
@@ -101,18 +101,22 @@ export default function GardenLotsSection() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">A Legacy That Spans Generations</h2>
           <p className="text-primary/70 text-base leading-relaxed">
-            A garden lot is more than a burial space — it&apos;s a shared family memorial. Imagine a single, beautifully landscaped site where grandparents, parents, children, and grandchildren are all remembered together. It becomes a place your family returns to, year after year — a legacy of togetherness that endures.
+            A garden lot is more than a burial space - it&apos;s a shared family memorial. Imagine a single, beautifully landscaped site where grandparents, parents, children, and grandchildren are all remembered together. It becomes a place your family returns to, year after year - a legacy of togetherness that endures.
           </p>
         </div>
       </section>
 
       <FinanceCalculator mode="property" data={gardenLotData} title="Garden Lot Payment Calculator" />
 
+      <div className="text-center pb-16 -mt-8">
+        <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request a Quote</a>
+      </div>
+
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Experience the Gardens Firsthand</h2>
-          <p className="text-white/70 mb-8 max-w-xl mx-auto">Walk the garden paths, see the lots, and feel the peace of Heritage Park for yourself.</p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Book a Lot Tripping Visit</a>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Reserve Your Garden Lot Today</h2>
+          <p className="text-white/70 mb-8 max-w-xl mx-auto">Our team will walk you through the available garden lots and help you choose the perfect location for your family's lasting memorial.</p>
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Talk to a Memorial Sales Consultant</a>
         </div>
       </section>
     </>

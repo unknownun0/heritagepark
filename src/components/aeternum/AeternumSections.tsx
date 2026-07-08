@@ -32,7 +32,7 @@ export default function AeternumSections() {
           <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Premium Columbary</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Indoor Sanctuaries of Peace</h2>
-            <p className="text-primary/60 mt-2 max-w-xl mx-auto">Aeternum offers the finest columbary experience in the Philippines — blending architectural elegance with serene contemplation.</p>
+            <p className="text-primary/60 mt-2 max-w-xl mx-auto">Aeternum offers the finest columbary experience in the Philippines - blending architectural elegance with serene contemplation.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
@@ -69,7 +69,7 @@ export default function AeternumSections() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-primary mb-4">Pricing &amp; Availability</h2>
           <p className="text-primary/60 mb-8">Aeternum columbary niches start at ₱35,000. Private suites from ₱120,000. Inquire for complete pricing and available locations.</p>
-          <a href="#" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Request Pricing</a>
+          <a href="#" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request Pricing</a>
         </div>
       </section>
 
@@ -89,7 +89,7 @@ export default function AeternumSections() {
                 <div>
                   <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded text-white placeholder-white/40 text-sm focus:outline-none focus:border-gold" />
                 </div>
-                <button type="submit" className="w-full bg-gold text-primary font-semibold py-3 rounded text-sm hover:bg-gold/90 transition-colors">Request Tour</button>
+                <button type="submit" className="w-full bg-[#e2af43] text-primary font-semibold py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request Tour</button>
               </form>
             </div>
             <div className="aspect-square bg-primary-light rounded-lg flex items-center justify-center">

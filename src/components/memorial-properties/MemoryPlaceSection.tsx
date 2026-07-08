@@ -20,7 +20,7 @@ export default function MemoryPlaceSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Above-Ground Elegance</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-            <p>Memory Place is for families who prefer an <strong>above-ground memorial</strong> — a structured, dignified solution that offers easy access and a clear sense of place. It combines the privacy of individual crypts with the beauty of a shared memorial structure.</p>
+            <p>Memory Place is for families who prefer an <strong>above-ground memorial</strong> - a structured, dignified solution that offers easy access and a clear sense of place. It combines the privacy of individual crypts with the beauty of a shared memorial structure.</p>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function MemoryPlaceSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size</h3>
-                <p className="text-sm text-primary/70"><strong>8 plots</strong> within a 4.00m × 4.88m (19.52 sqm) area, designed specifically for above-ground crypt structures.</p>
+                <p className="text-sm text-primary/70"><strong>8 plots</strong> within a 4.00m �- 4.88m (19.52 sqm) area, designed specifically for above-ground crypt structures.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
@@ -51,7 +51,7 @@ export default function MemoryPlaceSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Total Capacity</h3>
-                <p className="text-sm text-primary/70"><strong>22 total burials</strong>: 2 full-body crypts + 4 below-ground burials + 16 urn burials. Each crypt measures <strong>2.44m × 2.00m × 1.00m</strong>. <em>The crypt is not included.</em></p>
+                <p className="text-sm text-primary/70"><strong>22 total burials</strong>: 2 full-body crypts + 4 below-ground burials + 16 urn burials. Each crypt measures <strong>2.44m �- 2.00m �- 1.00m</strong>. <em>The crypt is not included.</em></p>
               </div>
             </div>
           </div>
@@ -69,11 +69,15 @@ export default function MemoryPlaceSection() {
 
       <FinanceCalculator mode="property" data={memoryPlaceData} title="Memory Place Payment Calculator" />
 
+      <div className="text-center pb-16 -mt-8">
+        <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request a Quote</a>
+      </div>
+
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Learn More About Memory Place</h2>
           <p className="text-white/70 mb-8 max-w-xl mx-auto">Our consultants will walk you through the options, the structure, and the payment plan that works best for your family.</p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Talk to a Memorial Sales Consultant</a>
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Talk to a Memorial Sales Consultant</a>
         </div>
       </section>
     </>

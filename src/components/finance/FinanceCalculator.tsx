@@ -90,7 +90,7 @@ export default function FinanceCalculator(props: Props) {
               </div>
               <div className="bg-white rounded-lg p-4 text-center">
                 <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">
-                  {freq.label} ({row.installments}check)
+                  {freq.label} ({row.installments} checks)
                 </p>
                 <p className="text-lg font-bold text-primary">{formatPeso(row.payment)}</p>
               </div>
@@ -99,9 +99,17 @@ export default function FinanceCalculator(props: Props) {
                 <p className="text-lg font-bold text-primary">{formatPeso(row.totalPaid)}</p>
               </div>
             </div>
-            <p className="text-xs text-primary/40 mt-4 text-center">
-              Transfer fee: {formatPeso(tier.transferFee)} payable to RMMI
-            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
+              <a
+                href="/contact"
+                className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
+              >
+                Request a Quote
+              </a>
+              <p className="text-xs text-primary/40 text-center">
+                Transfer fee: {formatPeso(tier.transferFee)} payable to RMMI
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -118,10 +126,10 @@ export default function FinanceCalculator(props: Props) {
   const plan = sData[selectedPlan] || sData[0]
 
   const installmentOptions = [
-    { label: 'Annual (5check)', payment: plan.annual, installments: 5 },
-    { label: 'Semi-Annual (5check)', payment: plan.semiAnnual, installments: 10 },
-    { label: 'Quarterly (5check)', payment: plan.quarterly, installments: 20 },
-    { label: 'Monthly (5check)', payment: plan.monthly, installments: 50 },
+    { label: 'Annual (5 checks)', payment: plan.annual, installments: 5 },
+    { label: 'Semi-Annual (10 checks)', payment: plan.semiAnnual, installments: 10 },
+    { label: 'Quarterly (20 checks)', payment: plan.quarterly, installments: 20 },
+    { label: 'Monthly (50 checks)', payment: plan.monthly, installments: 50 },
   ]
 
   const freqSvc = installmentOptions[selectedFreqSvc] || installmentOptions[0]
@@ -166,7 +174,7 @@ export default function FinanceCalculator(props: Props) {
                 <p className="text-2xl font-bold text-primary">{formatPeso(plan.contractPrice)}</p>
               </div>
               <div className="bg-white rounded-lg p-5 text-center border border-gold/20 ring-1 ring-gold/30">
-                <p className="text-xs text-gold uppercase tracking-wider mb-1">Recommended — Spot Cash (10% off)</p>
+                <p className="text-xs text-gold uppercase tracking-wider mb-1">Recommended - Spot Cash (10% off)</p>
                 <p className="text-2xl font-bold text-gold">{formatPeso(plan.spotCash)}</p>
                 <p className="text-xs text-primary/40 mt-1">Save {formatPeso(plan.contractPrice - plan.spotCash)}</p>
               </div>
@@ -195,7 +203,7 @@ export default function FinanceCalculator(props: Props) {
                 </div>
                 <div className="bg-white rounded-lg p-4 text-center">
                   <p className="text-xs text-primary/50 uppercase tracking-wider mb-1">
-                    {freqSvc.label.split(' (')[0]} ({freqSvc.installments}check)
+                    {freqSvc.label.split(' (')[0]} ({freqSvc.installments} checks)
                   </p>
                   <p className="text-lg font-bold text-gold">{formatPeso(freqSvc.payment)}</p>
                 </div>
@@ -206,9 +214,15 @@ export default function FinanceCalculator(props: Props) {
               </div>
             </>
           )}
+          <div className="text-center mt-6">
+            <a
+              href="/contact"
+              className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
+            >
+              Request a Quote
+            </a>
+          </div>
         </div>
-
-
       </div>
     </section>
   )

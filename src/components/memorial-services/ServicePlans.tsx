@@ -6,7 +6,7 @@ const planFamilies = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
-    desc: 'From cremation services to full traditional wakes — choose the level of care that fits your family\'s traditions and wishes. Each plan covers pickup, chapel use, and memorial service coordination.',
+    desc: 'From cremation services to full traditional wakes - choose the level of care that fits your family\'s traditions and wishes. Each plan covers pickup, chapel use, and memorial service coordination.',
     href: '/memorial-services/mortuary-plans',
   },
   {
@@ -59,7 +59,7 @@ export default function ServicePlans() {
         <div className="absolute inset-0 bg-[url(/images/services-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Care and Service, Planned in Advance</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Beyond a final resting place, Heritage Park also offers memorial service plans — so your family is cared for in every detail, not just provided a place.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">Beyond a final resting place, Heritage Park also offers memorial service plans - so your family is cared for in every detail, not just provided a place.</p>
         </div>
       </section>
 
@@ -71,19 +71,19 @@ export default function ServicePlans() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {planFamilies.map((plan) => (
-              <div key={plan.title} className="bg-white rounded-lg p-8 border border-primary/5 hover:shadow-lg transition-shadow">
+              <a key={plan.title} href={plan.href} className="block bg-white rounded-lg p-8 border border-primary/5 hover:shadow-lg transition-shadow group">
                 <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center text-gold mb-5">
                   {plan.icon}
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{plan.title}</h3>
+                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-gold transition-colors">{plan.title}</h3>
                 <p className="text-sm text-primary/60 mb-6 leading-relaxed">{plan.desc}</p>
-                <a href={plan.href} className="inline-flex items-center gap-2 text-gold font-semibold text-sm hover:text-gold/80 transition-colors">
+                <span className="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:text-gold/80 transition-colors">
                   Learn More
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
-              </div>
+                </span>
+              </a>
             ))}
           </div>
         </div>
@@ -120,14 +120,14 @@ export default function ServicePlans() {
         </div>
       </section>
 
-      <FinanceCalculator mode="service" data={[...mortuaryPlans, ...intermentPlans, ...comboPlans]} title="All Service Plans — Compare Pricing" />
+      <FinanceCalculator mode="service" data={[...mortuaryPlans, ...intermentPlans, ...comboPlans]} title="All Service Plans - Compare Pricing" />
 
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-primary rounded-lg p-8 md:p-10 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Your Memorial Property Comes With a Service Plan</h3>
-            <p className="text-white/70 mb-6 max-w-xl mx-auto">Your memorial property comes complete with a service plan, so nothing is left for your family to arrange alone. It's not an upsell — it's how we ensure every family is fully cared for.</p>
-            <a href="#compare" className="inline-block bg-gold text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-gold/90 transition-colors">Compare Plans</a>
+            <p className="text-white/70 mb-6 max-w-xl mx-auto">Your memorial property comes complete with a service plan, so nothing is left for your family to arrange alone. It's not an upsell - it's how we ensure every family is fully cared for.</p>
+            <a href="#compare" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Compare Plans</a>
           </div>
         </div>
       </section>
@@ -136,7 +136,7 @@ export default function ServicePlans() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Not Sure Which Plan Fits?</h2>
           <p className="text-primary/60 mb-8 max-w-xl mx-auto">Our consultants will walk you through each option, explain the differences, and help you choose with confidence.</p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Speak with a Consultant</a>
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Speak with a Consultant</a>
         </div>
       </section>
     </>

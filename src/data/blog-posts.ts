@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     content: [
       'Pre-need memorial plans are one of the most thoughtful gifts you can give your family. By planning ahead, you lock in today&apos;s prices, ensure your wishes are honored, and spare your loved ones the burden of making difficult decisions during a time of grief.',
       'In the Philippines, pre-need plans are regulated by the Insurance Commission, providing strong consumer protections. Every plan is backed by a trust fund that guarantees the delivery of services and properties as promised, regardless of economic changes.',
-      'When you purchase a pre-need plan at Heritage Park, you are not just buying a memorial lot or service — you are investing in peace of mind. Flexible payment terms make it accessible for every family, with terms ranging from 1 to 5 years.',
+      'When you purchase a pre-need plan at Heritage Park, you are not just buying a memorial lot or service - you are investing in peace of mind. Flexible payment terms make it accessible for every family, with terms ranging from 1 to 5 years.',
       'Whether you choose a lawn lot, garden lot, estate lot, or a complete service package, planning ahead ensures that your family will never have to worry about unexpected expenses or rushed decisions.',
     ],
     relatedSlugs: ['cost-comparison-pre-need-vs-at-need', 'understanding-memorial-trust-funds'],
@@ -63,7 +63,7 @@ const blogPosts: BlogPost[] = [
       'The difference between pre-need and at-need pricing can be substantial. When you plan ahead, you lock in today&apos;s rates and protect your family from annual price increases that typically range from 5% to 10% per year.',
       'Pre-need plans at Heritage Park offer 0% interest on 1-year terms, making it possible to secure your family&apos;s memorial arrangements with no additional cost beyond the current price. Longer terms of 2 to 5 years carry minimal interest that is still far less than the annual price increases.',
       'In contrast, at-need arrangements mean your family pays the full current price at the time of need, with no opportunity to lock in lower rates. This can result in significantly higher costs, especially if several years have passed since the family first considered planning.',
-      'Beyond the financial aspect, pre-need planning gives your family the gift of time — time to grieve without the pressure of making hurried decisions and time to focus on honoring your life rather than worrying about expenses.',
+      'Beyond the financial aspect, pre-need planning gives your family the gift of time - time to grieve without the pressure of making hurried decisions and time to focus on honoring your life rather than worrying about expenses.',
     ],
     relatedSlugs: ['what-you-need-to-know-about-pre-need-plans', 'the-true-cost-of-memorial-services'],
   },
@@ -81,7 +81,7 @@ const blogPosts: BlogPost[] = [
       'The Filipino culture is rich with traditions that honor and remember loved ones who have passed. From Undas (All Saints&apos; Day and All Souls&apos; Day) to death anniversaries, these practices strengthen family bonds and keep memories alive.',
       'One of the most beloved traditions is the celebration of Undas every November 1 and 2. Families travel from all over the country to visit cemeteries, clean and decorate graves, light candles, and pray together. It is a time of reunion as much as remembrance.',
       'Pasyon, or the chanting of the passion of Christ, is another tradition that some families incorporate into their remembrance practices. Nine-day novenas, monthly prayers, and annual memorial masses are also common ways Filipino families honor their departed.',
-      'At Heritage Park, we honor these traditions by providing spaces that accommodate family gatherings, prayer services, and annual remembrance activities. Our memorial parks are designed to be places of living memory — where families can gather, reflect, and celebrate the lives of their loved ones.',
+      'At Heritage Park, we honor these traditions by providing spaces that accommodate family gatherings, prayer services, and annual remembrance activities. Our memorial parks are designed to be places of living memory - where families can gather, reflect, and celebrate the lives of their loved ones.',
     ],
     relatedSlugs: ['what-you-need-to-know-about-pre-need-plans', 'the-role-of-memorials-in-filipino-culture'],
   },
@@ -112,7 +112,7 @@ const blogPosts: BlogPost[] = [
     image: '/images/blog-planning.jpg',
     readTime: '5 min read',
     content: [
-      'When planning for the future, one of the most important questions Filipino families ask is how their pre-need investment will be protected. Memorial trust funds are designed to do exactly that — they safeguard the money you set aside so that it is available exactly when your family needs it.',
+      'When planning for the future, one of the most important questions Filipino families ask is how their pre-need investment will be protected. Memorial trust funds are designed to do exactly that - they safeguard the money you set aside so that it is available exactly when your family needs it.',
       'In the Philippines, memorial trust funds are regulated by the Insurance Commission and operate under strict guidelines. Every pre-need plan you purchase is required by law to have a corresponding trust fund that covers the full cost of the services and properties promised.',
       'What does this mean for you? It means peace of mind. When you choose a trusted memorial park like Heritage Park, your payments go into a trust that ensures your chosen lot, service plan, or columbary niche will be delivered as promised.',
     ],
@@ -145,7 +145,7 @@ const blogPosts: BlogPost[] = [
     image: '/images/blog-grief.jpg',
     readTime: '4 min read',
     content: [
-      'Nature has a remarkable ability to comfort and heal. Studies have shown that spending time in green spaces can reduce stress, improve mood, and support emotional well-being — benefits that are especially valuable during the grieving process.',
+      'Nature has a remarkable ability to comfort and heal. Studies have shown that spending time in green spaces can reduce stress, improve mood, and support emotional well-being - benefits that are especially valuable during the grieving process.',
       'At Heritage Park, our memorial gardens are designed with this understanding. Lush landscapes, flowering pathways, tranquil water features, and shaded resting areas create an environment where families can find moments of peace and reflection.',
       'Whether you are visiting a loved one&apos;s resting place or simply taking a quiet walk through the gardens, nature offers a gentle reminder of life&apos;s enduring beauty and the cycle of renewal.',
     ],
@@ -161,7 +161,7 @@ const blogPosts: BlogPost[] = [
     image: '/images/blog-culture.jpg',
     readTime: '6 min read',
     content: [
-      'In Filipino culture, memorials are more than markers of where our loved ones rest — they are tangible connections to family history, identity, and heritage. They serve as gathering places where stories are shared, traditions are passed down, and bonds are strengthened.',
+      'In Filipino culture, memorials are more than markers of where our loved ones rest - they are tangible connections to family history, identity, and heritage. They serve as gathering places where stories are shared, traditions are passed down, and bonds are strengthened.',
       'The Filipino value of utang na loob (debt of gratitude) extends even beyond death. Families feel a deep sense of responsibility to honor their departed loved ones with dignity, and memorials are a physical expression of this commitment.',
       'Modern memorial practices in the Philippines blend traditional Catholic and indigenous customs with contemporary design. Heritage Park embraces this cultural richness by offering spaces that honor both tradition and modernity.',
     ],

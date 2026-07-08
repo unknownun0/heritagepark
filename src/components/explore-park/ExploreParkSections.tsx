@@ -1,3 +1,8 @@
+'use client'
+
+import { useState } from 'react'
+import Modal from '@/components/ui/Modal'
+
 const galleryAreas = [
   { label: 'Gardens', image: '/images/garden-lot/garden%20lot.jpg', desc: 'Beautifully landscaped gardens with indigenous flowering trees that provide shade and color throughout the year.' },
   { label: 'Chapels', image: '/images/mortuary/20250219_144912.jpg', desc: 'The Heritage Chapel is designed for intimate family services, offering a peaceful setting for remembrance and prayer.' },
@@ -10,7 +15,7 @@ const galleryAreas = [
 const visitInfo = [
   {
     title: 'Location',
-    desc: 'Brgy. San Bartolome, Novaliches, Quezon City — easily accessible from major Metro Manila thoroughfares.',
+    desc: 'Brgy. San Bartolome, Novaliches, Quezon City - easily accessible from major Metro Manila thoroughfares.',
   },
   {
     title: 'Park Hours',
@@ -27,6 +32,17 @@ const visitInfo = [
 ]
 
 export default function ExploreParkSections() {
+  const [carouselOpen, setCarouselOpen] = useState(false)
+  const [carouselIndex, setCarouselIndex] = useState(0)
+
+  const openCarousel = (index: number) => {
+    setCarouselIndex(index)
+    setCarouselOpen(true)
+  }
+
+  const nextImage = () => setCarouselIndex((carouselIndex + 1) % galleryAreas.length)
+  const prevImage = () => setCarouselIndex((carouselIndex - 1 + galleryAreas.length) % galleryAreas.length)
+
   return (
     <>
       {/* HERO */}
@@ -39,7 +55,7 @@ export default function ExploreParkSections() {
             Discover a Place of Uncommon Beauty
           </h1>
           <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
-            Heritage Park is a master-planned memorial community — acres of landscaped gardens, modern sanctuaries, and peaceful spaces designed for reflection and remembrance.
+            Heritage Park is a master-planned memorial community - acres of landscaped gardens, modern sanctuaries, and peaceful spaces designed for reflection and remembrance.
           </p>
         </div>
       </section>
@@ -52,18 +68,30 @@ export default function ExploreParkSections() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Wander Through the Park</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {galleryAreas.map((item) => (
-              <div key={item.label} className="flex flex-col sm:flex-row gap-5 bg-white rounded-lg overflow-hidden shadow-sm">
+            {galleryAreas.map((item, idx) => (
+              <button key={item.label} onClick={() => openCarousel(idx)} className="flex flex-col sm:flex-row gap-5 bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow text-left w-full">
                 <div className="sm:w-56 h-44 shrink-0 bg-cover bg-center" style={{ backgroundImage: `url(${item.image})` }} />
                 <div className="py-4 pr-4 flex-1">
                   <h3 className="font-bold text-primary mb-2">{item.label}</h3>
                   <p className="text-sm text-primary/60 leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      <Modal open={carouselOpen} onClose={() => setCarouselOpen(false)} title={galleryAreas[carouselIndex].label}>
+        <div className="space-y-4">
+          <div className="aspect-video bg-cover bg-center rounded-lg" style={{ backgroundImage: `url(${galleryAreas[carouselIndex].image})` }} />
+          <p className="text-sm text-primary/60">{galleryAreas[carouselIndex].desc}</p>
+          <div className="flex items-center justify-between">
+            <button onClick={prevImage} className="bg-cream text-primary px-4 py-2 rounded text-sm hover:bg-primary/10 transition-colors">&larr; Previous</button>
+            <span className="text-xs text-primary/50">{carouselIndex + 1} / {galleryAreas.length}</span>
+            <button onClick={nextImage} className="bg-cream text-primary px-4 py-2 rounded text-sm hover:bg-primary/10 transition-colors">Next &rarr;</button>
+          </div>
+        </div>
+      </Modal>
 
       {/* MASTERPLAN STORY */}
       <section className="py-20 bg-white">
@@ -74,13 +102,13 @@ export default function ExploreParkSections() {
           </div>
           <div className="text-primary/60 text-sm leading-relaxed space-y-5 max-w-3xl mx-auto">
             <p>
-              Heritage Park was designed from the ground up as a master-planned memorial community — not a traditional cemetery. 
+              Heritage Park was designed from the ground up as a master-planned memorial community - not a traditional cemetery. 
               Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
             </p>
             <p>
               The park is organized into distinct sections connected by a network of paved roads and walking paths. 
               Landscaped gardens with indigenous flowering trees provide shade and color throughout the year. 
-              Each zone has its own character — from the open lawns of the Garden lots to the intimate garden settings of our estate areas.
+              Each zone has its own character - from the open lawns of the Garden lots to the intimate garden settings of our estate areas.
             </p>
             <p>
               Central to the park is the Aeternum columbary complex, an indoor sanctuary of elegance, and the Heritage Chapel, 
@@ -123,7 +151,7 @@ export default function ExploreParkSections() {
           <p className="text-white/60 text-sm mb-8 max-w-xl mx-auto">
             Schedule a Lot Tripping Visit and walk the grounds with a dedicated Memorial Sales Consultant.
           </p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">
             Book a Lot Tripping Visit
           </a>
         </div>

@@ -32,7 +32,7 @@ export default async function HeroSection() {
         </div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{leftLabel}</h2>
         <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mb-8">{leftDesc}</p>
-        <span className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">{leftBtn}</span>
+        <span className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">{leftBtn}</span>
       </Link>
 
       <Link
@@ -47,7 +47,7 @@ export default async function HeroSection() {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{rightLabel}</h2>
         <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mb-4">{rightDesc}</p>
         <p className="text-gold font-bold text-xl mb-6">{phone}</p>
-        <span className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">{rightBtn}</span>
+        <span className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">{rightBtn}</span>
       </Link>
     </section>
   )

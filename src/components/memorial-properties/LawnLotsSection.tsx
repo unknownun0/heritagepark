@@ -2,7 +2,7 @@ const tiers = [
   {
     name: 'Regular',
     position: '11th row and beyond',
-    desc: 'A peaceful location within the lawn section at an accessible entry point. Same dignity, same perpetual care — simply a different row placement.',
+    desc: 'A peaceful location within the lawn section at an accessible entry point. Same dignity, same perpetual care - simply a different row placement.',
   },
   {
     name: 'Premium',
@@ -27,7 +27,7 @@ export default function LawnLotsSection() {
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Lawn Lots</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Meaningful First Step in Planning</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Simple, dignified, and built for peace of mind — at a place that feels like home.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">Simple, dignified, and built for peace of mind - at a place that feels like home.</p>
         </div>
       </section>
 
@@ -39,7 +39,7 @@ export default function LawnLotsSection() {
           </div>
           <div className="space-y-6 text-primary/70 text-base leading-relaxed max-w-3xl mx-auto">
             <p>A lawn lot is for the <strong>first-time planner</strong> who wants to begin their memorial journey with a meaningful, manageable step. It&apos;s designed for <strong>young families</strong> starting out, <strong>OFWs</strong> securing their family&apos;s future from abroad, and <strong>professionals</strong> who want the peace of mind that comes with planning early.</p>
-            <p>You don&apos;t need to have everything figured out. A lawn lot is the starting point — a decision your future self will thank you for.</p>
+            <p>You don&apos;t need to have everything figured out. A lawn lot is the starting point - a decision your future self will thank you for.</p>
           </div>
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function LawnLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size</h3>
-                <p className="text-sm text-primary/70">1.00m × 2.44m (2.44 sqm) — a single interment lot in a well-maintained lawn setting.</p>
+                <p className="text-sm text-primary/70">1.00m �- 2.44m (2.44 sqm) - a single interment lot in a well-maintained lawn setting.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
@@ -81,7 +81,7 @@ export default function LawnLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Marker</h3>
-                <p className="text-sm text-primary/70">A 16″×28″×3″ solid granite flat marker provides a lasting tribute. <em>The marker is not included but may be selected from our range of finishes.</em></p>
+                <p className="text-sm text-primary/70">A 16″�-28″�-3″ solid granite flat marker provides a lasting tribute. <em>The marker is not included but may be selected from our range of finishes.</em></p>
               </div>
             </div>
           </div>
@@ -110,18 +110,22 @@ export default function LawnLotsSection() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Why Start Here?</h2>
           <p className="text-primary/70 text-base leading-relaxed">
-            A lawn lot is not a compromise — it&apos;s a thoughtful entry point. Starting early means you secure today&apos;s pricing, lock in your preferred location, and give your family one less thing to worry about. You can always upgrade or add to your plan later. The most important step is simply beginning.
+            A lawn lot is not a compromise - it&apos;s a thoughtful entry point. Starting early means you secure today&apos;s pricing, lock in your preferred location, and give your family one less thing to worry about. You can always upgrade or add to your plan later. The most important step is simply beginning.
           </p>
         </div>
       </section>
 
       <FinanceCalculator mode="property" data={lawnLotData} title="Lawn Lot Payment Calculator" />
 
+      <div className="text-center pb-16 -mt-8">
+        <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request a Quote</a>
+      </div>
+
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">See the Lots for Yourself</h2>
-          <p className="text-white/70 mb-8 max-w-xl mx-auto">Nothing compares to walking the grounds. Schedule a lot tripping visit and experience the peace of Heritage Park firsthand.</p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Book a Lot Tripping Visit</a>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Secure a Lawn Lot?</h2>
+          <p className="text-white/70 mb-8 max-w-xl mx-auto">Our memorial sales consultants will guide you through every step - from selecting the right lot to setting up a payment plan that fits your budget.</p>
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Talk to a Memorial Sales Consultant</a>
         </div>
       </section>
     </>

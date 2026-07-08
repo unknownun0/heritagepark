@@ -30,7 +30,7 @@ export default function ConsultantProfileSection() {
               <p>
                 For over 12 years, Maria has had the privilege of walking alongside Filipino families during
                 one of the most important decisions they will ever make. She believes that memorial planning
-                is not about selling a product — it is about providing peace of mind.
+                is not about selling a product - it is about providing peace of mind.
               </p>
               <p>
                 Every family she works with receives the same level of care and attention she would give her
@@ -76,7 +76,7 @@ export default function ConsultantProfileSection() {
             </div>
             <a
               href="/contact"
-              className="inline-block mt-6 bg-gold text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-gold/90 transition-colors"
+              className="inline-block mt-6 bg-[#e2af43] text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
             >
               Book a Time With Me
             </a>
@@ -90,7 +90,7 @@ export default function ConsultantProfileSection() {
             </div>
             <div>
               <p className="text-sm font-semibold text-primary">Licensed PhilPlans Memorial Sales Consultant</p>
-              <p className="text-xs text-primary/50">Verified partner — Pompa & Associates</p>
+              <p className="text-xs text-primary/50">Verified partner - Pompa & Associates</p>
             </div>
           </div>
         </div>

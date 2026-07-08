@@ -12,7 +12,7 @@ const steps = [
   {
     number: '03',
     title: 'We Handle the Details',
-    description: 'Together we arrange everything so you can focus on what matters — your family.',
+    description: 'Together we arrange everything so you can focus on what matters - your family.',
   },
 ]
 
@@ -39,11 +39,11 @@ export default function ImmediateNeedSection() {
             We&apos;re Here to Help, Right Now.
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto mb-10">
-            If you&apos;ve experienced a loss, our team is ready to assist you immediately — every step of the way.
+            If you&apos;ve experienced a loss, our team is ready to assist you immediately - every step of the way.
           </p>
           <a
             href="tel:+639178841009"
-            className="inline-flex items-center gap-2 bg-gold text-primary font-bold text-lg px-10 py-4 rounded hover:bg-gold/90 transition-colors"
+            className="inline-flex items-center gap-2 bg-[#e2af43] text-primary font-bold text-lg px-10 py-4 rounded hover:bg-[#e2af43]/90 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -92,12 +92,12 @@ export default function ImmediateNeedSection() {
       <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <p className="text-2xl md:text-3xl text-gold font-accent italic leading-relaxed">
-            &ldquo;In your moment of need, you are not alone. We are here — with compassion, with clarity, and with the quiet strength of those who have walked this path beside many families before yours.&rdquo;
+            &ldquo;In your moment of need, you are not alone. We are here - with compassion, with clarity, and with the quiet strength of those who have walked this path beside many families before yours.&rdquo;
           </p>
           <div className="mt-8">
             <a
               href="tel:+639178841009"
-              className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
+              className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
             >
               Call Us Now
             </a>

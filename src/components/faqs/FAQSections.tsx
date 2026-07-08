@@ -77,7 +77,7 @@ export default function FAQSections() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Still Have Questions?</h2>
           <p className="text-white/70 mb-8">We\u2019re here to help with anything at all.</p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">
             Contact Us
           </a>
         </div>

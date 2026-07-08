@@ -42,7 +42,7 @@ export default function LearnSections() {
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Learn &amp; Resources</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Answers, Before You Need Them</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg mb-8">
-            An educational resource designed to help you understand memorial planning — no sales, just clarity.
+            An educational resource designed to help you understand memorial planning - no sales, just clarity.
           </p>
           <div className="relative max-w-xl mx-auto">
             <input
@@ -68,8 +68,8 @@ export default function LearnSections() {
                 onClick={() => setActiveTopic(topic.label)}
                 className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
                   activeTopic === topic.label
-                    ? 'bg-gold text-primary'
-                    : 'bg-white text-primary/70 border border-primary/10 hover:border-gold/30'
+                    ? 'bg-[#e2af43] text-primary'
+                    : 'bg-white text-primary/70 border border-primary/10 hover:border-[#e2af43]/30'
                 }`}
               >
                 {topic.label}
@@ -119,7 +119,7 @@ export default function LearnSections() {
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Get Your Free Family Planning Guide</h2>
               <p className="text-white/60 text-sm mb-6">A comprehensive resource to help your family plan ahead with confidence.</p>
-              <a href="#" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Download Free Guide</a>
+              <a href="#" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Download Free Guide</a>
             </div>
           </div>
         </div>

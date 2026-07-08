@@ -88,7 +88,7 @@ export default function BlogPostsList() {
                     <p className="text-sm font-medium text-[#1F3A2D]">{post.title}</p>
                     <p className="text-xs text-[#1F3A2D]/40 mt-0.5">/{post.slug}</p>
                   </td>
-                  <td className="p-4 hidden sm:table-cell"><span className="text-xs text-[#1F3A2D]/60">{post.topic || "—"}</span></td>
+                  <td className="p-4 hidden sm:table-cell"><span className="text-xs text-[#1F3A2D]/60">{post.topic || "-"}</span></td>
                   <td className="p-4 hidden md:table-cell"><span className="text-xs text-[#1F3A2D]/40">{new Date(post.created_at).toLocaleDateString()}</span></td>
                   <td className="p-4">
                     <span className={`text-[10px] px-2 py-0.5 rounded-full ${post.published ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}>

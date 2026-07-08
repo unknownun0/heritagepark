@@ -5,7 +5,7 @@ import Link from 'next/link'
 const values = [
   {
     title: 'Peace of Mind',
-    desc: 'Know that your family\'s future is secured with a thoughtful plan in place — no rushed decisions, no added burden.',
+    desc: 'Know that your family\'s future is secured with a thoughtful plan in place - no rushed decisions, no added burden.',
   },
   {
     title: 'Family Legacy',
@@ -17,7 +17,7 @@ const values = [
   },
   {
     title: 'Lasting Value',
-    desc: 'Lock in today\'s prices with flexible payment plans — protecting your family from future cost increases.',
+    desc: 'Lock in today\'s prices with flexible payment plans - protecting your family from future cost increases.',
   },
 ]
 
@@ -29,10 +29,10 @@ const parkPreviews = [
 ]
 
 const properties = [
-  { title: 'Lawn Lots', desc: 'Affordable, well-maintained lawn plots in peaceful garden settings.', href: '/memorial-properties' },
-  { title: 'Garden Lots', desc: 'Premium garden plots with landscaping and personalization options.', href: '/memorial-properties' },
-  { title: 'Estate Lots', desc: 'Spacious estate-sized lots for families who want room to honor.', href: '/memorial-properties' },
-  { title: 'Memory Place', desc: 'Indoor columbary niches in the elegant Aeternum sanctuary.', href: '/aeternum' },
+  { title: 'Lawn Lots', desc: 'Affordable, well-maintained lawn plots in peaceful garden settings.', href: '/memorial-properties', image: '/images/lawn-lot-hero.jpg' },
+  { title: 'Garden Lots', desc: 'Premium garden plots with landscaping and personalization options.', href: '/memorial-properties', image: '/images/garden-lot-hero.jpg' },
+  { title: 'Estate Lots', desc: 'Spacious estate-sized lots for families who want room to honor.', href: '/memorial-properties', image: '/images/estate-lot-hero.jpg' },
+  { title: 'Memory Place', desc: 'Indoor columbary niches in the elegant Aeternum sanctuary.', href: '/aeternum', image: '/images/memory-place-hero.jpg' },
 ]
 
 export default function HomeSections() {
@@ -97,12 +97,15 @@ export default function HomeSections() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {properties.map((p) => (
-              <Link key={p.title} href={p.href} className="group block border border-primary/10 rounded-lg p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-l-2 border-transparent hover:border-gold">
-                <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-gold transition-colors">{p.title}</h3>
-                <p className="text-sm text-primary/60 mb-4">{p.desc}</p>
-                <span className="text-gold font-semibold text-sm group-hover:underline">
-                  Learn More &rarr;
-                </span>
+              <Link key={p.title} href={p.href} className="group block border border-primary/10 rounded-lg overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${p.image})` }} />
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-gold transition-colors">{p.title}</h3>
+                  <p className="text-sm text-primary/60 mb-4">{p.desc}</p>
+                  <span className="text-gold font-semibold text-sm group-hover:underline">
+                    Learn More &rarr;
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -116,7 +119,7 @@ export default function HomeSections() {
             Get Your Free Heritage Park Family Planning Guide
           </h2>
           <p className="text-white/60 text-sm mb-8 max-w-xl mx-auto">
-            A gentle introduction to pre-need memorial planning — written for Filipino families who want to prepare with confidence.
+            A gentle introduction to pre-need memorial planning - written for Filipino families who want to prepare with confidence.
           </p>
           <form className="max-w-lg mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
             <input
@@ -136,7 +139,8 @@ export default function HomeSections() {
             />
             <button
               type="submit"
-              className="w-full bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
+              className="w-full text-primary font-semibold px-8 py-3.5 rounded text-sm hover:opacity-90 transition-colors"
+              style={{ backgroundColor: '#e2af43' }}
             >
               Send Me the Guide
             </button>
@@ -160,7 +164,8 @@ export default function HomeSections() {
           </h2>
           <Link
             href="/contact"
-            className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
+            className="inline-block text-primary font-semibold px-8 py-3.5 rounded text-sm hover:opacity-90 transition-colors"
+            style={{ backgroundColor: '#e2af43' }}
           >
             Schedule a Visit
           </Link>

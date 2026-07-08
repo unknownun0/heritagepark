@@ -6,16 +6,11 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import MobileMenu from './MobileMenu'
 
-interface NavChild {
-  label: string
-  href: string
-}
-
 interface NavItem {
   key: string
   label: string
   href: string
-  children?: NavChild[]
+  children?: { label: string; href: string }[]
 }
 
 const navItems: NavItem[] = [
@@ -23,19 +18,13 @@ const navItems: NavItem[] = [
     key: 'plan-ahead',
     label: 'Plan Ahead',
     href: '/plan-ahead',
-    children: [
-      { label: 'Plan Ahead', href: '/plan-ahead' },
-      { label: 'Why Plan Ahead', href: '/plan-ahead#why-plan-ahead' },
-      { label: 'What Planning Looks Like', href: '/plan-ahead#what-planning-looks-like' },
-      { label: 'Common Questions', href: '/plan-ahead#common-questions' },
-    ],
   },
   {
     key: 'memorial-properties',
     label: 'Memorial Properties',
     href: '/memorial-properties',
     children: [
-      { label: 'Memorial Properties', href: '/memorial-properties' },
+      { label: 'Explore All', href: '/memorial-properties' },
       { label: 'Lawn Lots', href: '/memorial-properties/lawn-lots' },
       { label: 'Garden Lots', href: '/memorial-properties/garden-lots' },
       { label: 'Estate Lots', href: '/memorial-properties/estate-lots' },
@@ -47,8 +36,8 @@ const navItems: NavItem[] = [
     label: 'Memorial Services',
     href: '/memorial-services',
     children: [
-      { label: 'Memorial Services', href: '/memorial-services' },
-      { label: 'Mortuary Plans', href: '/memorial-services/mortuary-plans' },
+      { label: 'Explore All', href: '/memorial-services' },
+      { label: 'Mortuary & Wake Plans', href: '/memorial-services/mortuary-plans' },
       { label: 'Interment Plans', href: '/memorial-services/interment-plans' },
       { label: 'Combo Plans', href: '/memorial-services/combo-plans' },
     ],
@@ -57,123 +46,56 @@ const navItems: NavItem[] = [
     key: 'explore-the-park',
     label: 'Explore the Park',
     href: '/explore-the-park',
-    children: [
-      { label: 'Explore the Park', href: '/explore-the-park' },
-      { label: 'Park Highlights', href: '/explore-the-park' },
-      { label: 'Aeternum Columbary', href: '/aeternum' },
-      { label: 'Schedule a Visit', href: '/contact' },
-    ],
   },
   {
     key: 'nacional',
     label: 'Nacional',
     href: '/nacional',
-    children: [
-      { label: 'Nacional', href: '/nacional' },
-      { label: 'Cremation Plans', href: '/nacional' },
-      { label: 'Cremation with Viewing', href: '/nacional' },
-      { label: 'Viewing then Cremation', href: '/nacional' },
-      { label: 'Regular Plans', href: '/nacional' },
-    ],
   },
   {
     key: 'learn',
-    label: 'Learn',
+    label: '__',
     href: '/learn',
-    children: [
-      { label: 'Learn', href: '/learn' },
-      { label: 'Planning Basics', href: '/learn' },
-      { label: 'Memorial Properties', href: '/learn' },
-      { label: 'Costs & Payment', href: '/learn' },
-      { label: 'Grief & Support', href: '/learn' },
-      { label: 'Culture & Tradition', href: '/learn' },
-    ],
   },
   {
-    key: 'internom',
-    label: 'Internom',
-    href: '/internom',
-    children: [
-      { label: 'Internom', href: '/internom' },
-      { label: 'Personalized Memorials', href: '/internom#personalized' },
-      { label: 'Digital Tributes', href: '/internom#digital' },
-      { label: 'Expert Guidance', href: '/internom#expert' },
-    ],
+    key: 'aeternum',
+    label: 'Aeternum',
+    href: '/aeternum',
   },
   {
     key: 'contact',
     label: 'Contact',
     href: '/contact',
-    children: [
-      { label: 'Contact Us', href: '/contact' },
-      { label: 'Find a Consultant', href: '/find-a-consultant' },
-      { label: 'FAQs', href: '/faqs' },
-    ],
   },
   {
     key: 'feedback',
     label: 'Feedback',
     href: '/feedback',
-    children: [
-      { label: 'Share Your Experience', href: '/feedback' },
-      { label: 'Rate Your Visit', href: '/feedback' },
-      { label: 'Suggestions', href: '/feedback' },
-    ],
   },
 ]
 
-const atNeedLinks = [
-  { label: 'Get Help Now', href: 'tel:+639178841009' },
-  { label: 'FAQs', href: '/faqs' },
-  { label: 'Find a Consultant', href: '/find-a-consultant' },
-]
-
 const mobileLinks = [
-  ...navItems.map((item) => ({ label: item.label, href: item.href })),
-  { label: 'Immediate Need', href: '/immediate-need' },
-  { label: 'FAQs', href: '/faqs' },
-  { label: 'Find a Consultant', href: '/find-a-consultant' },
+  ...navItems.map((item) => ({ label: item.label === '__' ? 'Learn' : item.label, href: item.href })),
 ]
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [atNeedOpen, setAtNeedOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const navRef = useRef<HTMLDivElement>(null)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const pathname = usePathname()
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 80)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setMobileOpen(false)
-    setActiveDropdown(null)
-    setAtNeedOpen(false)
   }, [pathname])
 
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setActiveDropdown(null)
-        setAtNeedOpen(false)
-      }
-    }
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setActiveDropdown(null)
-        setAtNeedOpen(false)
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null)
       }
     }
     document.addEventListener('mousedown', handleClickOutside)
-    document.addEventListener('keydown', handleKey)
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      document.removeEventListener('keydown', handleKey)
-    }
+    return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
   const navLinkClass = (isActive: boolean) =>
@@ -202,82 +124,53 @@ export default function Header() {
               />
             </Link>
 
-            <nav ref={navRef} className="hidden lg:flex flex-1 items-center justify-start ml-2 gap-0.5">
+            <nav className="hidden lg:flex flex-1 items-center justify-start ml-2 gap-0.5" ref={dropdownRef}>
               {navItems.map((item) => {
                 const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
+                const hasChildren = item.children && item.children.length > 0
                 return (
-                  <div key={item.key} className="relative">
-                    <div className="flex items-center gap-0.5">
-                      <Link
-                        href={item.href}
-                        className={navLinkClass(isActive)}
-                        onClick={(e) => {
-                          if (item.children) {
-                            e.preventDefault()
-                            setActiveDropdown(activeDropdown === item.key ? null : item.key)
-                            return
-                          }
-                          window.scrollTo({ top: 0, behavior: 'smooth' })
-                        }}
-                      >
-                        {item.label}
-                      </Link>
-                      {item.children && (
-                        <button
-                          onClick={() => setActiveDropdown(activeDropdown === item.key ? null : item.key)}
-                          className="p-0.5 text-white/50 hover:text-white transition-colors"
-                          aria-label={`Toggle ${item.label} menu`}
-                        >
-                          <svg className={`w-3 h-3 transition-transform ${activeDropdown === item.key ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
+                  <div
+                    key={item.key}
+                    className="relative group"
+                    onMouseEnter={() => setOpenDropdown(item.key)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
+                    <Link
+                      href={item.href}
+                      className={navLinkClass(isActive)}
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    >
+                      {item.label}
+                      {hasChildren && (
+                        <svg className="inline-block w-3 h-3 ml-0.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
                       )}
-                    </div>
-                    {item.children && activeDropdown === item.key && (
-                      <div className="absolute top-full left-0 mt-1 w-52 bg-white rounded shadow-lg overflow-hidden animate-slide-down z-50">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2.5 text-[12px] text-primary hover:bg-cream transition-colors border-b border-primary/5 last:border-0"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                    </Link>
+                    {hasChildren && openDropdown === item.key && (
+                      <div className="absolute top-full left-0 mt-0 w-56 bg-white rounded-lg shadow-xl border border-primary/10 py-2 animate-slide-down">
+                        {item.children!.map((child) => {
+                          const isChildActive = pathname === child.href
+                          return (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              onClick={() => { setOpenDropdown(null); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+                              className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                                isChildActive
+                                  ? 'text-gold bg-gold/5'
+                                  : 'text-primary/80 hover:text-primary hover:bg-cream'
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          )
+                        })}
                       </div>
                     )}
                   </div>
                 )
               })}
-              <div className="relative">
-                <button
-                  onClick={() => setAtNeedOpen(!atNeedOpen)}
-                  className="flex items-center gap-1 px-3 py-2 text-[11px] font-bold tracking-wide uppercase rounded transition-colors bg-gold text-primary hover:bg-gold/90"
-                >
-                  AT NEED
-                  <svg className={`w-3 h-3 transition-transform ${atNeedOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {atNeedOpen && (
-                  <div className="absolute top-full right-0 mt-1 w-52 bg-white rounded shadow-lg overflow-hidden animate-slide-down">
-                    <a href="/immediate-need" className="block px-4 py-3 text-xs font-semibold text-primary bg-gold/10 hover:bg-gold/20 transition-colors border-b border-primary/5">
-                      Immediate Need &mdash; We&apos;re Here
-                    </a>
-                    {atNeedLinks.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        className="block px-4 py-3 text-xs text-primary hover:bg-cream transition-colors border-b border-primary/5 last:border-0"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
             </nav>
 
             <button

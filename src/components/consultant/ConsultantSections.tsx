@@ -38,7 +38,7 @@ const consultants = [
 const benefits = [
   {
     title: 'No Pressure, Ever',
-    desc: 'Our consultants are trained to educate first. You decide what is right for your family — on your timeline, without sales pressure.',
+    desc: 'Our consultants are trained to educate first. You decide what is right for your family - on your timeline, without sales pressure.',
   },
   {
     title: 'Full Education',
@@ -59,7 +59,7 @@ export default function ConsultantSections() {
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Find a Consultant</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Your Family Deserves a Dedicated Guide</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            A Heritage Park Memorial Sales Consultant is your partner in planning — here to educate, guide, and support your family with compassion and zero pressure.
+            A Heritage Park Memorial Sales Consultant is your partner in planning - here to educate, guide, and support your family with compassion and zero pressure.
           </p>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default function ConsultantSections() {
           <p className="text-white/70 mb-8">No obligation. Just a warm conversation with someone who understands.</p>
           <a
             href="/contact"
-            className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
+            className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
           >
             Book a Time With a Consultant
           </a>

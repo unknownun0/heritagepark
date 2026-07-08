@@ -3,7 +3,7 @@ import { getPageContent } from '@/lib/content'
 export default async function AboutSections() {
   const subtitle = await getPageContent('about', 'subtitle', 'A Legacy of Dignity & Peace')
   const heroDesc = await getPageContent('about', 'hero_desc', 'For generations, Heritage Park has stood as a sanctuary where families find comfort, beauty, and lasting remembrance.')
-  const storyTitle = await getPageContent('about', 'story_title', 'More Than a Cemetery — A Master-Planned Memorial Community')
+  const storyTitle = await getPageContent('about', 'story_title', 'More Than a Cemetery - A Master-Planned Memorial Community')
   const visionTitle = await getPageContent('about', 'vision_title', 'A Master-Planned Memorial Community')
   const philosophyTitle = await getPageContent('about', 'philosophy_title', 'Guided by Education, Never Pressure')
 
@@ -26,7 +26,7 @@ export default async function AboutSections() {
           </div>
           <div className="space-y-6 text-primary/70 leading-relaxed">
             <p>
-              Heritage Park was envisioned as something different — not simply a cemetery, but a thoughtfully designed memorial
+              Heritage Park was envisioned as something different - not simply a cemetery, but a thoughtfully designed memorial
               community where nature, architecture, and remembrance exist in harmony. Every pathway, garden, and chapel was
               planned with the intention of creating a space that honors life while offering solace to those who visit.
             </p>
@@ -52,10 +52,10 @@ export default async function AboutSections() {
           </div>
           <div className="text-primary/60 text-sm leading-relaxed space-y-5 max-w-3xl mx-auto">
             <p>
-              Heritage Park was designed from the ground up as a master-planned memorial community — not a traditional cemetery. Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
+              Heritage Park was designed from the ground up as a master-planned memorial community - not a traditional cemetery. Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
             </p>
             <p>
-              The park is organized into distinct sections connected by a network of paved roads and walking paths. Landscaped gardens with indigenous flowering trees provide shade and color throughout the year. Each zone has its own character — from the open lawns of the Garden lots to the intimate garden settings of our estate areas.
+              The park is organized into distinct sections connected by a network of paved roads and walking paths. Landscaped gardens with indigenous flowering trees provide shade and color throughout the year. Each zone has its own character - from the open lawns of the Garden lots to the intimate garden settings of our estate areas.
             </p>
             <p>
               Central to the park is the Aeternum columbary complex, an indoor sanctuary of elegance, and the Heritage Chapel, designed for intimate family services. The Nacional Memorial section stands as a tribute to the nation&apos;s heritage, while Reflection Lake offers a quiet place for contemplation.
@@ -74,7 +74,7 @@ export default async function AboutSections() {
             <div className="bg-white rounded-lg p-8 border border-primary/5">
               <h3 className="text-xl font-semibold text-primary mb-3">Our Mission</h3>
               <p className="text-sm text-primary/60 leading-relaxed">
-                To help Filipino families make informed, dignified decisions about memorial planning — with complete
+                To help Filipino families make informed, dignified decisions about memorial planning - with complete
                 transparency, compassionate guidance, and zero sales pressure. We believe knowledge empowers families
                 to choose what is right for them.
               </p>
@@ -91,40 +91,7 @@ export default async function AboutSections() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Who We Are</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">About Pompa &amp; Associates</h2>
-          <p className="text-primary/70 leading-relaxed max-w-3xl mx-auto mb-4">
-            Heritage Park is exclusively represented by Pompa &amp; Associates, a trusted partner of PhilPlans —
-            the Philippines&apos; largest and most established pre-need plan provider. Together, we bring decades of
-            experience in memorial planning, with a shared commitment to integrity, transparency, and genuine care for
-            the families we serve.
-          </p>
-          <p className="text-primary/70 leading-relaxed max-w-3xl mx-auto">
-            Our consultants are not salespeople — they are educators and guides who take the time to understand each
-            family&apos;s unique needs, beliefs, and financial situation. Every recommendation is made with your best
-            interests at heart.
-          </p>
-        </div>
-      </section>
 
-      <section className="py-20 bg-cream">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Our Team</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Meet Your Consultants</h2>
-          <p className="text-primary/60 mb-8 max-w-2xl mx-auto">
-            Our dedicated team of memorial planning professionals is ready to guide you with compassion, expertise,
-            and respect.
-          </p>
-          <a
-            href="/find-a-consultant"
-            className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors"
-          >
-            Meet Our Consultants
-          </a>
-        </div>
-      </section>
     </>
   )
 }

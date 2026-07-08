@@ -7,7 +7,7 @@ const cards = [
   {
     name: 'Lawn Lots',
     href: '/memorial-properties/lawn-lots',
-    desc: 'A meaningful first step — simple, dignified, and affordable. Lawn lots offer a serene resting place with flat granite markers in beautifully maintained open spaces.',
+    desc: 'A meaningful first step - simple, dignified, and affordable. Lawn lots offer a serene resting place with flat granite markers in beautifully maintained open spaces.',
     image: '/images/lawn-lot-hero.jpg',
   },
   {
@@ -56,19 +56,28 @@ export default function PropertyComparison() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {cards.map((card) => (
-              <div key={card.name} className="bg-white rounded-lg overflow-hidden border border-transparent hover:shadow-lg transition-shadow">
+              <a key={card.name} href={card.href} className="block bg-white rounded-lg overflow-hidden border border-transparent hover:shadow-lg transition-shadow group">
                 <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${card.image})` }} />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">{card.name}</h3>
+                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-gold transition-colors">{card.name}</h3>
                   <p className="text-sm text-primary/70 leading-relaxed mb-4">{card.desc}</p>
-                  <a href={card.href} className="inline-flex items-center gap-1 text-gold font-semibold text-sm hover:text-gold/80 transition-colors">
+                  <span className="inline-flex items-center gap-1 text-gold font-semibold text-sm group-hover:text-gold/80 transition-colors">
                     Learn More
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </span>
+                  <div className="mt-3">
+                    <a
+                      href="/contact"
+                      onClick={(e) => e.stopPropagation()}
+                      className="block w-full text-center bg-[#e2af43] text-primary font-semibold py-2.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
+                    >
+                      Request a Quote
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -108,6 +117,10 @@ export default function PropertyComparison() {
 
       <FinanceCalculator mode="property" data={[...lawnLotData, ...gardenLotData, ...memoryPlaceData, ...estateLotData]} title="Explore Your Payment Options" />
 
+      <div className="text-center pb-16 -mt-8">
+        <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request a Quote</a>
+      </div>
+
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-gold text-lg font-accent italic leading-relaxed">
@@ -120,7 +133,7 @@ export default function PropertyComparison() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Ready to Find the Right Fit?</h2>
           <p className="text-primary/60 mb-8 max-w-xl mx-auto">Our memorial sales consultants are here to guide your family with care and no pressure.</p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Talk to a Memorial Sales Consultant</a>
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Talk to a Memorial Sales Consultant</a>
         </div>
       </section>
     </>

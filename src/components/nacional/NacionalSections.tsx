@@ -1,19 +1,27 @@
 const nacionalDisplayPlans = [
   {
     name: 'Cremation',
+    image: '/images/cremation-plan.jpg',
     features: ['Pickup service', 'Crematory Chapel', 'Basic Urn', 'Cremation certificate'],
+    href: '/contact',
   },
   {
     name: 'Cremation with Viewing',
+    image: '/images/cremation-viewing-plan.jpg',
     features: ['Pickup service', 'Regular Chapel (4D/3N)', 'Basic Urn', 'Wake coordination'],
+    href: '/contact',
   },
   {
     name: 'Viewing then Cremation',
+    image: '/images/viewing-cremation-plan.jpg',
     features: ['Pickup service', 'Preservation included', 'Regular Chapel (4D/3N)', 'Basic Urn + Presentation Casket'],
+    href: '/contact',
   },
   {
     name: 'Regular',
+    image: '/images/regular-plan.jpg',
     features: ['Full pickup & preservation', 'Hearse service', 'Regular Chapel (4D/3N)', 'Metal Non-Gasketted Casket'],
+    href: '/contact',
   },
 ]
 
@@ -28,7 +36,7 @@ export default function NacionalSections() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/40 to-transparent" />
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Nacional Memorial Homes</p>
-          <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">Nacional Memorial Homes<br /><span className="text-gold">— Quezon City</span></h1>
+          <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">Nacional Memorial Homes<br /><span className="text-gold">- Quezon City</span></h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">The same Heritage Park quality standard, now serving Quezon City and the wider Metro Manila community with dignified memorial service plans.</p>
         </div>
       </section>
@@ -38,7 +46,7 @@ export default function NacionalSections() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">About Nacional</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Heritage Park Quality, Quezon City Convenience</h2>
-            <p className="text-primary/60 leading-relaxed">Nacional Memorial Homes brings Heritage Park's legacy of premium memorial care to a dedicated facility in Quezon City. Our chapel is equipped with a Regular Chapel and Family Room, comfortable lounge areas, and restroom facilities — providing the same standard of dignity and comfort that Heritage Park is known for.</p>
+            <p className="text-primary/60 leading-relaxed">Nacional Memorial Homes brings Heritage Park's legacy of premium memorial care to a dedicated facility in Quezon City. Our chapel is equipped with a Regular Chapel and Family Room, comfortable lounge areas, and restroom facilities - providing the same standard of dignity and comfort that Heritage Park is known for.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="aspect-video bg-moss/10 rounded-lg flex items-center justify-center text-moss/30">
@@ -52,7 +60,7 @@ export default function NacionalSections() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <p className="text-sm text-primary/70">Located in Quezon City — easily accessible from major Metro Manila routes.</p>
+                <p className="text-sm text-primary/70">Located in Quezon City - easily accessible from major Metro Manila routes.</p>
               </div>
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-gold mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,20 +87,29 @@ export default function NacionalSections() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {nacionalDisplayPlans.map((plan) => (
-              <div key={plan.name} className="bg-cream rounded-lg p-6 border border-primary/5 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-primary mb-4">{plan.name}</h3>
-                <ul className="space-y-2.5 mb-6">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-xs text-primary/60">
-                      <svg className="w-3.5 h-3.5 text-moss mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <a href="/contact" className="block w-full text-center bg-primary text-white font-semibold py-2.5 rounded text-sm hover:bg-primary/90 transition-colors">Inquire</a>
-              </div>
+              <a key={plan.name} href={plan.href} className="block bg-white rounded-lg overflow-hidden border border-primary/5 hover:shadow-md transition-shadow group">
+                <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${plan.image})` }}>
+                  <div className="w-full h-full bg-moss/10 flex items-center justify-center text-moss/30">
+                    <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-primary mb-4 group-hover:text-gold transition-colors">{plan.name}</h3>
+                  <ul className="space-y-2.5 mb-6">
+                    {plan.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2 text-xs text-primary/60">
+                        <svg className="w-3.5 h-3.5 text-moss mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="block w-full text-center bg-primary text-white font-semibold py-2.5 rounded text-sm hover:bg-primary/90 transition-colors">Inquire</span>
+                </div>
+              </a>
             ))}
           </div>
         </div>

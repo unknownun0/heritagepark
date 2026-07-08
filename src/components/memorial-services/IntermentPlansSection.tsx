@@ -36,7 +36,7 @@ export default function IntermentPlansSection() {
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Interment Plans</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Dignified Burial and Cremains Interment</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">An interment plan covers the burial of your loved one in your Heritage Park lot — whether for full-body or cremains placement, at the depth that suits your family's needs.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">An interment plan covers the burial of your loved one in your Heritage Park lot - whether for full-body or cremains placement, at the depth that suits your family's needs.</p>
         </div>
       </section>
 
@@ -90,7 +90,7 @@ export default function IntermentPlansSection() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h3 className="text-xl font-bold text-primary mb-3">Get Exact Interment Pricing</h3>
           <p className="text-primary/60 text-sm mb-8">Contact our team for current interment plan pricing, availability, and package options.</p>
-          <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-gold/90 transition-colors">Request Plan Pricing</a>
+          <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request Plan Pricing</a>
         </div>
       </section>
     </>

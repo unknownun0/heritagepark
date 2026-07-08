@@ -9,12 +9,14 @@ const quickLinks = [
   { label: 'Explore the Park', href: '/explore-the-park' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  { label: 'FAQs', href: '/faqs' },
 ]
 
 const legalLinks = [
   { label: 'Terms of Service', href: '/terms-of-use' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'FAQs', href: '/faqs' },
+  { label: 'Feedback', href: '/feedback' },
 ]
 
 const socialLinks = [
@@ -90,18 +92,12 @@ export default async function Footer() {
           <div>
             <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
             <div className="space-y-3 text-sm text-white/70">
-              <p>{address}</p>
-              <p className="pt-2">
+              <p>
                 <a href={`tel:${phone}`} className="text-gold hover:text-gold/80 transition-colors">{phone}</a>
               </p>
               <p>
                 <a href={`mailto:${email}`} className="text-gold hover:text-gold/80 transition-colors">{email}</a>
               </p>
-              <div className="pt-2">
-                <p className="font-semibold text-white/90 text-xs">Office Hours</p>
-                <p>Mon–Sat: 8:00 AM – 5:00 PM</p>
-                <p>Sun: 9:00 AM – 3:00 PM</p>
-              </div>
             </div>
           </div>
         </div>
