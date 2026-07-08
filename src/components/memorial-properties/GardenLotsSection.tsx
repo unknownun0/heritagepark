@@ -20,7 +20,7 @@ export default function GardenLotsSection() {
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Garden Lots</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Lasting Place for Your Whole Family</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Generous space, timeless elegance - designed for families who plan together.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">Generous space, timeless elegance designed for families who plan together.</p>
         </div>
       </section>
 
@@ -31,7 +31,7 @@ export default function GardenLotsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Built for Generations</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-            <p>A garden lot is for the family that thinks ahead - not just for themselves, but for their children and grandchildren. It&apos;s for those who want a <strong>single, beautiful space</strong> where multiple generations can be honored together, surrounded by nature and cared for in perpetuity.</p>
+            <p>A garden lot is for the family that thinks ahead not just for themselves, but for their children and grandchildren. It&apos;s for those who want a <strong>single, beautiful space</strong> where multiple generations can be honored together, surrounded by nature and cared for in perpetuity.</p>
           </div>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function GardenLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size &amp; Layout</h3>
-                <p className="text-sm text-primary/70">Each garden lot spans <strong>4.00m �- 4.88m (19.52 sqm)</strong> and comprises <strong>8 individual plots</strong> - enough space for a full family memorial.</p>
+                <p className="text-sm text-primary/70">Each garden lot spans <strong>4.00m �- 4.88m (19.52 sqm)</strong> and comprises <strong>8 individual plots</strong> enough space for a full family memorial.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
@@ -101,7 +101,7 @@ export default function GardenLotsSection() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">A Legacy That Spans Generations</h2>
           <p className="text-primary/70 text-base leading-relaxed">
-            A garden lot is more than a burial space - it&apos;s a shared family memorial. Imagine a single, beautifully landscaped site where grandparents, parents, children, and grandchildren are all remembered together. It becomes a place your family returns to, year after year - a legacy of togetherness that endures.
+            A garden lot is more than a burial space it&apos;s a shared family memorial. Imagine a single, beautifully landscaped site where grandparents, parents, children, and grandchildren are all remembered together. It becomes a place your family returns to, year after year a legacy of togetherness that endures.
           </p>
         </div>
       </section>

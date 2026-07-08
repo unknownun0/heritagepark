@@ -6,7 +6,7 @@ const planFamilies = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
-    desc: 'From cremation services to full traditional wakes - choose the level of care that fits your family\'s traditions and wishes. Each plan covers pickup, chapel use, and memorial service coordination.',
+    desc: 'From cremation services to full traditional wakes choose the level of care that fits your family\'s traditions and wishes. Each plan covers pickup, chapel use, and memorial service coordination.',
     href: '/memorial-services/mortuary-plans',
   },
   {
@@ -34,17 +34,17 @@ const planFamilies = [
 const chapels = [
   {
     name: 'Regular Chapel',
-    capacity: '40–50 guests + trellis area',
+    capacity: '40 50 guests + trellis area',
     features: ['Family room with restroom', 'Microwave & refrigerator', 'Sofa bed', 'TV & Wi-Fi'],
   },
   {
     name: 'Premier Chapel',
-    capacity: '80–100 guests + trellis area',
+    capacity: '80 100 guests + trellis area',
     features: ['Spacious pantry', 'Dining table', 'Family room', 'Premium finishes'],
   },
   {
     name: 'Crematory Chapel',
-    capacity: '20–30 guests',
+    capacity: '20 30 guests',
     features: ['On-site crematory', 'Private viewing area', 'Direct cremation access'],
   },
 ]
@@ -59,7 +59,7 @@ export default function ServicePlans() {
         <div className="absolute inset-0 bg-[url(/images/services-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Care and Service, Planned in Advance</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Beyond a final resting place, Heritage Park also offers memorial service plans - so your family is cared for in every detail, not just provided a place.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">Beyond a final resting place, Heritage Park also offers memorial service plans so your family is cared for in every detail, not just provided a place.</p>
         </div>
       </section>
 
@@ -120,13 +120,13 @@ export default function ServicePlans() {
         </div>
       </section>
 
-      <FinanceCalculator mode="service" data={[...mortuaryPlans, ...intermentPlans, ...comboPlans]} title="All Service Plans - Compare Pricing" />
+      <FinanceCalculator mode="service" data={[...mortuaryPlans, ...intermentPlans, ...comboPlans]} title="All Service Plans Compare Pricing" />
 
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-primary rounded-lg p-8 md:p-10 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Your Memorial Property Comes With a Service Plan</h3>
-            <p className="text-white/70 mb-6 max-w-xl mx-auto">Your memorial property comes complete with a service plan, so nothing is left for your family to arrange alone. It's not an upsell - it's how we ensure every family is fully cared for.</p>
+            <p className="text-white/70 mb-6 max-w-xl mx-auto">Your memorial property comes complete with a service plan, so nothing is left for your family to arrange alone. It's not an upsell it's how we ensure every family is fully cared for.</p>
             <a href="#compare" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Compare Plans</a>
           </div>
         </div>

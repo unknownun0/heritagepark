@@ -15,7 +15,7 @@ const galleryAreas = [
 const visitInfo = [
   {
     title: 'Location',
-    desc: 'Brgy. San Bartolome, Novaliches, Quezon City - easily accessible from major Metro Manila thoroughfares.',
+    desc: 'Brgy. San Bartolome, Novaliches, Quezon City easily accessible from major Metro Manila thoroughfares.',
   },
   {
     title: 'Park Hours',
@@ -55,7 +55,7 @@ export default function ExploreParkSections() {
             Discover a Place of Uncommon Beauty
           </h1>
           <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
-            Heritage Park is a master-planned memorial community - acres of landscaped gardens, modern sanctuaries, and peaceful spaces designed for reflection and remembrance.
+            Heritage Park is a master-planned memorial community acres of landscaped gardens, modern sanctuaries, and peaceful spaces designed for reflection and remembrance.
           </p>
         </div>
       </section>
@@ -102,13 +102,13 @@ export default function ExploreParkSections() {
           </div>
           <div className="text-primary/60 text-sm leading-relaxed space-y-5 max-w-3xl mx-auto">
             <p>
-              Heritage Park was designed from the ground up as a master-planned memorial community - not a traditional cemetery. 
+              Heritage Park was designed from the ground up as a master-planned memorial community not a traditional cemetery. 
               Every pathway, garden, and sanctuary was thoughtfully laid out to create an environment of peace, dignity, and natural beauty.
             </p>
             <p>
               The park is organized into distinct sections connected by a network of paved roads and walking paths. 
               Landscaped gardens with indigenous flowering trees provide shade and color throughout the year. 
-              Each zone has its own character - from the open lawns of the Garden lots to the intimate garden settings of our estate areas.
+              Each zone has its own character from the open lawns of the Garden lots to the intimate garden settings of our estate areas.
             </p>
             <p>
               Central to the park is the Aeternum columbary complex, an indoor sanctuary of elegance, and the Heritage Chapel, 

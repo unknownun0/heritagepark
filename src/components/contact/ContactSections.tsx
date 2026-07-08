@@ -160,9 +160,9 @@ export default function ContactSections() {
                     required
                   >
                     <option value="">Select a time</option>
-                    <option value="Morning (8AM – 12PM)">Morning (8AM – 12PM)</option>
-                    <option value="Afternoon (12PM – 5PM)">Afternoon (12PM – 5PM)</option>
-                    <option value="Evening (5PM – 8PM)">Evening (5PM – 8PM)</option>
+                    <option value="Morning (8AM   12PM)">Morning (8AM   12PM)</option>
+                    <option value="Afternoon (12PM   5PM)">Afternoon (12PM   5PM)</option>
+                    <option value="Evening (5PM   8PM)">Evening (5PM   8PM)</option>
                     <option value="Anytime">Anytime</option>
                   </select>
                 </div>

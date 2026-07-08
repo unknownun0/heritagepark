@@ -32,12 +32,12 @@ export default function AeternumSections() {
           <div className="text-center mb-12">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Premium Columbary</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Indoor Sanctuaries of Peace</h2>
-            <p className="text-primary/60 mt-2 max-w-xl mx-auto">Aeternum offers the finest columbary experience in the Philippines - blending architectural elegance with serene contemplation.</p>
+            <p className="text-primary/60 mt-2 max-w-xl mx-auto">Aeternum offers the finest columbary experience in the Philippines blending architectural elegance with serene contemplation.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { title: 'The Grand Columbary', desc: 'Floor-to-ceiling marble niches with ambient LED lighting and individual glass-front displays. Climate-controlled for year-round comfort.', features: ['Polished marble finish', 'LED-illuminated niches', 'Climate-controlled', '24/7 access'] },
-              { title: 'The Private Suites', desc: 'Intimate, lockable rooms designed for families who desire a completely private space for remembrance. Each suite accommodates 8–12 urns.', features: ['Private room', 'Customizable interior', 'Seating area', 'Sound system ready'] },
+              { title: 'The Private Suites', desc: 'Intimate, lockable rooms designed for families who desire a completely private space for remembrance. Each suite accommodates 8 12 urns.', features: ['Private room', 'Customizable interior', 'Seating area', 'Sound system ready'] },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-lg overflow-hidden shadow-sm">
                 <div className="aspect-video bg-gradient-to-br from-primary/5 to-gold/5 flex items-center justify-center">

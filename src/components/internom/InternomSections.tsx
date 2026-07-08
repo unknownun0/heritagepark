@@ -6,7 +6,7 @@ export default function InternomSections() {
     },
     {
       title: 'Digital Tributes',
-      desc: 'Preserve memories with our digital tribute platform - photos, stories, and messages that live on for generations to come.',
+      desc: 'Preserve memories with our digital tribute platform photos, stories, and messages that live on for generations to come.',
     },
     {
       title: 'Expert Guidance',
@@ -55,7 +55,7 @@ export default function InternomSections() {
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Coming Soon</p>
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">More Details on the Way</h2>
           <p className="text-primary/60 text-sm leading-relaxed max-w-2xl mx-auto">
-            We are putting the finishing touches on Internom - our newest offering designed to help families
+            We are putting the finishing touches on Internom our newest offering designed to help families
             create meaningful, lasting tributes. Check back soon for full details, pricing, and availability.
           </p>
           <a

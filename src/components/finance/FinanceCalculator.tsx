@@ -174,7 +174,7 @@ export default function FinanceCalculator(props: Props) {
                 <p className="text-2xl font-bold text-primary">{formatPeso(plan.contractPrice)}</p>
               </div>
               <div className="bg-white rounded-lg p-5 text-center border border-gold/20 ring-1 ring-gold/30">
-                <p className="text-xs text-gold uppercase tracking-wider mb-1">Recommended - Spot Cash (10% off)</p>
+                <p className="text-xs text-gold uppercase tracking-wider mb-1">Recommended Spot Cash (10% off)</p>
                 <p className="text-2xl font-bold text-gold">{formatPeso(plan.spotCash)}</p>
                 <p className="text-xs text-primary/40 mt-1">Save {formatPeso(plan.contractPrice - plan.spotCash)}</p>
               </div>

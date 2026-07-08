@@ -120,7 +120,7 @@ export default async function BlogPostSection({ slug }: Props) {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Ready to Secure Your Family&apos;s Future?</h2>
           <p className="text-white/60 mb-6 max-w-xl mx-auto">
-            Take the next step - explore our memorial properties and service plans designed with your family in mind.
+            Take the next step explore our memorial properties and service plans designed with your family in mind.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/memorial-properties" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">

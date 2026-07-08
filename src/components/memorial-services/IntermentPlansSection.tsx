@@ -36,7 +36,7 @@ export default function IntermentPlansSection() {
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Interment Plans</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Dignified Burial and Cremains Interment</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">An interment plan covers the burial of your loved one in your Heritage Park lot - whether for full-body or cremains placement, at the depth that suits your family's needs.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">An interment plan covers the burial of your loved one in your Heritage Park lot whether for full-body or cremains placement, at the depth that suits your family's needs.</p>
         </div>
       </section>
 

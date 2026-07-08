@@ -7,7 +7,7 @@ const cards = [
   {
     name: 'Lawn Lots',
     href: '/memorial-properties/lawn-lots',
-    desc: 'A meaningful first step - simple, dignified, and affordable. Lawn lots offer a serene resting place with flat granite markers in beautifully maintained open spaces.',
+    desc: 'A meaningful first step simple, dignified, and affordable. Lawn lots offer a serene resting place with flat granite markers in beautifully maintained open spaces.',
     image: '/images/lawn-lot-hero.jpg',
   },
   {

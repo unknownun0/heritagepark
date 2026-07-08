@@ -37,7 +37,7 @@ export default function MortuaryPlansSection() {
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Mortuary &amp; Wake Plans</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Complete Care From Pickup to Chapel</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">A mortuary plan ensures your loved one is cared for with dignity from the moment of pickup through the wake and service - giving your family space to grieve without logistical burden.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">A mortuary plan ensures your loved one is cared for with dignity from the moment of pickup through the wake and service giving your family space to grieve without logistical burden.</p>
         </div>
       </section>
 

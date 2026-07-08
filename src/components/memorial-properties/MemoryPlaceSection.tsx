@@ -20,7 +20,7 @@ export default function MemoryPlaceSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Above-Ground Elegance</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-            <p>Memory Place is for families who prefer an <strong>above-ground memorial</strong> - a structured, dignified solution that offers easy access and a clear sense of place. It combines the privacy of individual crypts with the beauty of a shared memorial structure.</p>
+            <p>Memory Place is for families who prefer an <strong>above-ground memorial</strong> a structured, dignified solution that offers easy access and a clear sense of place. It combines the privacy of individual crypts with the beauty of a shared memorial structure.</p>
           </div>
         </div>
       </section>

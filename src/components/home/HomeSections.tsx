@@ -5,7 +5,7 @@ import Link from 'next/link'
 const values = [
   {
     title: 'Peace of Mind',
-    desc: 'Know that your family\'s future is secured with a thoughtful plan in place - no rushed decisions, no added burden.',
+    desc: 'Know that your family\'s future is secured with a thoughtful plan in place no rushed decisions, no added burden.',
   },
   {
     title: 'Family Legacy',
@@ -17,7 +17,7 @@ const values = [
   },
   {
     title: 'Lasting Value',
-    desc: 'Lock in today\'s prices with flexible payment plans - protecting your family from future cost increases.',
+    desc: 'Lock in today\'s prices with flexible payment plans protecting your family from future cost increases.',
   },
 ]
 
@@ -39,7 +39,7 @@ export default function HomeSections() {
   return (
     <>
 
-      {/* SECTION 2 - Why Families Choose Heritage Park */}
+      {/* SECTION 2 Why Families Choose Heritage Park */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -57,7 +57,7 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* SECTION 3 - Park Preview */}
+      {/* SECTION 3 Park Preview */}
       <section className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -88,7 +88,7 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* SECTION 4 - Memorial Properties Snapshot */}
+      {/* SECTION 4 Memorial Properties Snapshot */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -112,14 +112,14 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* SECTION 5 - Lead Magnet Block */}
+      {/* SECTION 5 Lead Magnet Block */}
       <section className="py-20 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Get Your Free Heritage Park Family Planning Guide
           </h2>
           <p className="text-white/60 text-sm mb-8 max-w-xl mx-auto">
-            A gentle introduction to pre-need memorial planning - written for Filipino families who want to prepare with confidence.
+            A gentle introduction to pre-need memorial planning written for Filipino families who want to prepare with confidence.
           </p>
           <form className="max-w-lg mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
             <input
@@ -156,7 +156,7 @@ export default function HomeSections() {
         </div>
       </div>
 
-      {/* SECTION 8 - Footer CTA */}
+      {/* SECTION 8 Footer CTA */}
       <section className="py-20 bg-cream">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
@@ -172,7 +172,7 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* SECTION 9 - FaQ featured */}
+      {/* SECTION 9 FaQ featured */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -205,7 +205,7 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* SECTION 10 - Map */}
+      {/* SECTION 10 Map */}
       <section className="bg-primary border-b border-white/10">
         <div className="w-full h-96 md:h-[650px] relative">
           <iframe

@@ -9,7 +9,7 @@ export default function EstateLotsSection() {
         <div className="relative z-10 text-center px-4">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Estate Lots</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Private Legacy, Built for Generations</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">The pinnacle of memorial planning - a private estate that reflects your family&apos;s enduring legacy.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">The pinnacle of memorial planning a private estate that reflects your family&apos;s enduring legacy.</p>
         </div>
       </section>
 
@@ -20,7 +20,7 @@ export default function EstateLotsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">For Families Who Seek the Extraordinary</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-            <p>An estate lot is for families who envision something more - a <strong>private mausoleum</strong> that stands as a permanent tribute to their name and legacy. It&apos;s designed for those who want complete control over their memorial space, with the privacy and prestige that only a dedicated family structure can provide.</p>
+            <p>An estate lot is for families who envision something more a <strong>private mausoleum</strong> that stands as a permanent tribute to their name and legacy. It&apos;s designed for those who want complete control over their memorial space, with the privacy and prestige that only a dedicated family structure can provide.</p>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function EstateLotsSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size</h3>
-                <p className="text-sm text-primary/70">A generous <strong>39.04 sqm (4.00m �- 9.76m)</strong> - more than enough space for a private family mausoleum and surrounding landscape.</p>
+                <p className="text-sm text-primary/70">A generous <strong>39.04 sqm (4.00m �- 9.76m)</strong> more than enough space for a private family mausoleum and surrounding landscape.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
@@ -76,7 +76,7 @@ export default function EstateLotsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Building Your Family&apos;s Monument</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto space-y-4">
-            <p>Your private mausoleum is a separate, guided construction process that begins after you secure your estate lot. Our team will walk you through every step - from design consultation with our architects to material selection, permitting, and construction management.</p>
+            <p>Your private mausoleum is a separate, guided construction process that begins after you secure your estate lot. Our team will walk you through every step from design consultation with our architects to material selection, permitting, and construction management.</p>
             <p>The result is a one-of-a-kind family memorial that reflects your values, your story, and your legacy. Whether you envision classic marble, modern stone, or a custom architectural design, we help bring it to life.</p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function EstateLotsSection() {
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Begin Your Legacy?</h2>
-          <p className="text-white/70 mb-8 max-w-xl mx-auto">Our team is here to discuss your vision in complete confidence - with no pressure, only guidance.</p>
+          <p className="text-white/70 mb-8 max-w-xl mx-auto">Our team is here to discuss your vision in complete confidence with no pressure, only guidance.</p>
           <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Schedule a Private Consultation</a>
         </div>
       </section>

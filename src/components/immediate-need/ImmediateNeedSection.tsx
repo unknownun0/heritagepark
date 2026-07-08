@@ -12,7 +12,7 @@ const steps = [
   {
     number: '03',
     title: 'We Handle the Details',
-    description: 'Together we arrange everything so you can focus on what matters - your family.',
+    description: 'Together we arrange everything so you can focus on what matters your family.',
   },
 ]
 
@@ -39,7 +39,7 @@ export default function ImmediateNeedSection() {
             We&apos;re Here to Help, Right Now.
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto mb-10">
-            If you&apos;ve experienced a loss, our team is ready to assist you immediately - every step of the way.
+            If you&apos;ve experienced a loss, our team is ready to assist you immediately every step of the way.
           </p>
           <a
             href="tel:+639178841009"
@@ -92,7 +92,7 @@ export default function ImmediateNeedSection() {
       <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <p className="text-2xl md:text-3xl text-gold font-accent italic leading-relaxed">
-            &ldquo;In your moment of need, you are not alone. We are here - with compassion, with clarity, and with the quiet strength of those who have walked this path beside many families before yours.&rdquo;
+            &ldquo;In your moment of need, you are not alone. We are here with compassion, with clarity, and with the quiet strength of those who have walked this path beside many families before yours.&rdquo;
           </p>
           <div className="mt-8">
             <a

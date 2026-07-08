@@ -12,7 +12,7 @@ interface Feedback {
 
 const defaultFeedback: Feedback = {
   name: 'Maria S., Taguig',
-  message: 'Heritage Park gave our family the time and space to make the right decision - without pressure. We are truly grateful for their compassion.',
+  message: 'Heritage Park gave our family the time and space to make the right decision without pressure. We are truly grateful for their compassion.',
   rating: 5,
   date: '',
 }

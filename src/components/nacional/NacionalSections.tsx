@@ -46,7 +46,7 @@ export default function NacionalSections() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">About Nacional</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Heritage Park Quality, Quezon City Convenience</h2>
-            <p className="text-primary/60 leading-relaxed">Nacional Memorial Homes brings Heritage Park's legacy of premium memorial care to a dedicated facility in Quezon City. Our chapel is equipped with a Regular Chapel and Family Room, comfortable lounge areas, and restroom facilities - providing the same standard of dignity and comfort that Heritage Park is known for.</p>
+            <p className="text-primary/60 leading-relaxed">Nacional Memorial Homes brings Heritage Park's legacy of premium memorial care to a dedicated facility in Quezon City. Our chapel is equipped with a Regular Chapel and Family Room, comfortable lounge areas, and restroom facilities providing the same standard of dignity and comfort that Heritage Park is known for.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="aspect-video bg-moss/10 rounded-lg flex items-center justify-center text-moss/30">
@@ -60,7 +60,7 @@ export default function NacionalSections() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <p className="text-sm text-primary/70">Located in Quezon City - easily accessible from major Metro Manila routes.</p>
+                <p className="text-sm text-primary/70">Located in Quezon City easily accessible from major Metro Manila routes.</p>
               </div>
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-gold mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

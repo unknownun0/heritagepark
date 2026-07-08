@@ -42,7 +42,7 @@ export default function LearnSections() {
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Learn &amp; Resources</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Answers, Before You Need Them</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg mb-8">
-            An educational resource designed to help you understand memorial planning - no sales, just clarity.
+            An educational resource designed to help you understand memorial planning no sales, just clarity.
           </p>
           <div className="relative max-w-xl mx-auto">
             <input

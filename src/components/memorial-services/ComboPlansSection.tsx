@@ -30,7 +30,7 @@ export default function ComboPlansSection() {
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Combo Plans</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">One Decision, Fully Covered</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Every Heritage Park memorial property comes bundled with a complete mortuary and interment plan - one decision that ensures your family has nothing left to arrange.</p>
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">Every Heritage Park memorial property comes bundled with a complete mortuary and interment plan one decision that ensures your family has nothing left to arrange.</p>
         </div>
       </section>
 
