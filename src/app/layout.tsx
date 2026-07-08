@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   title: "Heritage Park | A Place Worth Planning For",
   description:
     "Heritage Park helps Filipino families plan ahead with dignity, peace of mind, and lasting protection for generations to come.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   keywords: [
     "Heritage Park",
     "memorial park",
