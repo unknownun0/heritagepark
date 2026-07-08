@@ -6,7 +6,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import FloatingChat from "@/components/layout/FloatingChat";
-import FloatingAtNeed from "@/components/layout/FloatingAtNeed";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -57,7 +56,6 @@ export default function RootLayout({
 
         <Header />
         <ScrollToTop />
-        <FloatingAtNeed />
         <main className="flex-1 pt-16">{children}</main>
         <hr className="border-t border-primary/10" />
         <Footer />
