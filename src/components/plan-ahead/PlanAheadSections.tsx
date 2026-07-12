@@ -1,31 +1,27 @@
 const benefits = [
   {
-    icon: '🕊️',
-    title: 'Peace of Mind',
+    title: 'Decide While You Have Time',
     desc: 'Knowing that everything is arranged brings a deep sense of calm. Your family won\'t have to make difficult decisions under pressure.',
   },
   {
-    icon: '💰',
-    title: 'Financial Preparation',
-    desc: 'Lock in today\'s prices with flexible, zero-interest payment plans. Planning ahead protects your family from rising costs.',
+    title: 'Prepare Financially',
+    desc: 'Planning ahead gives you time to explore available payment arrangements and understand today\'s costs before you decide.',
   },
   {
-    icon: '🌳',
-    title: 'Family Legacy',
-    desc: 'Create a lasting place of honor that future generations can visit a meaningful connection to your family\'s story.',
-  },
-  {
-    icon: '📋',
-    title: 'Avoiding Rushed Decisions',
+    title: 'Protect Your Family From Pressure',
     desc: 'When the time comes, emotions run high. Planning ahead ensures every choice reflects your wishes, not the urgency of the moment.',
+  },
+  {
+    title: 'Preserve Your Wishes',
+    desc: 'A clear plan means your family carries out your intentions exactly as you envisioned, with nothing left to guess.',
   },
 ]
 
 const steps = [
-  { num: '01', title: 'Understand', desc: 'Learn how preneed memorial planning works and why Filipino families are choosing to plan ahead.' },
-  { num: '02', title: 'Learn', desc: 'Explore our properties, services, and payment options at your own pace no obligation.' },
-  { num: '03', title: 'Visit', desc: 'Tour Heritage Park with a consultant. See the grounds, chapels, and memorial spaces firsthand.' },
-  { num: '04', title: 'Decide', desc: 'When you\'re ready, choose a plan that fits your family. We\'ll be with you every step of the way.' },
+  { num: '01', title: 'Understand', desc: 'Learn how pre-need memorial planning works and why Filipino families are choosing to plan ahead.' },
+  { num: '02', title: 'Explore', desc: 'Compare memorial properties, services, and available payment arrangements at your own pace — no obligation.' },
+  { num: '03', title: 'Consult', desc: 'Speak with a Memorial Planning Advisor, ask questions, and arrange a guided visit when you\'re ready. There is no obligation to decide right away.' },
+  { num: '04', title: 'Decide', desc: 'Review everything with your family and choose only when you feel fully informed and comfortable.' },
 ]
 
 const faqs = [
@@ -51,17 +47,31 @@ export default function PlanAheadSections() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[70vh] min-h-[450px] flex items-center justify-center bg-primary overflow-hidden">
+      <section className="relative min-h-[500px] flex items-center bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[url(/images/gardens.jpg)] bg-cover bg-center opacity-30" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06)_0%,_transparent_70%)]" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">Plan Ahead</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            The Best Time to Plan Is Before You Have To
-          </h1>
-          <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
-            Thoughtful preparation is a quiet act of love. Heritage Park helps you plan with confidence not fear.
-          </p>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20 flex items-center gap-12">
+          <div className="flex-1 text-left">
+            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">Plan Ahead</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              The Best Time to Plan Is Before You Have To
+            </h1>
+            <p className="text-white/70 text-base md:text-lg max-w-xl mb-8">
+              Thoughtful preparation is a quiet act of love. Heritage Park helps you plan with confidence, not fear.
+            </p>
+            <a href="#" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors mb-4">
+              Speak with an Advisor
+            </a>
+            <div>
+              <a href="/memorial-properties" className="text-gold text-sm font-semibold underline underline-offset-4 hover:text-white transition-colors">
+                Explore Memorial Properties &rarr;
+              </a>
+            </div>
+          </div>
+          <div className="hidden lg:block flex-1">
+            <div className="aspect-[4/3] bg-white/10 rounded-lg flex items-center justify-center text-white/40 text-sm">
+              Family Photo
+            </div>
+          </div>
         </div>
       </section>
 
@@ -75,7 +85,6 @@ export default function PlanAheadSections() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((b) => (
               <div key={b.title} className="bg-cream rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-                <span className="text-3xl block mb-4">{b.icon}</span>
                 <h3 className="text-lg font-semibold text-primary mb-2">{b.title}</h3>
                 <p className="text-sm text-primary/60 leading-relaxed">{b.desc}</p>
               </div>
@@ -88,10 +97,11 @@ export default function PlanAheadSections() {
       <section id="what-planning-looks-like" className="py-20 bg-cream scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">What Planning Ahead Looks Like</h2>
+            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">What Planning Ahead Looks Like</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">A Simple, Guided Process</h2>
             <p className="text-primary/60 mt-2">A calm, guided process that puts your family first.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {steps.map((s) => (
               <div key={s.num} className="relative text-center">
                 <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -102,6 +112,14 @@ export default function PlanAheadSections() {
               </div>
             ))}
           </div>
+          <div className="text-center">
+            <p className="text-primary/60 text-sm">
+              Have questions before visiting?{' '}
+              <a href="#" className="text-gold font-semibold underline underline-offset-4 hover:text-primary transition-colors">
+                Speak with an advisor &rarr;
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -109,17 +127,17 @@ export default function PlanAheadSections() {
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">A Note on Cost</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Value Before Price</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Planning With Clarity</h2>
           <div className="text-primary/60 text-sm leading-relaxed space-y-4 max-w-2xl mx-auto">
             <p>
-              We understand that cost is an important consideration for every family. At Heritage Park, we believe in 
-              complete transparency no hidden fees, no surprise charges. Our preneed plans are designed to offer 
-              exceptional value, locking in today&apos;s prices so your family is protected from future increases.
+              Planning ahead gives your family more time to understand the available properties, payment arrangements, 
+              and applicable charges before making a decision. A Memorial Planning Advisor can walk you through a clear 
+              breakdown based on the property and terms you&apos;re considering.
             </p>
             <p>
-              More importantly, we believe the true value of planning ahead goes far beyond pesos and centavos. 
-              It&apos;s the peace of knowing your family will be cared for, your wishes will be honored, and your legacy 
-              will endure no matter what the future holds.
+              More than the financial preparation, planning ahead allows your family to make thoughtful decisions 
+              without the pressure of an immediate need. It&apos;s the peace of knowing your family will be cared for, 
+              your wishes will be honored, and your legacy will endure.
             </p>
           </div>
           <div className="mt-8">
@@ -159,14 +177,22 @@ export default function PlanAheadSections() {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
             Ready to Take the First Step?
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/memorial-properties" className="bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">
-              See Our Memorial Properties
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <a href="#" className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+              Speak With an Advisor
             </a>
-            <a href="#" className="border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">
-              Download the Family Planning Guide
+            <a href="/memorial-properties" className="border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">
+              Explore Memorial Properties
             </a>
           </div>
+          <div className="mb-4">
+            <a href="#" className="text-gold text-sm font-semibold underline underline-offset-4 hover:text-white transition-colors">
+              Get the Family Planning Guide &rarr;
+            </a>
+          </div>
+          <p className="text-white/50 text-sm">
+            No pressure. Ask questions first, and decide when you&apos;re ready.
+          </p>
         </div>
       </section>
     </>
