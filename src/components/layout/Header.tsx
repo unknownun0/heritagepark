@@ -81,6 +81,7 @@ export default function Header() {
 
   useEffect(() => {
     setMobileOpen(false)
+    setOpenDropdown(null)
   }, [pathname])
 
   useEffect(() => {
@@ -135,7 +136,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       className={`flex items-center gap-1 ${navLinkClass(isActive)}`}
-                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      onClick={() => { closeDropdown(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
                     >
                       {item.label}
                       {hasChildren && (
