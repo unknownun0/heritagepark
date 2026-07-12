@@ -26,20 +26,20 @@ const steps = [
 
 const faqs = [
   {
-    q: 'Isn\'t this something I should think about later?',
-    a: 'Many families feel that way and it\'s completely understandable. But planning ahead is one of the most caring decisions you can make. It ensures your wishes are honored and spares your loved ones from making hurried, expensive decisions during a time of grief.',
+    q: 'Is it too early for me to start planning?',
+    a: 'Many families feel that way, and it\'s completely understandable. But planning ahead is one of the most caring decisions you can make. It ensures your wishes are honored and spares your loved ones from making hurried decisions during a time of grief.',
   },
   {
-    q: 'Will my family actually need this?',
-    a: 'Every family will eventually face this moment. A preneed plan means your family can focus on honoring your life rather than scrambling for arrangements. It\'s a gift of time, clarity, and peace.',
+    q: 'Can I speak with an advisor without committing to a purchase?',
+    a: 'Absolutely. In fact, we encourage it. Choosing a memorial property is a personal decision, and there\'s no obligation to purchase. Our advisors are happy to answer your questions and help you understand your options.',
   },
   {
-    q: 'What happens if I can\'t finish payments?',
-    a: 'We work with families. Heritage Park offers flexible payment options and grace periods. Our consultants can help adjust your plan if your circumstances change no judgment, just support.',
+    q: 'What should I consider when choosing a memorial property?',
+    a: 'It depends on your family\'s preferences, budget, and long-term plans — including how many family members you\'d like to accommodate. A Memorial Planning Advisor can walk you through the differences between our properties so you can make a confident, informed decision.',
   },
   {
-    q: 'Is it expensive to plan ahead?',
-    a: 'Planning ahead is often more affordable than waiting. You lock in today\'s prices and can choose from a range of options to fit your budget. Our team will help you find a plan that works for you.',
+    q: 'What happens if my financial circumstances change?',
+    a: 'We understand that circumstances can change. Available options will depend on your account status and the terms of your purchase. We encourage you to speak with an advisor early so we can walk you through what\'s available to you.',
   },
 ]
 
@@ -152,7 +152,8 @@ export default function PlanAheadSections() {
       <section id="common-questions" className="py-20 bg-cream scroll-mt-24">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">Common Questions</h2>
+            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Common Questions</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Common Questions About Planning Ahead</h2>
             <p className="text-primary/60 mt-2">Honest answers to the questions families ask most.</p>
           </div>
           <div className="space-y-3">
