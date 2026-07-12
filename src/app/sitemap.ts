@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/data/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://heritagepark.vercel.app'
+  const baseUrl = 'https://heritageparktaguig.com'
 
   const staticRoutes = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 1 },
