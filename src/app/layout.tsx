@@ -28,21 +28,52 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Heritage Park Taguig | Official Website",
+  title: {
+    default: "Heritage Park Taguig",
+    template: "%s | Heritage Park Taguig",
+  },
   description:
-    "Heritage Park helps Filipino families plan ahead with dignity, peace of mind, and lasting protection for generations to come.",
+    "Heritage Park is the premier memorial park in Taguig, Philippines. Plan ahead with dignity — memorial lots, services, and preneed plans for Filipino families.",
   icons: {
     icon: "/favicon.svg",
   },
   keywords: [
     "Heritage Park",
-    "memorial park",
+    "Heritage Park Taguig",
+    "memorial park Taguig",
+    "memorial park Philippines",
     "plan ahead",
-    "memorial lots",
+    "memorial lots Taguig",
     "memorial services",
     "preneed plan",
     "Philippines",
+    "burial lots Taguig",
   ],
+  authors: [{ name: "Heritage Park Taguig" }],
+  publisher: "Heritage Park Taguig",
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "en_PH",
+    siteName: "Heritage Park Taguig",
+    title: "Heritage Park Taguig",
+    description:
+      "Heritage Park is the premier memorial park in Taguig, Philippines. Plan ahead with dignity — memorial lots, services, and preneed plans for Filipino families.",
+    url: "https://heritageparktaguig.com",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Heritage Park Taguig",
+    description:
+      "Heritage Park is the premier memorial park in Taguig, Philippines.",
+    images: ["/images/og-image.jpg"],
+  },
+  alternates: { canonical: "https://heritageparktaguig.com" },
+  verification: {
+    google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
+  },
+  category: "memorial park",
 };
 
 export default function RootLayout({
