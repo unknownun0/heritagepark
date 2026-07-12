@@ -69,7 +69,7 @@ export default function HomeSections() {
             </svg>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Planning for the Future</h2>
-          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md">Give your family the gift of preparation. A preneed memorial plan locks in today&apos;s prices and ensures your wishes are honored with dignity.</p>
+          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md">Give your family the gift of preparation. A pre-need memorial plan locks in today&apos;s prices and ensures your wishes are honored with dignity.</p>
         </Link>
         <Link
           href="/immediate-need"
@@ -81,7 +81,7 @@ export default function HomeSections() {
             </svg>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">We Need Help Now</h2>
-          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mb-4">We&apos;re here for your family in this moment. Call our 24/7 support line for immediate assistance.</p>
+          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mb-4">We&apos;re here for your family in this moment. Call our support line for immediate assistance.</p>
           <p className="text-gold font-bold text-xl">0917 884 1009</p>
         </Link>
       </section>
@@ -200,6 +200,15 @@ export default function HomeSections() {
                 <p className="px-6 py-4 text-sm text-primary/60 leading-relaxed">{faq.a}</p>
               </details>
             ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/faqs"
+              className="inline-block text-primary font-semibold px-8 py-3.5 rounded text-sm hover:opacity-90 transition-colors"
+              style={{ backgroundColor: '#e2af43' }}
+            >
+              View All FAQs
+            </Link>
           </div>
         </div>
       </section>

@@ -35,9 +35,12 @@ async function getMergedPosts(): Promise<BlogPost[]> {
 
 export default async function BlogSection() {
   const allPosts = await getMergedPosts()
-  const topics = topicFilters.filter(
-    (t) => t.id !== 'all' && allPosts.some((p) => p.topicId === t.id)
-  )
+  const topicDisplay: { id: string; label: string }[] = [
+    { id: 'planning', label: 'PLANNING AHEAD' },
+    { id: 'costs', label: 'UNDERSTANDING MEMORIAL OPTIONS' },
+    { id: 'culture', label: 'FILIPINO TRADITIONS & GRIEF SUPPORT' },
+  ]
+  const topics = topicDisplay.filter((t) => allPosts.some((p) => p.topicId === t.id))
 
   return (
     <section className="py-20 bg-cream">
