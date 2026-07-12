@@ -54,7 +54,7 @@ const navItems: NavItem[] = [
   },
   {
     key: 'learn',
-    label: '__',
+    label: 'Resources',
     href: '/learn',
   },
   {
@@ -70,7 +70,7 @@ const navItems: NavItem[] = [
 ]
 
 const mobileLinks = [
-  ...navItems.map((item) => ({ label: item.label === '__' ? 'Learn' : item.label, href: item.href })),
+  ...navItems.map((item) => ({ label: item.label, href: item.href })),
 ]
 
 export default function Header() {
