@@ -67,11 +67,6 @@ const navItems: NavItem[] = [
     label: 'Contact',
     href: '/contact',
   },
-  {
-    key: 'feedback',
-    label: 'Feedback',
-    href: '/feedback',
-  },
 ]
 
 const mobileLinks = [
@@ -89,10 +84,8 @@ export default function Header() {
   }, [pathname])
 
   useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
-        setOpenDropdown(null)
-      }
+    function handleClickOutside() {
+      setOpenDropdown(null)
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
@@ -130,7 +123,7 @@ export default function Header() {
               {navItems.map((item) => {
                 const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
                 const hasChildren = item.children && item.children.length > 0
-                const isOpen = openDropdown === item.key || (hasChildren && isActive)
+                const isOpen = openDropdown === item.key
 
                 return (
                   <div
