@@ -28,7 +28,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Heritage Park | A Place Worth Planning For",
+  title: "Heritage Park Taguig | Official Website",
   description:
     "Heritage Park helps Filipino families plan ahead with dignity, peace of mind, and lasting protection for generations to come.",
   icons: {
