@@ -85,8 +85,10 @@ export default function Header() {
   }, [pathname])
 
   useEffect(() => {
-    function handleClickOutside() {
-      setOpenDropdown(null)
+    function handleClickOutside(e: MouseEvent) {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null)
+      }
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
