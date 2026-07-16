@@ -58,7 +58,7 @@ export default function PropertyComparison() {
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
         <div className="absolute inset-0 bg-[url(/images/properties-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Memorial Properties</p>
+          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Memorial Lots</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Find the Right Place for Your Family</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">Every family is different. Here&apos;s how to think about what fits yours.</p>
         </div>

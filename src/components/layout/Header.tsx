@@ -35,7 +35,6 @@ const navItems: NavItem[] = [
     label: 'Funeral Services',
     href: '/memorial-services',
     children: [
-      { label: 'Explore All', href: '/memorial-services' },
       { label: 'Mortuary & Wake Plans', href: '/memorial-services/mortuary-plans' },
       { label: 'Interment Plans', href: '/memorial-services/interment-plans' },
       { label: 'Combo Plans', href: '/memorial-services/combo-plans' },

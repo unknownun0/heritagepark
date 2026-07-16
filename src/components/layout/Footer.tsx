@@ -4,8 +4,8 @@ import { getPageContent } from '@/lib/content'
 
 const quickLinks = [
   { label: 'Plan Ahead', href: '/plan-ahead' },
-  { label: 'Memorial Properties', href: '/memorial-properties' },
-  { label: 'Memorial Services', href: '/memorial-services' },
+  { label: 'Memorial Lots', href: '/memorial-properties' },
+  { label: 'Funeral Services', href: '/memorial-services' },
   { label: 'Explore the Park', href: '/explore-the-park' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

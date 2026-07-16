@@ -8,7 +8,7 @@ const categories = [
     ],
   },
   {
-    title: 'Memorial Properties',
+    title: 'Memorial Lots',
     questions: [
       { q: 'Can I visit before deciding?', a: 'Absolutely. We encourage all families to visit Heritage Park in person. Our consultants are happy to give you a guided tour so you can experience the park\u2019s beauty and serenity firsthand.' },
       { q: 'What happens if I move abroad?', a: 'Your lot and preneed plan remain fully valid. All arrangements can be managed remotely, and we assist families from anywhere in the world with coordination and transfers if needed.' },
@@ -23,7 +23,7 @@ const categories = [
     ],
   },
   {
-    title: 'Memorial Services',
+    title: 'Funeral Services',
     questions: [
       { q: 'What services are available?', a: 'We offer a full range of memorial services including cremation, traditional viewing and wake, chapel services, and complete burial arrangements. Every service can be customized.' },
       { q: 'Can I bundle with my lot purchase?', a: 'Yes. Bundling your memorial lot with pre-arranged services is the most costeffective approach. Our consultants will help you build a package that fits your needs and budget.' },

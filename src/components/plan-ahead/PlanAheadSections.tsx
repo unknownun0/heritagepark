@@ -63,7 +63,7 @@ export default function PlanAheadSections() {
             </a>
             <div>
               <a href="/memorial-properties" className="text-gold text-sm font-semibold underline underline-offset-4 hover:text-white transition-colors">
-                Explore Memorial Properties &rarr;
+                Explore Memorial Lots &rarr;
               </a>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function PlanAheadSections() {
           </div>
           <div className="mt-8">
             <a href="/memorial-properties" className="text-gold font-semibold text-sm underline underline-offset-4 hover:text-primary transition-colors">
-              View Memorial Properties &rarr;
+              View Memorial Lots &rarr;
             </a>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function PlanAheadSections() {
               Speak With an Advisor
             </a>
             <a href="/memorial-properties" className="border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">
-              Explore Memorial Properties
+              Explore Memorial Lots
             </a>
           </div>
           <div className="mb-4">

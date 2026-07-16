@@ -16,7 +16,7 @@ export interface BlogPost {
 export const topicFilters: { id: string; label: string }[] = [
   { id: 'all', label: 'All Topics' },
   { id: 'planning', label: 'Planning Basics' },
-  { id: 'properties', label: 'Memorial Properties' },
+  { id: 'properties', label: 'Memorial Lots' },
   { id: 'costs', label: 'Costs & Payment' },
   { id: 'grief', label: 'Grief & Support' },
   { id: 'culture', label: 'Culture & Tradition' },
@@ -24,7 +24,7 @@ export const topicFilters: { id: string; label: string }[] = [
 
 export const topicMap: Record<string, string> = {
   planning: 'Planning Basics',
-  properties: 'Memorial Properties',
+  properties: 'Memorial Lots',
   costs: 'Costs & Payment',
   grief: 'Grief & Support',
   culture: 'Culture & Tradition',
@@ -87,7 +87,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: 'the-true-cost-of-memorial-services',
-    title: 'The True Cost of Memorial Services in the Philippines',
+    title: 'The True Cost of Funeral Services in the Philippines',
     excerpt: 'A transparent breakdown of memorial service costs and payment options available.',
     topicId: 'costs',
     topic: 'Costs & Payment',

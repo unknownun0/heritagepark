@@ -133,8 +133,8 @@ export default function ContactSections() {
                     required
                   >
                     <option value="">Select an option</option>
-                    <option value="Memorial Properties">Memorial Properties</option>
-                    <option value="Memorial Services">Memorial Services</option>
+                    <option value="Memorial Lots">Memorial Lots</option>
+                    <option value="Funeral Services">Funeral Services</option>
                     <option value="Just Exploring">Just Exploring</option>
                   </select>
                 </div>

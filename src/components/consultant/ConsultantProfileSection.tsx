@@ -4,7 +4,7 @@ const expertise = [
   'Estate Lots',
   'preneed Plans',
   'Garden & Lawn Lots',
-  'Memorial Services Bundling',
+  'Funeral Services Bundling',
 ]
 
 export default function ConsultantProfileSection() {
