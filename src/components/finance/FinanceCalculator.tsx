@@ -100,7 +100,7 @@ export default function FinanceCalculator(props: Props) {
               </div>
             </div>
             <div className="flex flex-col items-center gap-3 mt-6">
-              <p className="text-xs text-primary/60 text-center">
+              <p className="text-xs text-primary font-semibold text-center">
                 Transfer fee: {formatPeso(tier.transferFee)} payable to&nbsp;RMMI
               </p>
               <a
