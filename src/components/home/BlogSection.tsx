@@ -3,112 +3,112 @@ import { getAllPostsFromDb } from '@/lib/content'
 import { getAllPosts, topicFilters, BlogPost } from '@/data/blog-posts'
 
 async function getMergedPosts(): Promise<BlogPost[]> {
-  const staticPosts = getAllPosts()
-  try {
-    const dbPosts = await getAllPostsFromDb()
-    if (!dbPosts.length) return staticPosts
-    const merged: BlogPost[] = [...staticPosts]
-    for (const dbp of dbPosts) {
-      const idx = merged.findIndex((p) => p.slug === dbp.slug)
-      const post: BlogPost = {
-        slug: dbp.slug,
-        title: dbp.title,
-        excerpt: dbp.excerpt,
-        topicId: dbp.topic_id,
-        topic: dbp.topic,
-        lang: dbp.lang,
-        image: dbp.image || '/images/blog-planning.jpg',
-        readTime: dbp.read_time,
-        content: dbp.content ? dbp.content.split('\n\n').filter(Boolean) : [],
-        relatedSlugs: [],
-        featured: Boolean(dbp.featured),
-        fromDb: true,
-      }
-      if (idx >= 0) merged[idx] = post
-      else merged.push(post)
-    }
-    return merged
-  } catch {
-    return staticPosts
+ const staticPosts = getAllPosts()
+ try {
+  const dbPosts = await getAllPostsFromDb()
+  if (!dbPosts.length) return staticPosts
+  const merged: BlogPost[] = [...staticPosts]
+  for (const dbp of dbPosts) {
+   const idx = merged.findIndex((p) => p.slug === dbp.slug)
+   const post: BlogPost = {
+    slug: dbp.slug,
+    title: dbp.title,
+    excerpt: dbp.excerpt,
+    topicId: dbp.topic_id,
+    topic: dbp.topic,
+    lang: dbp.lang,
+    image: dbp.image || '/images/blog-planning.jpg',
+    readTime: dbp.read_time,
+    content: dbp.content ? dbp.content.split('\n\n').filter(Boolean) : [],
+    relatedSlugs: [],
+    featured: Boolean(dbp.featured),
+    fromDb: true,
+   }
+   if (idx >= 0) merged[idx] = post
+   else merged.push(post)
   }
+  return merged
+ } catch {
+  return staticPosts
+ }
 }
 
 export default async function BlogSection() {
-  const allPosts = await getMergedPosts()
-  const topicDisplay: { id: string; label: string }[] = [
-    { id: 'planning', label: 'PLANNING AHEAD' },
-    { id: 'costs', label: 'UNDERSTANDING MEMORIAL OPTIONS' },
-    { id: 'culture', label: 'FILIPINO TRADITIONS & GRIEF SUPPORT' },
-  ]
-  const topics = topicDisplay.filter((t) => allPosts.some((p) => p.topicId === t.id))
+ const allPosts = await getMergedPosts()
+ const topicDisplay: { id: string; label: string }[] = [
+  { id: 'planning', label: 'PLANNING AHEAD' },
+  { id: 'costs', label: 'UNDERSTANDING MEMORIAL OPTIONS' },
+  { id: 'culture', label: 'FILIPINO TRADITIONS & GRIEF SUPPORT' },
+ ]
+ const topics = topicDisplay.filter((t) => allPosts.some((p) => p.topicId === t.id))
 
-  return (
-    <section className="py-20 bg-cream">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">Helping You Understand Every&nbsp;Step</h2>
-          <p className="text-primary/60 max-w-2xl mx-auto mt-3">Planning for the future can feel overwhelming. Our simple guides explain everything you need&nbsp;to&nbsp;know.</p>
+ return (
+  <section className="py-20 bg-cream">
+   <div className="max-w-7xl mx-auto px-4">
+    <div className="text-center mb-14">
+     <h2 className="text-3xl md:text-4xl font-bold text-primary">Helping You Understand EveryStep</h2>
+     <p className="text-primary/60 max-w-2xl mx-auto mt-3">Planning for the future can feel overwhelming. Our simple guides explain everything you needtoknow.</p>
+    </div>
+
+    {topics.map((topic) => {
+     const posts = allPosts.filter((p) => p.topicId === topic.id)
+     const featured = posts.filter((p) => p.featured)
+     const others = posts.filter((p) => !p.featured)
+
+     return (
+      <div key={topic.id} className="mb-16 last:mb-0">
+       <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3">
+         <span className="w-1 h-6 bg-gold rounded-full" />
+         <h3 className="text-3xl font-bold text-primary">{topic.label}</h3>
         </div>
+        <Link
+         href={`/learn?topic=${topic.id}`}
+         className="text-primary/50 text-sm hover:text-gold transition-colors"
+        >
+         View All &rarr;
+        </Link>
+       </div>
 
-        {topics.map((topic) => {
-          const posts = allPosts.filter((p) => p.topicId === topic.id)
-          const featured = posts.filter((p) => p.featured)
-          const others = posts.filter((p) => !p.featured)
+       {featured.map((post) => (
+        <div key={post.slug}>
+         <Link href={`/learn/${post.slug}`} className="block group">
+          <article className="grid grid-cols-2 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow">
+           <div className="min-h-[240px] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
+           <div className="py-5 px-5">
+            <span className="bg-gold text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-2">Featured</span>
+            <h4 className="text-sm font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{post.title}</h4>
+            <p className="text-xs text-primary/60 leading-relaxed line-clamp-2">{post.excerpt}</p>
+           </div>
+          </article>
+         </Link>
+         <hr className="my-4 border-primary/10" />
+        </div>
+       ))}
 
-          return (
-            <div key={topic.id} className="mb-16 last:mb-0">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <span className="w-1 h-6 bg-gold rounded-full" />
-                  <h3 className="text-3xl font-bold text-primary">{topic.label}</h3>
-                </div>
-                <Link
-                  href={`/learn?topic=${topic.id}`}
-                  className="text-primary/50 text-sm hover:text-gold transition-colors"
-                >
-                  View All &rarr;
-                </Link>
-              </div>
+       {others.length > 0 && (
+        <div className="space-y-3">
+         {others.map((post) => (
+          <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
+           {post.title}
+          </Link>
+         ))}
+        </div>
+       )}
 
-              {featured.map((post) => (
-                <div key={post.slug}>
-                  <Link href={`/learn/${post.slug}`} className="block group">
-                    <article className="grid grid-cols-2 rounded-lg overflow-hidden bg-white hover:shadow-md transition-shadow">
-                      <div className="min-h-[240px] bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-                      <div className="py-5 px-5">
-                        <span className="bg-gold text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider inline-block w-fit mb-2">Featured</span>
-                        <h4 className="text-sm font-semibold text-primary mb-1 group-hover:text-gold transition-colors">{post.title}</h4>
-                        <p className="text-xs text-primary/60 leading-relaxed line-clamp-2">{post.excerpt}</p>
-                      </div>
-                    </article>
-                  </Link>
-                  <hr className="my-4 border-primary/10" />
-                </div>
-              ))}
-
-              {others.length > 0 && (
-                <div className="space-y-3">
-                  {others.map((post) => (
-                    <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
-                      {post.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-
-              {featured.length === 0 && others.length === 0 && posts.length > 0 && (
-                <div className="space-y-3">
-                  {posts.map((post) => (
-                    <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
-                      {post.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          )
-        })}
+       {featured.length === 0 && others.length === 0 && posts.length > 0 && (
+        <div className="space-y-3">
+         {posts.map((post) => (
+          <Link key={post.slug} href={`/learn/${post.slug}`} className="block text-primary font-semibold hover:text-gold transition-colors">
+           {post.title}
+          </Link>
+         ))}
+        </div>
+       )}
       </div>
-    </section>
-  )
+     )
+    })}
+   </div>
+  </section>
+ )
 }
