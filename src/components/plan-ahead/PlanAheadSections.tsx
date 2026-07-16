@@ -58,9 +58,6 @@ export default function PlanAheadSections() {
             <p className="text-white/70 text-base md:text-lg max-w-xl mb-8">
               Thoughtful preparation is a quiet act of love. Heritage Park helps you plan with confidence, not fear.
             </p>
-            <a href="#" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors mb-4">
-              Speak with an Advisor
-            </a>
             <div>
               <a href="/memorial-properties" className="text-gold text-sm font-semibold underline underline-offset-4 hover:text-white transition-colors">
                 Explore Memorial Lots &rarr;
