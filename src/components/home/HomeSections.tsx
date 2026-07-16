@@ -80,8 +80,8 @@ export default function HomeSections() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">We Need Help Now</h2>
-          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mb-4">We&apos;re here for your family in this moment. Call our support line for immediate assistance.</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Need a Memorial Lot&nbsp;Today?</h2>
+          <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mb-4">Whether you need a memorial property immediately or you&apos;re planning ahead, we&apos;ll help you find the right option based on your family&apos;s needs and&nbsp;budget.</p>
           <p className="text-gold font-bold text-xl">0917 884 1009</p>
         </Link>
       </section>
