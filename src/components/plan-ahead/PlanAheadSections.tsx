@@ -177,7 +177,7 @@ export default function PlanAheadSections() {
             <a href="#" className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
               Speak With an Advisor
             </a>
-            <a href="/memorial-properties" className="border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">
+            <a href="/memorial-properties" className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
               Explore Memorial Lots
             </a>
           </div>
