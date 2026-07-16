@@ -7,7 +7,7 @@ const galleryAreas = [
   { label: 'Gardens', image: '/images/garden-lot/garden%20lot.jpg', desc: 'Beautifully landscaped gardens with indigenous flowering trees that provide shade and color throughout the year.' },
   { label: 'Chapels', image: '/images/mortuary/20250219_144912.jpg', desc: 'The Heritage Chapel is designed for intimate family services, offering a peaceful setting for remembrance and prayer.' },
   { label: 'Estate Areas', image: '/images/estate-lot/IMG_9427.JPG', desc: 'Spacious estate-sized lots for families who want room to honor their loved ones in a private, dignified setting.' },
-  { label: 'Memory Place', image: '/images/mortuary/20250219_145000.jpg', desc: 'A dedicated sanctuary within the park for quiet reflection and lasting tribute to those who have passed.' },
+  { label: 'Memory Place', image: '/images/mortuary/20250219_145000.jpg', desc: 'A dedicated sanctuary within the park for quiet reflection and lasting tribute to those who have&nbsp;passed.' },
   { label: 'Walking Paths', image: '/images/estate-lot/IMG_9221.JPG', desc: 'Paved walking paths connect the park&apos;s distinct sections, allowing families to stroll through the serene landscape.' },
   { label: 'Reflection Lake', image: '/images/garden-lot/photo%2011.jpg', desc: 'A tranquil water feature that serves as a quiet place for contemplation and peaceful moments of remembrance.' },
 ]
@@ -19,15 +19,15 @@ const visitInfo = [
   },
   {
     title: 'Park Hours',
-    desc: 'Open daily from 6:00 AM to 6:00 PM. Office hours: 8:00 AM to 5:00 PM.',
+    desc: 'Open daily from 6:00 AM to 6:00 PM. Office hours: 8:00 AM to 5:00&nbsp;PM.',
   },
   {
     title: 'Wheelchair Accessible',
-    desc: 'Paved pathways throughout the park. Golf cart assistance and wheelchair access available upon request.',
+    desc: 'Paved pathways throughout the park. Golf cart assistance and wheelchair access available upon&nbsp;request.',
   },
   {
     title: 'Parking',
-    desc: 'Spacious parking for guests, including designated areas for large family gatherings and events.',
+    desc: 'Spacious parking for guests, including designated areas for large family gatherings and&nbsp;events.',
   },
 ]
 

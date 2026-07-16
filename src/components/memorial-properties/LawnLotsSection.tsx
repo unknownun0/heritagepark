@@ -7,7 +7,7 @@ const tiers = [
   {
     name: 'Premium',
     position: '6th to 10th row',
-    desc: 'Closer to the central pathways, with slightly wider spacing between markers. A step up in positioning while maintaining the same elegant simplicity.',
+    desc: 'Closer to the central pathways, with slightly wider spacing between markers. A step up in positioning while maintaining the same elegant&nbsp;simplicity.',
   },
   {
     name: 'Special Premium',
@@ -110,7 +110,7 @@ export default function LawnLotsSection() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Why Start Here?</h2>
           <p className="text-primary/70 text-base leading-relaxed">
-            A lawn lot is not a compromise it&apos;s a thoughtful entry point. Starting early means you secure today&apos;s pricing, lock in your preferred location, and give your family one less thing to worry about. You can always upgrade or add to your plan later. The most important step is simply beginning.
+            A lawn lot is not a compromise it&apos;s a thoughtful entry point. Starting early means you secure today&apos;s pricing, lock in your preferred location, and give your family one less thing to worry about. You can always upgrade or add to your plan later. The most important step is simply&nbsp;beginning.
           </p>
         </div>
       </section>

@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'what-you-need-to-know-about-preneed-plans',
     title: 'What You Need to Know About Preneed Plans',
-    excerpt: 'A comprehensive guide to understanding preneed memorial plans and how they protect your family.',
+    excerpt: 'A comprehensive guide to understanding preneed memorial plans and how they protect your&nbsp;family.',
     topicId: 'planning',
     topic: 'Planning Basics',
     lang: 'EN',

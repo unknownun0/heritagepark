@@ -4,15 +4,15 @@ import BlogSection from './BlogSection'
 const values = [
   {
     title: 'Peace of Mind',
-    desc: 'Know that your family\'s future is secured with a thoughtful plan in place. No rushed decisions, no added burden.',
+    desc: 'Know that your family\'s future is secured with a thoughtful plan in place. No rushed decisions, no added&nbsp;burden.',
   },
   {
     title: 'Family Legacy',
-    desc: 'Create a lasting tribute your family can visit and honor for generations.',
+    desc: 'Create a lasting tribute your family can visit and honor for&nbsp;generations.',
   },
   {
     title: 'Thoughtfully Designed',
-    desc: 'Beautifully landscaped gardens and peaceful surroundings create a space families can visit, not just to grieve, but to feel calm and reconnect.',
+    desc: 'Beautifully landscaped gardens and peaceful surroundings create a space families can visit, not just to grieve, but to feel calm and&nbsp;reconnect.',
   },
   {
     title: 'Lasting Value',
@@ -21,9 +21,9 @@ const values = [
 ]
 
 const properties = [
-  { title: 'Lawn Lots', desc: 'A dignified and affordable memorial lot for individuals and families planning ahead.', href: '/memorial-properties/lawn-lots', image: '/images/lawn-lot-hero.jpg' },
+  { title: 'Lawn Lots', desc: 'A dignified and affordable memorial lot for individuals and families planning&nbsp;ahead.', href: '/memorial-properties/lawn-lots', image: '/images/lawn-lot-hero.jpg' },
   { title: 'Garden Lots', desc: 'A spacious memorial lot ideal for families who want room to grow together, today and for the next generation.', href: '/memorial-properties/garden-lots', image: '/images/garden-lot-hero.jpg' },
-  { title: 'Memory Place', desc: 'Private above ground family crypts offering comfort, accessibility, and lasting remembrance.', href: '/memorial-properties/memory-place', image: '/images/memory-place-hero.jpg' },
+  { title: 'Memory Place', desc: 'Private above ground family crypts offering comfort, accessibility, and lasting&nbsp;remembrance.', href: '/memorial-properties/memory-place', image: '/images/memory-place-hero.jpg' },
   { title: 'Estate Lots', desc: 'Our most prestigious memorial property, expansive, private, and designed for families who wish to build a legacy spanning generations.', href: '/memorial-properties/estate-lots', image: '/images/estate-lot-hero.jpg' },
 ]
 

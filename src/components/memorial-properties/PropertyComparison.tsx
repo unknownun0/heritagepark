@@ -7,7 +7,7 @@ const cards = [
   {
     name: 'Lawn Lots',
     href: '/memorial-properties/lawn-lots',
-    desc: 'A meaningful first step simple, dignified, and affordable. Lawn lots offer a serene resting place with flat granite markers in beautifully maintained open spaces.',
+    desc: 'A meaningful first step simple, dignified, and affordable. Lawn lots offer a serene resting place with flat granite markers in beautifully maintained open&nbsp;spaces.',
     image: '/images/lawn-lot-hero.jpg',
   },
   {
@@ -147,7 +147,7 @@ export default function PropertyComparison() {
       <section className="py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Ready to Find the Right Fit?</h2>
-          <p className="text-primary/60 mb-8 max-w-xl mx-auto">Our memorial sales consultants are here to guide your family with care and no pressure.</p>
+          <p className="text-primary/60 mb-8 max-w-xl mx-auto">Our memorial sales consultants are here to guide your family with care and no&nbsp;pressure.</p>
           <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Talk to a Memorial Sales Consultant</a>
         </div>
       </section>

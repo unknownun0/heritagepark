@@ -40,7 +40,7 @@ export default function MemoryPlaceSection() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-primary mb-1">Lot Size</h3>
-                <p className="text-sm text-primary/70"><strong>8 plots</strong> within a 4.00m �- 4.88m (19.52 sqm) area, designed specifically for aboveground crypt structures.</p>
+                <p className="text-sm text-primary/70"><strong>8 plots</strong> within a 4.00m × 4.88m (19.52 sqm) area, designed specifically for aboveground crypt&nbsp;structures.</p>
               </div>
             </div>
             <div className="bg-cream rounded-lg p-5 flex items-start gap-4">

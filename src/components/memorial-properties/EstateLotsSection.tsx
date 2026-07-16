@@ -20,7 +20,7 @@ export default function EstateLotsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">For Families Who Seek the Extraordinary</h2>
           </div>
           <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-            <p>An estate lot is for families who envision something more a <strong>private mausoleum</strong> that stands as a permanent tribute to their name and legacy. It&apos;s designed for those who want complete control over their memorial space, with the privacy and prestige that only a dedicated family structure can provide.</p>
+            <p>An estate lot is for families who envision something more a <strong>private mausoleum</strong> that stands as a permanent tribute to their name and legacy. It&apos;s designed for those who want complete control over their memorial space, with the privacy and prestige that only a dedicated family structure can&nbsp;provide.</p>
           </div>
         </div>
       </section>
@@ -91,7 +91,7 @@ export default function EstateLotsSection() {
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Begin Your Legacy?</h2>
-          <p className="text-white/70 mb-8 max-w-xl mx-auto">Our team is here to discuss your vision in complete confidence with no pressure, only guidance.</p>
+          <p className="text-white/70 mb-8 max-w-xl mx-auto">Our team is here to discuss your vision in complete confidence with no pressure, only&nbsp;guidance.</p>
           <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Schedule a Private Consultation</a>
         </div>
       </section>

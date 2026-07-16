@@ -1,7 +1,7 @@
 const benefits = [
   {
     title: 'Decide While You Have Time',
-    desc: 'Knowing that everything is arranged brings a deep sense of calm. Your family won\'t have to make difficult decisions under pressure.',
+    desc: 'Knowing that everything is arranged brings a deep sense of calm. Your family won\'t have to make difficult decisions under&nbsp;pressure.',
   },
   {
     title: 'Prepare Financially',
@@ -13,7 +13,7 @@ const benefits = [
   },
   {
     title: 'Preserve Your Wishes',
-    desc: 'A clear plan means your family carries out your intentions exactly as you envisioned, with nothing left to guess.',
+    desc: 'A clear plan means your family carries out your intentions exactly as you envisioned, with nothing left to&nbsp;guess.',
   },
 ]
 
