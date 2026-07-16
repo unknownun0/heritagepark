@@ -22,12 +22,31 @@ import { lawnLotData } from '@/data/pricing'
 export default function LawnLotsSection() {
   return (
     <>
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
+      <section className="relative min-h-[500px] flex items-center bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[url(/images/lawn-lot-hero.jpg)] bg-cover bg-center opacity-30" />
-        <div className="relative z-10 text-center px-4">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Lawn Lots</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Meaningful First Step in Planning</h1>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Simple, dignified, and built for peace of mind at a place that feels like home.</p>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20 flex items-center gap-12">
+          <div className="flex-1 text-left">
+            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">Lawn Lots</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Every Meaningful Plan Begins with a First&nbsp;Step
+            </h1>
+            <p className="text-white/70 text-base md:text-lg max-w-xl mb-8">
+              Planning ahead doesn&apos;t always begin with the largest memorial property. For many individuals, couples, and young families, a Lawn Lot offers a thoughtful, practical, and dignified way to prepare while keeping future options&nbsp;open.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+                Speak with an Advisor
+              </a>
+              <a href="/contact" className="text-gold text-sm font-semibold underline underline-offset-4 hover:text-white transition-colors self-center">
+                Request Current Pricing &rarr;
+              </a>
+            </div>
+          </div>
+          <div className="hidden lg:block flex-1">
+            <div className="aspect-[4/3] bg-white/10 rounded-lg flex items-center justify-center text-white/40 text-sm">
+              Photo
+            </div>
+          </div>
         </div>
       </section>
 
