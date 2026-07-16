@@ -113,12 +113,12 @@ export default function PlanAheadSections() {
             ))}
           </div>
           <div className="text-center">
-            <p className="text-primary/60 text-sm">
-              Have questions before visiting?{' '}
-              <a href="#" className="text-gold font-semibold underline underline-offset-4 hover:text-primary transition-colors">
-                Speak with an advisor &rarr;
-              </a>
+            <p className="text-primary/60 text-sm mb-2">
+              Have questions before&nbsp;visiting?
             </p>
+            <a href="#" className="inline-block text-gold font-semibold text-sm underline underline-offset-4 hover:text-primary transition-colors">
+              Speak with an advisor &rarr;
+            </a>
           </div>
         </div>
       </section>
