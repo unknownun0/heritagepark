@@ -6,35 +6,43 @@ import { lawnLotData, gardenLotData, memoryPlaceData, estateLotData } from '@/da
 const cards = [
   {
     name: 'Lawn Lots',
+    heading: 'A Simple Beginning That Leaves Room for&nbsp;Tomorrow',
+    desc: 'Planning ahead doesn\'t have to start with a big decision. Lawn Lots offer a thoughtful first step for individuals, couples, and young families who want to prepare with dignity and peace of&nbsp;mind.',
     href: '/memorial-properties/lawn-lots',
-    desc: 'A meaningful first step simple, dignified, and affordable. Lawn lots offer a serene resting place with flat granite markers in beautifully maintained open&nbsp;spaces.',
     image: '/images/lawn-lot-hero.jpg',
+    btnLabel: 'Explore Lawn Lots',
   },
   {
     name: 'Garden Lots',
+    heading: 'Made for Families That Grow Across&nbsp;Generations',
+    desc: 'When one memorial space is meant to serve multiple generations, Garden Lots provide the space, flexibility, and permanence to keep loved ones together through the&nbsp;years.',
     href: '/memorial-properties/garden-lots',
-    desc: 'Designed for families planning across generations. Garden lots provide generous space for upright monuments in a landscaped garden setting.',
     image: '/images/garden-lot-hero.jpg',
-  },
-  {
-    name: 'Estate Lots',
-    href: '/memorial-properties/estate-lots',
-    desc: 'A private legacy for generations to come. Estate lots allow for a custom family mausoleum in a secluded, prestigious location within the park.',
-    image: '/images/estate-lot-hero.jpg',
+    btnLabel: 'Explore Garden Lots',
   },
   {
     name: 'Memory Place',
+    heading: 'An Elegant Way to Keep Loved Ones&nbsp;Close',
+    desc: 'For families who prefer above-ground memorials, Memory Place offers a refined and thoughtfully designed setting that combines accessibility with lasting&nbsp;remembrance.',
     href: '/memorial-properties/memory-place',
-    desc: 'An aboveground solution that combines dignity with structure. Memory Place offers beautifully designed crypts for families who prefer a vertical memorial.',
     image: '/images/memory-place-hero.jpg',
+    btnLabel: 'Explore Memory Place',
+  },
+  {
+    name: 'Estate Lots',
+    heading: 'Where a Family\'s Legacy Has Its Own&nbsp;Place',
+    desc: 'Designed for families seeking privacy and permanence, Estate Lots provide the freedom to create a private memorial estate that can honor generations to&nbsp;come.',
+    href: '/memorial-properties/estate-lots',
+    image: '/images/estate-lot-hero.jpg',
+    btnLabel: 'Explore Estate Lots',
   },
 ]
 
 const tableRows = [
   { property: 'Lawn Lot', size: '2.44 sqm', capacity: '2 full body / 8 cremains', bestFor: 'First-time planners, young families' },
   { property: 'Garden Lot', size: '19.52 sqm', capacity: '16 full body / 64 cremains', bestFor: 'Multi-generational families' },
-  { property: 'Estate Lot', size: '39.04 sqm', capacity: '32 full body + crypts', bestFor: 'Private mausoleum, ultimate legacy' },
   { property: 'Memory Place', size: '19.52 sqm', capacity: '22 total burials', bestFor: 'aboveground crypts, structured solution' },
+  { property: 'Estate Lot', size: '39.04 sqm', capacity: '32 full body + crypts', bestFor: 'Private mausoleum, ultimate legacy' },
 ]
 
 export default function PropertyComparison() {
@@ -64,35 +72,62 @@ export default function PropertyComparison() {
         </div>
       </section>
 
+      {/* HOW TO CHOOSE */}
       <section className="py-20 bg-cream">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">How to Choose the Right Memorial&nbsp;Property</h2>
+            <p className="text-primary/60 max-w-3xl mx-auto mt-4">Choosing a memorial property isn&apos;t only about lot size or capacity. Every family has different needs, traditions, and plans for the future. Before comparing the available options, consider what matters most to your&nbsp;family.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Who are you planning&nbsp;for?',
+                desc: 'Are you planning for yourself, your parents, or creating a place that can serve your family for&nbsp;generations?',
+              },
+              {
+                title: 'What type of memorial feels right for your&nbsp;family?',
+                desc: 'Would you prefer a traditional full-body burial, an above-ground memorial, or a space for cremated&nbsp;remains?',
+              },
+              {
+                title: 'Will future generations use the same&nbsp;space?',
+                desc: 'Think beyond today&rsquo;s needs. Consider whether future family members may one day share the same memorial&nbsp;space.',
+              },
+              {
+                title: 'What payment approach works best for your&nbsp;family?',
+                desc: 'Planning ahead often provides more flexibility, giving you more time to choose the option that fits your family&rsquo;s budget and long-term&nbsp;plans.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-lg p-6 text-left">
+                <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
+                <p className="text-sm text-primary/60 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Explore Your Options</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {cards.map((card) => (
-              <a key={card.name} href={card.href} className="block bg-white rounded-lg overflow-hidden border border-transparent hover:shadow-lg transition-shadow group">
+              <div key={card.name} className="bg-white rounded-lg overflow-hidden border border-transparent hover:shadow-lg transition-shadow group">
                 <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${card.image})` }} />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-gold transition-colors">{card.name}</h3>
-                  <p className="text-sm text-primary/70 leading-relaxed mb-4">{card.desc}</p>
-                  <span className="inline-flex items-center gap-1 text-gold font-semibold text-sm group-hover:text-gold/80 transition-colors">
-                    Learn More
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                  <div className="mt-3">
-                    <a
-                      href="/contact"
-                      onClick={(e) => e.stopPropagation()}
-                      className="block w-full text-center bg-[#e2af43] text-primary font-semibold py-2.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
-                    >
-                      Request a Quote
-                    </a>
-                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-gold transition-colors">{card.name}</h3>
+                  <p className="text-base font-semibold text-primary/80 mb-2">{card.heading}</p>
+                  <p className="text-sm text-primary/60 leading-relaxed mb-4">{card.desc}</p>
+                  <a
+                    href={card.href}
+                    className="block w-full text-center bg-[#e2af43] text-primary font-semibold py-2.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
+                  >
+                    {card.btnLabel}
+                  </a>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -131,10 +166,6 @@ export default function PropertyComparison() {
       </section>
 
       <FinanceCalculator mode="property" data={[...lawnLotData, ...gardenLotData, ...memoryPlaceData, ...estateLotData]} title="Explore Your Payment Options" />
-
-      <div className="text-center pb-16 -mt-8">
-        <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request a Quote</a>
-      </div>
 
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">

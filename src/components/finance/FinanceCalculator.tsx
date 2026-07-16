@@ -99,16 +99,16 @@ export default function FinanceCalculator(props: Props) {
                 <p className="text-lg font-bold text-primary">{formatPeso(row.totalPaid)}</p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
+            <div className="flex flex-col items-center gap-3 mt-6">
+              <p className="text-xs text-primary/60 text-center">
+                Transfer fee: {formatPeso(tier.transferFee)} payable to&nbsp;RMMI
+              </p>
               <a
                 href="/contact"
                 className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
               >
                 Request a Quote
               </a>
-              <p className="text-xs text-primary/40 text-center">
-                Transfer fee: {formatPeso(tier.transferFee)} payable to RMMI
-              </p>
             </div>
           </div>
         </div>
