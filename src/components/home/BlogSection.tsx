@@ -46,9 +46,8 @@ export default async function BlogSection() {
     <section className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase">Guidance</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mt-2">Answers, Before You Need Them.</h2>
-          <p className="text-primary/60 max-w-2xl mx-auto mt-3">Knowledge is comfort. Explore our library of helpful guides written with your family&apos;s peace of mind in mind.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary">Helping You Understand Every&nbsp;Step</h2>
+          <p className="text-primary/60 max-w-2xl mx-auto mt-3">Planning for the future can feel overwhelming. Our simple guides explain everything you need&nbsp;to&nbsp;know.</p>
         </div>
 
         {topics.map((topic) => {
