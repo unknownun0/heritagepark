@@ -40,6 +40,21 @@ const tableRows = [
 export default function PropertyComparison() {
   return (
     <>
+      <div className="bg-primary border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 py-2">
+          <nav className="flex items-center gap-2 text-xs sm:text-sm text-white/60">
+            <a href="/explore-the-park" className="hover:text-gold transition-colors">Explore the Park</a>
+            <span>&gt;</span>
+            <a href="/learn" className="hover:text-gold transition-colors">Resources</a>
+            <span>&gt;</span>
+            <a href="/aeternum" className="hover:text-gold transition-colors">Aeternum</a>
+            <span>&gt;</span>
+            <a href="/nacional" className="hover:text-gold transition-colors">Nacional</a>
+            <span>&gt;</span>
+            <span className="text-white/90">Contact</span>
+          </nav>
+        </div>
+      </div>
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
         <div className="absolute inset-0 bg-[url(/images/properties-hero.jpg)] bg-cover bg-center opacity-30" />
         <div className="relative z-10 text-center px-4">

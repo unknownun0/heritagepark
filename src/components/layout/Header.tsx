@@ -21,10 +21,9 @@ const navItems: NavItem[] = [
   },
   {
     key: 'memorial-properties',
-    label: 'Memorial Properties',
+    label: 'Memorial Lots',
     href: '/memorial-properties',
     children: [
-      { label: 'Explore All', href: '/memorial-properties' },
       { label: 'Lawn Lots', href: '/memorial-properties/lawn-lots' },
       { label: 'Garden Lots', href: '/memorial-properties/garden-lots' },
       { label: 'Estate Lots', href: '/memorial-properties/estate-lots' },
@@ -33,7 +32,7 @@ const navItems: NavItem[] = [
   },
   {
     key: 'memorial-services',
-    label: 'Memorial Services',
+    label: 'Funeral Services',
     href: '/memorial-services',
     children: [
       { label: 'Explore All', href: '/memorial-services' },
