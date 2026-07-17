@@ -73,16 +73,15 @@ export default function HomeSections() {
     </Link>
     <Link
      href="/immediate-need"
-     className="flex-1 flex flex-col items-center justify-center p-12 md:p-16 text-center bg-[#163026] hover:bg-primary transition-colors group min-h-[40vh] border-t md:border-t-0 md:border-l border-white/10"
+     className="flex-1 flex flex-col items-center justify-center p-12 md:p-16 text-center bg-primary hover:bg-[#163026] transition-colors group min-h-[40vh] border-t md:border-t-0 md:border-l border-white/10"
     >
      <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/30 transition-colors">
       <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
       </svg>
      </div>
-     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Need a Memorial LotToday?</h2>
-     <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mb-4">Whether you need a memorial property immediately or you&apos;re planning ahead, we&apos;ll help you find the right option based on your family&apos;s needs and budget.</p>
-     <p className="text-gold font-bold text-xl">0917 884 1009</p>
+     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Need a Memorial Lot Today?</h2>
+     <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md">Whether you need a memorial property immediately or you&apos;re planning ahead, we&apos;ll help you find the right option based on your family&apos;s needs and budget.</p>
     </Link>
    </section>
 
@@ -99,7 +98,7 @@ export default function HomeSections() {
       {values.map((v) => (
        <div key={v.title} className="bg-cream rounded-lg p-6 text-center hover:shadow-md transition-shadow">
         <h3 className="text-lg font-semibold text-primary mb-3">{v.title}</h3>
-        <p className="text-sm text-primary/60 leading-relaxed">{v.desc}</p>
+        <p className="text-base md:text-lg text-primary/60 leading-relaxed">{v.desc}</p>
        </div>
       ))}
      </div>
@@ -119,7 +118,7 @@ export default function HomeSections() {
         <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${p.image})` }} />
         <div className="p-6">
          <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-gold transition-colors">{p.title}</h3>
-         <p className="text-sm text-primary/60 mb-5 leading-relaxed">{p.desc}</p>
+         <p className={`text-primary/60 mb-5 leading-relaxed ${p.title === 'Memory Place' ? 'text-base md:text-lg' : 'text-sm'}`}>{p.desc}</p>
          <span className="text-gold font-semibold text-sm group-hover:underline">
           Learn More &rarr;
          </span>
