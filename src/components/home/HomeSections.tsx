@@ -134,7 +134,7 @@ export default function HomeSections() {
      </div>
      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {values.map((v) => (
-       <div key={v.title} className="bg-white/10 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+       <div key={v.title} className="bg-white/10 rounded-lg p-6 text-center hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
         <h3 className="text-lg font-semibold text-white mb-3">{v.title}</h3>
         <p className="text-base md:text-lg text-white/70 leading-relaxed">{v.desc}</p>
        </div>
