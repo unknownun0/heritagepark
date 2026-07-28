@@ -126,17 +126,17 @@ export default function HomeSections() {
    </section>
 
    {/* Why Families Choose Us */}
-   <section className="py-20 bg-white">
+   <section className="py-20 bg-primary">
     <div className="max-w-7xl mx-auto px-4">
      <div className="text-center mb-12">
       <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Why Families Choose Us</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">Designed with Your Family in Mind</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-white">Designed with Your Family in Mind</h2>
      </div>
      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {values.map((v) => (
-       <div key={v.title} className="bg-cream rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-        <h3 className="text-lg font-semibold text-primary mb-3">{v.title}</h3>
-        <p className="text-base md:text-lg text-primary/60 leading-relaxed">{v.desc}</p>
+       <div key={v.title} className="bg-white/10 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+        <h3 className="text-lg font-semibold text-white mb-3">{v.title}</h3>
+        <p className="text-base md:text-lg text-white/70 leading-relaxed">{v.desc}</p>
        </div>
       ))}
      </div>
