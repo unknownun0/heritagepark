@@ -92,13 +92,18 @@ export default async function Footer() {
      <div>
       <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
       <div className="space-y-3 text-sm text-white/70">
-       <p>
-        <a href={`tel:${phone}`} className="text-gold hover:text-gold/80 transition-colors">{phone}</a>
-       </p>
-       <p>
-        <a href={`mailto:${email}`} className="text-gold hover:text-gold/80 transition-colors">{email}</a>
-       </p>
-      </div>
+        <p>
+         <a href={`tel:${phone}`} className="text-gold hover:text-gold/80 transition-colors">{phone}</a>
+        </p>
+        <p>
+         <a href={`mailto:${email}`} className="text-gold hover:text-gold/80 transition-colors">{email}</a>
+        </p>
+        <p>
+         <a href="https://www.facebook.com/heritageparktaguigph" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold/80 transition-colors">
+          facebook.com/heritageparktaguigph
+         </a>
+        </p>
+       </div>
      </div>
     </div>
 

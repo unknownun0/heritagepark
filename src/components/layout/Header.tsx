@@ -15,6 +15,11 @@ interface NavItem {
 
 const navItems: NavItem[] = [
  {
+  key: 'home',
+  label: 'Home',
+  href: '/',
+ },
+ {
   key: 'plan-ahead',
   label: 'Plan Ahead',
   href: '/plan-ahead',
