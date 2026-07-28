@@ -42,7 +42,7 @@ export default function PlanAheadSections() {
     <>
       {/* HERO */}
       <section className="relative min-h-[500px] flex items-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-[url(/uploads/Heritage%20Park%20Memorial%20Lots.jpg)] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url(/images/plan-ahead-hero.jpg)] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
           <div className="max-w-2xl">
