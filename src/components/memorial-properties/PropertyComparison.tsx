@@ -88,8 +88,11 @@ export default function PropertyComparison() {
        Heritage Park Memorial Lots
       </p>
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-       Explore the different memorial properties available for individuals, couples, and families. Compare each option and find the one that best fits your family&apos;s needs.
+       Explore the different memorial properties
       </h1>
+      <p className="text-white/70 text-base md:text-lg max-w-2xl mb-8">
+       Available for individuals, couples, and families. Compare each option and find the one that best fits your family&apos;s needs.
+      </p>
       <div className="flex flex-col sm:flex-row items-start gap-4">
        <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
         Inquire Now
