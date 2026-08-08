@@ -106,7 +106,7 @@ export default function PlanAheadSections() {
                 <div className="bg-primary rounded-lg px-4 py-3 text-center min-w-[160px]">
                   <p className="text-white text-sm font-semibold">{step.text}</p>
                 </div>
-                {i < processSteps.length - 1 && <span className="text-gold text-xl font-bold">&darr;</span>}
+                {i < processSteps.length - 1 && <i className="fa-solid fa-arrow-down-long text-gold text-xl font-bold" />}
               </div>
             ))}
           </div>

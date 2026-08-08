@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Montserrat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";

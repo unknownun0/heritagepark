@@ -171,7 +171,7 @@ export default function LawnLotsSection() {
         </div>
         {i < purchaseSteps.length - 1 && (
          <div className="flex justify-center py-2">
-          <span className="text-gold text-xl font-bold">&darr;</span>
+          <i className="fa-solid fa-arrow-down-long text-gold text-xl font-bold" />
          </div>
         )}
        </div>
