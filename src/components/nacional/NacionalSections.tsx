@@ -58,7 +58,7 @@ const facilities = [
  { icon: 'fa-solid fa-couch', label: 'Family Room', image: '/images/nacional-facility/family-room.jpg' },
  { icon: 'fa-solid fa-door-open', label: 'Lobby', image: '/images/nacional-facility/lobby.jpg' },
  { icon: 'fa-solid fa-eye', label: 'Viewing Rooms', image: '/images/nacional-facility/viewing-rooms.jpg' },
- { icon: 'fa-solid fa-square-parking', label: 'Parking', image: '/images/nacional-facility/parking.jpg' },
+ { icon: 'fa-solid fa-square-parking', label: 'Parking', image: '/images/nacional-facility/parking-lot.jpg' },
 ]
 
 const inclusions = [
