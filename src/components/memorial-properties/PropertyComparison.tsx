@@ -5,20 +5,31 @@ import { lawnLotData, gardenLotData, memoryPlaceData, estateLotData } from '@/da
 
 const cards = [
  {
-  name: 'Lawn Lots',
+  name: 'Lawn Lot',
   heading: 'A Simple Beginning That Leaves Room for Tomorrow',
-  desc: 'Planning ahead doesn\'t have to start with a big decision. Lawn Lots offer a thoughtful first step for individuals, couples, and young families who want to prepare with dignity and peace of mind.',
+  desc: 'Planning ahead doesn\'t have to start with a big decision. Lawn Lots offer a thoughtful first step for individuals and couples who want to prepare with dignity and peace of mind.',
   href: '/memorial-properties/lawn-lots',
   image: '/images/lawn-lot-hero.jpg',
   btnLabel: 'Explore Lawn Lots',
+  details: [
+   { icon: 'fa-solid fa-users', label: 'Capacity', value: '2 Full Body or up to 8 Urns / Cremains' },
+   { icon: 'fa-solid fa-leaf', label: 'Type', value: 'Underground Burial' },
+   { icon: 'fa-solid fa-person', label: 'Best For', value: 'Individuals or Couples' },
+  ],
  },
  {
-  name: 'Garden Lots',
+  name: 'Garden Lot',
   heading: 'Made for Families That Grow Across Generations',
   desc: 'When one memorial space is meant to serve multiple generations, Garden Lots provide the space, flexibility, and permanence to keep loved ones together through the years.',
   href: '/memorial-properties/garden-lots',
   image: '/images/garden-lot-hero.jpg',
   btnLabel: 'Explore Garden Lots',
+  details: [
+   { icon: 'fa-solid fa-users', label: 'Capacity', value: '16 Full Body or up to 64 Urns / Cremains' },
+   { icon: 'fa-solid fa-leaf', label: 'Type', value: 'Underground Burial' },
+   { icon: 'fa-solid fa-users-line', label: 'Best For', value: 'Families' },
+   { icon: 'fa-solid fa-tree', label: 'Setting', value: 'Garden Landscape' },
+  ],
  },
  {
   name: 'Memory Place',
@@ -27,14 +38,26 @@ const cards = [
   href: '/memorial-properties/memory-place',
   image: '/images/memory-place-hero.jpg',
   btnLabel: 'Explore Memory Place',
+  details: [
+   { icon: 'fa-solid fa-users', label: 'Capacity', value: '2 Full Body Above Ground Crypts, 4 Full body Burials and 16 Urns / Cremains' },
+   { icon: 'fa-solid fa-landmark', label: 'Type', value: 'Above-Ground / Underground Burial' },
+   { icon: 'fa-solid fa-users-line', label: 'Best For', value: 'People who want Above Ground Burial' },
+   { icon: 'fa-solid fa-chart-line', label: 'Ideal For', value: 'Investors' },
+  ],
  },
  {
-  name: 'Estate Lots',
+  name: 'Estate Lot',
   heading: 'Where a Family\'s Legacy Has Its Own Place',
   desc: 'Designed for families seeking privacy and permanence, Estate Lots provide the freedom to create a private memorial estate that can honor generations to come.',
   href: '/memorial-properties/estate-lots',
   image: '/images/estate-lot-hero.jpg',
   btnLabel: 'Explore Estate Lots',
+  details: [
+   { icon: 'fa-solid fa-users', label: 'Capacity', value: 'Multiple family interments' },
+   { icon: 'fa-solid fa-landmark', label: 'Type', value: 'Private Estate' },
+   { icon: 'fa-solid fa-users-line', label: 'Best For', value: 'Large families' },
+   { icon: 'fa-solid fa-tree', label: 'Setting', value: 'Exclusive family space' },
+  ],
  },
 ]
 
@@ -45,69 +68,67 @@ const tableRows = [
  { property: 'Estate Lot', size: '39.04 sqm', capacity: '32 full body + crypts', bestFor: 'Private mausoleum, ultimate legacy' },
 ]
 
+const purchaseSteps = [
+ 'Talk to a Memorial Advisor and discuss your family\u2019s needs.',
+ 'Visit Heritage Park with your Memorial Advisor to view the available memorial lots.',
+ 'Choose the memorial lot that best fits your family, then complete the application and submit the required documents.',
+ 'Select your preferred payment option.',
+ 'Receive your ownership documents and keep them in a safe place.',
+]
+
 export default function PropertyComparison() {
  return (
   <>
-   <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
+   {/* HERO */}
+   <section className="relative min-h-[500px] flex items-center bg-primary overflow-hidden">
     <div className="absolute inset-0 bg-[url(/images/properties-hero.jpg)] bg-cover bg-center opacity-30" />
-    <div className="relative z-10 text-center px-4">
-     <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Memorial Lots</p>
-     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Find the Right Place for Your Family</h1>
-     <p className="text-white/70 max-w-2xl mx-auto text-lg">Every family is different. Here&apos;s how to think about what fits yours.</p>
+    <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
+     <div className="max-w-2xl">
+      <p className="inline-block bg-gold/10 border border-gold/40 text-gold text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-4">
+       Heritage Park Memorial Lots
+      </p>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+       Explore the different memorial properties available for individuals, couples, and families. Compare each option and find the one that best fits your family&apos;s needs.
+      </h1>
+      <div className="flex flex-col sm:flex-row items-start gap-4">
+       <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+        Inquire Now
+       </a>
+       <a href="#comparison" className="inline-block border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">
+        Compare Memorial Lots
+       </a>
+      </div>
+     </div>
     </div>
    </section>
 
-   {/* HOW TO CHOOSE */}
+   {/* EXPLORE OUR MEMORIAL LOTS */}
    <section className="py-20 bg-cream">
     <div className="max-w-7xl mx-auto px-4">
      <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">How to Choose the Right Memorial Property</h2>
-      <p className="text-primary/60 max-w-3xl mx-auto mt-4">Choosing a memorial property isn&apos;t only about lot size or capacity. Every family has different needs, traditions, and plans for the future. Before comparing the available options, consider what matters most to your family.</p>
-     </div>
-     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {[
-       {
-        title: 'Who are you planning for?',
-        desc: 'Are you planning for yourself, your parents, or creating a place that can serve your family for generations?',
-       },
-       {
-        title: 'What type of memorial feels right for your family?',
-        desc: 'Would you prefer a traditional full-body burial, an above-ground memorial, or a space for cremated remains?',
-       },
-       {
-        title: 'Will future generations use the same space?',
-        desc: 'Think beyond today&rsquo;s needs. Consider whether future family members may one day share the same memorial space.',
-       },
-       {
-        title: 'What payment approach works best for your family?',
-        desc: 'Planning ahead often provides more flexibility, giving you more time to choose the option that fits your family&rsquo;s budget and long-term plans.',
-       },
-      ].map((item) => (
-       <div key={item.title} className="bg-white rounded-lg p-6 text-left">
-        <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
-        <p className="text-sm text-primary/60 leading-relaxed">{item.desc}</p>
-       </div>
-      ))}
-     </div>
-    </div>
-   </section>
-
-   <section className="py-20 bg-white">
-    <div className="max-w-7xl mx-auto px-4">
-     <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">Explore Your Options</h2>
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Explore Our Memorial Lots</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary">Find the Memorial Property That Fits Your Family</h2>
+      <p className="text-primary/60 mt-3 max-w-2xl mx-auto">Explore the different memorial properties available at Heritage Park.</p>
      </div>
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {cards.map((card) => (
-       <div key={card.name} className="bg-white rounded-lg overflow-hidden border border-transparent hover:shadow-lg transition-shadow group">
+       <div key={card.name} className="bg-white rounded-xl overflow-hidden border border-light-stone hover:shadow-lg transition-shadow group flex flex-col">
         <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${card.image})` }} />
-        <div className="p-6">
+        <div className="p-6 flex-1 flex flex-col">
          <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-gold transition-colors">{card.name}</h3>
          <p className="text-base font-semibold text-primary/80 mb-2">{card.heading}</p>
          <p className="text-sm text-primary/60 leading-relaxed mb-4">{card.desc}</p>
+         <ul className="space-y-2.5 mb-5">
+          {card.details.map((d) => (
+           <li key={d.label} className="flex items-start gap-2.5">
+            <i className={`${d.icon} text-gold mt-0.5 w-4 text-center shrink-0`} />
+            <span className="text-xs text-primary/70 leading-relaxed"><strong className="text-primary font-semibold">{d.label}:</strong> {d.value}</span>
+           </li>
+          ))}
+         </ul>
          <a
           href={card.href}
-          className="block w-full text-center bg-[#e2af43] text-primary font-semibold py-2.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
+          className="mt-auto block w-full text-center bg-[#e2af43] text-primary font-semibold py-2.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors"
          >
           {card.btnLabel}
          </a>
@@ -118,10 +139,11 @@ export default function PropertyComparison() {
     </div>
    </section>
 
-   <section className="py-20 bg-white">
+   {/* SIDE-BY-SIDE COMPARISON */}
+   <section id="comparison" className="py-20 bg-white scroll-mt-24">
     <div className="max-w-7xl mx-auto px-4">
      <div className="text-center mb-12">
-      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">sidebyside Comparison</p>
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Side-by-Side Comparison</p>
       <h2 className="text-3xl md:text-4xl font-bold text-primary">Find What Fits Your Family</h2>
      </div>
      <div className="overflow-x-auto">
@@ -130,7 +152,7 @@ export default function PropertyComparison() {
         <tr className="border-b-2 border-primary">
          <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Property</th>
          <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Lot Size</th>
-         <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Typical Capacity</th>
+         <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Capacity</th>
          <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider hidden md:table-cell">Best For</th>
         </tr>
        </thead>
@@ -150,21 +172,47 @@ export default function PropertyComparison() {
     </div>
    </section>
 
+   {/* FINANCE CALCULATOR */}
    <FinanceCalculator mode="property" data={[...lawnLotData, ...gardenLotData, ...memoryPlaceData, ...estateLotData]} title="Explore Your Payment Options" />
 
-   <section className="py-16 bg-primary">
-    <div className="max-w-4xl mx-auto px-4 text-center">
-     <p className="text-gold text-lg font-accent italic leading-relaxed">
-      Every memorial property includes a Heritage Park memorial plan, ensuring your family is fully prepared, not just provided for.
-     </p>
+   {/* HOW TO PURCHASE */}
+   <section className="py-20 bg-white">
+    <div className="max-w-4xl mx-auto px-4">
+     <div className="text-center mb-12">
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">How to Purchase</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary">How to Purchase a Memorial Lot</h2>
+     </div>
+     <div className="space-y-0">
+      {purchaseSteps.map((step, i) => (
+       <div key={i}>
+        <div className="flex items-start gap-4 bg-cream rounded-lg p-6">
+         <div className="w-10 h-10 bg-gold text-primary rounded-full flex items-center justify-center font-bold shrink-0">
+          {i + 1}
+         </div>
+         <p className="text-primary/70 text-sm md:text-base leading-relaxed pt-2">{step}</p>
+        </div>
+        {i < purchaseSteps.length - 1 && (
+         <div className="flex justify-center py-2">
+          <i className="fa-solid fa-arrow-down-long text-gold text-xl font-bold" />
+         </div>
+        )}
+       </div>
+      ))}
+     </div>
     </div>
    </section>
 
-   <section className="py-16 bg-cream">
-    <div className="max-w-7xl mx-auto px-4 text-center">
-     <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Ready to Find the Right Fit?</h2>
-     <p className="text-primary/60 mb-8 max-w-xl mx-auto">Our memorial sales consultants are here to guide your family with care and no pressure.</p>
-     <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Talk to a Memorial Sales Consultant</a>
+   {/* CTA */}
+   <section className="py-20 bg-primary">
+    <div className="max-w-3xl mx-auto px-4 text-center">
+     <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Ready to Find the Right Fit?</p>
+     <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">Need Help Choosing the Right Memorial Lot?</h2>
+     <p className="text-white/70 mb-8 max-w-xl mx-auto">
+      Every family has different needs. Whether you&apos;re comparing memorial lots, exploring payment options, or simply have questions, our Memorial Advisors are here to help you make an informed decision.
+     </p>
+     <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+      Talk to a Memorial Advisor
+     </a>
     </div>
    </section>
   </>
