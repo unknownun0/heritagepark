@@ -42,7 +42,7 @@ const beforePurchasing = [
  },
  {
   title: 'Above-Ground Crypt Is Sold Separately',
-  desc: 'The above-ground crypt structure is a not included in the purchase of the Memory Place. Pricing, design options, and installation requirements can be discussed with your Memorial Advisor.',
+  desc: 'The above-ground crypt structure is not included in the purchase of the Memory Place. Pricing, design options, and installation requirements can be discussed with your Memorial Advisor.',
  },
 ]
 
