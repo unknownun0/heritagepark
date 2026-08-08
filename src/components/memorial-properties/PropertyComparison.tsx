@@ -61,13 +61,6 @@ const cards = [
  },
 ]
 
-const tableRows = [
- { property: 'Lawn Lot', size: '2.44 sqm', capacity: '2 full body / 8 cremains', bestFor: 'First-time planners, young families' },
- { property: 'Garden Lot', size: '19.52 sqm', capacity: '16 full body / 64 cremains', bestFor: 'Multi-generational families' },
- { property: 'Memory Place', size: '19.52 sqm', capacity: '22 total burials', bestFor: 'aboveground crypts, structured solution' },
- { property: 'Estate Lot', size: '39.04 sqm', capacity: '32 full body + crypts', bestFor: 'Private mausoleum, ultimate legacy' },
-]
-
 const purchaseSteps = [
  'Talk to a Memorial Advisor and discuss your family\u2019s needs.',
  'Visit Heritage Park with your Memorial Advisor to view the available memorial lots.',
@@ -97,7 +90,7 @@ export default function PropertyComparison() {
        <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
         Inquire Now
        </a>
-       <a href="#comparison" className="inline-block border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">
+       <a href="#memorial-lots" className="inline-block border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">
         Compare Memorial Lots
        </a>
       </div>
@@ -106,7 +99,7 @@ export default function PropertyComparison() {
    </section>
 
    {/* EXPLORE OUR MEMORIAL LOTS */}
-   <section className="py-20 bg-cream">
+   <section id="memorial-lots" className="py-20 bg-cream scroll-mt-24">
     <div className="max-w-7xl mx-auto px-4">
      <div className="text-center mb-12">
       <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Explore Our Memorial Lots</p>
@@ -139,39 +132,6 @@ export default function PropertyComparison() {
        </div>
       ))}
      </div>
-    </div>
-   </section>
-
-   {/* SIDE-BY-SIDE COMPARISON */}
-   <section id="comparison" className="py-20 bg-white scroll-mt-24">
-    <div className="max-w-7xl mx-auto px-4">
-     <div className="text-center mb-12">
-      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Side-by-Side Comparison</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">Find What Fits Your Family</h2>
-     </div>
-     <div className="overflow-x-auto">
-      <table className="w-full text-left border-collapse">
-       <thead>
-        <tr className="border-b-2 border-primary">
-         <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Property</th>
-         <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Lot Size</th>
-         <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider">Capacity</th>
-         <th className="py-3 px-2 md:py-4 md:px-4 text-primary font-heading font-bold text-xs md:text-sm uppercase tracking-wider hidden md:table-cell">Best For</th>
-        </tr>
-       </thead>
-       <tbody>
-        {tableRows.map((row, i) => (
-         <tr key={row.property} className={i < tableRows.length - 1 ? 'border-b border-light-stone' : ''}>
-          <td className="py-3 px-2 md:py-4 md:px-4 font-heading font-bold text-primary text-xs md:text-sm">{row.property}</td>
-          <td className="py-3 px-2 md:py-4 md:px-4 text-primary/70 text-xs md:text-sm">{row.size}</td>
-          <td className="py-3 px-2 md:py-4 md:px-4 text-primary/70 text-xs md:text-sm">{row.capacity}</td>
-          <td className="py-3 px-2 md:py-4 md:px-4 text-primary/70 text-xs md:text-sm hidden md:table-cell">{row.bestFor}</td>
-         </tr>
-        ))}
-       </tbody>
-      </table>
-     </div>
-     <p className="text-xs text-primary/40 mt-4 text-center">Starting from ₱300K range. Prices vary by tier and availability. Contact us for current pricing.</p>
     </div>
    </section>
 
