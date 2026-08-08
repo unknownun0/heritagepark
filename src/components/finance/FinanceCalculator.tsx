@@ -3,8 +3,6 @@
 import { useState } from 'react'
 import type { PropertyTier, ServicePlan } from '@/data/pricing'
 
-type CalculatorMode = 'property' | 'service'
-
 interface PropertyProps {
  mode: 'property'
  data: PropertyTier[]
@@ -15,6 +13,7 @@ interface ServiceProps {
  mode: 'service'
  data: ServicePlan[]
  title?: string
+ insuranceToggle?: boolean
 }
 
 type Props = PropertyProps | ServiceProps
@@ -30,6 +29,10 @@ export default function FinanceCalculator(props: Props) {
  const [selectedTier, setSelectedTier] = useState(0)
  const [selectedTerm, setSelectedTerm] = useState(0)
  const [selectedFreq, setSelectedFreq] = useState(0)
+ const [selectedPlan, setSelectedPlan] = useState(0)
+ const [selectedPayMode, setSelectedPayMode] = useState<'spot' | 'installment'>('spot')
+ const [selectedFreqSvc, setSelectedFreqSvc] = useState(0)
+ const [withInsurance, setWithInsurance] = useState(false)
 
  if (isProperty) {
   const pData = (props as PropertyProps).data
@@ -116,14 +119,12 @@ export default function FinanceCalculator(props: Props) {
   )
  }
 
- const sData = (props as ServiceProps).data
- if (!sData.length) return null
+  const sData = (props as ServiceProps).data
+  if (!sData.length) return null
 
- const [selectedPlan, setSelectedPlan] = useState(0)
- const [selectedPayMode, setSelectedPayMode] = useState<'spot' | 'installment'>('spot')
- const [selectedFreqSvc, setSelectedFreqSvc] = useState(0)
+  const insuranceToggle = (props as ServiceProps).insuranceToggle
 
- const plan = sData[selectedPlan] || sData[0]
+  const plan = sData[selectedPlan] || sData[0]
 
  const installmentOptions = [
   { label: 'Annual (5 checks)', payment: plan.annual, installments: 5 },
@@ -154,18 +155,45 @@ export default function FinanceCalculator(props: Props) {
         {sData.map((p, i) => <option key={p.name} value={i}>{p.name}</option>)}
        </select>
       </div>
-      <div>
-       <label className="block text-xs font-semibold text-primary mb-1.5 uppercase tracking-wider">Payment Mode</label>
-       <select
-        value={selectedPayMode}
-        onChange={(e) => setSelectedPayMode(e.target.value as 'spot' | 'installment')}
-        className="w-full px-3 py-2.5 rounded text-sm bg-white border border-primary/10 text-primary focus:outline-none focus:border-gold"
-       >
-        <option value="spot">Spot Cash</option>
-        <option value="installment">Installment</option>
-       </select>
+       <div>
+        <label className="block text-xs font-semibold text-primary mb-1.5 uppercase tracking-wider">Payment Mode</label>
+        <select
+         value={selectedPayMode}
+         onChange={(e) => setSelectedPayMode(e.target.value as 'spot' | 'installment')}
+         className="w-full px-3 py-2.5 rounded text-sm bg-white border border-primary/10 text-primary focus:outline-none focus:border-gold"
+        >
+         <option value="spot">Spot Cash</option>
+         <option value="installment">Installment</option>
+        </select>
+       </div>
       </div>
-     </div>
+
+      {insuranceToggle && (
+       <div className="mb-8">
+        <label className="block text-xs font-semibold text-primary mb-2 uppercase tracking-wider">Add ons</label>
+        <div className="inline-flex rounded-lg overflow-hidden border border-primary/10 bg-white">
+         <button
+          type="button"
+          onClick={() => setWithInsurance(false)}
+          className={`px-6 py-2.5 text-sm font-semibold transition-colors ${!withInsurance ? 'bg-gold text-primary' : 'text-primary/60 hover:text-primary'}`}
+         >
+          No Insurance
+         </button>
+         <button
+          type="button"
+          onClick={() => setWithInsurance(true)}
+          className={`px-6 py-2.5 text-sm font-semibold transition-colors ${withInsurance ? 'bg-gold text-primary' : 'text-primary/60 hover:text-primary'}`}
+         >
+          With Insurance
+         </button>
+        </div>
+        {withInsurance && (
+         <p className="text-xs text-primary/50 mt-2">
+          Selected plans with insurance include additional financial protection while your plan is active.
+         </p>
+        )}
+       </div>
+      )}
 
      {selectedPayMode === 'spot' ? (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
