@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import FinanceCalculator from '@/components/finance/FinanceCalculator'
 import { nacionalPlans } from '@/data/pricing'
 
@@ -53,11 +54,11 @@ const plans = [
 ]
 
 const facilities = [
- { icon: 'fa-solid fa-landmark', label: 'Regular Chapel' },
- { icon: 'fa-solid fa-couch', label: 'Family Room' },
- { icon: 'fa-solid fa-door-open', label: 'Lobby' },
- { icon: 'fa-solid fa-eye', label: 'Viewing Rooms' },
- { icon: 'fa-solid fa-square-parking', label: 'Parking' },
+ { icon: 'fa-solid fa-landmark', label: 'Regular Chapel', image: '/images/nacional-facility/regular-chapel.jpg' },
+ { icon: 'fa-solid fa-couch', label: 'Family Room', image: '/images/nacional-facility/family-room.jpg' },
+ { icon: 'fa-solid fa-door-open', label: 'Lobby', image: '/images/nacional-facility/lobby.jpg' },
+ { icon: 'fa-solid fa-eye', label: 'Viewing Rooms', image: '/images/nacional-facility/viewing-rooms.jpg' },
+ { icon: 'fa-solid fa-square-parking', label: 'Parking', image: '/images/nacional-facility/parking.jpg' },
 ]
 
 const inclusions = [
@@ -231,13 +232,16 @@ export default function NacionalSections() {
       <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Nacional Facilities</p>
       <h2 className="text-3xl md:text-4xl font-bold text-primary">Facilities at Nacional Chapels &amp; Crematory</h2>
      </div>
-     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {facilities.map((f) => (
-       <div key={f.label} className="bg-cream rounded-lg p-6 border border-light-stone flex flex-col items-center text-center">
-        <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mb-4">
-         <i className={`${f.icon} text-gold text-lg`} />
+       <div key={f.label} className="bg-cream rounded-lg overflow-hidden border border-light-stone flex flex-col">
+        <div className="relative aspect-[4/3] overflow-hidden bg-white">
+         <Image src={f.image} alt={f.label} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
         </div>
-        <p className="text-sm text-primary/70 font-medium leading-relaxed">{f.label}</p>
+        <div className="p-5 flex items-center gap-3 flex-1">
+         <i className={`${f.icon} text-gold`} />
+         <p className="text-sm text-primary/70 font-medium leading-relaxed">{f.label}</p>
+        </div>
        </div>
       ))}
      </div>
