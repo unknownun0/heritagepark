@@ -1,98 +1,200 @@
+import Image from 'next/image'
 import FinanceCalculator from '@/components/finance/FinanceCalculator'
 import { estateLotData } from '@/data/pricing'
+
+const details = [
+ { icon: 'fa-solid fa-ruler-combined', label: 'Lot Size', value: '39.04 sq.m. (4.00m x 9.76m)' },
+ { icon: 'fa-solid fa-people-group', label: 'Capacity', value: '32 full body interments plus 2 aboveground crypts' },
+ { icon: 'fa-solid fa-leaf', label: 'Burial Type', value: 'Private Estate / Underground Burial' },
+ { icon: 'fa-solid fa-monument', label: 'Mausoleum Allowance', value: 'Provides the land for a private family mausoleum. The mausoleum itself is not included and is a separate guided construction process.' },
+ { icon: 'fa-solid fa-credit-card', label: 'Payment Options', value: 'Flexible Payment Terms Available' },
+]
+
+const tiers = [
+ {
+  name: 'Estate Lot',
+  position: 'A Private Legacy',
+  icon: 'fa-solid fa-crown',
+  desc: 'A private memorial estate that reflects your family\u2019s enduring legacy, designed for those who want complete control over their memorial space with the privacy and prestige that only a dedicated family structure can provide.',
+ },
+]
+
+const gallery = [
+ '/images/estate-lot/estate-1.jpg',
+ '/images/estate-lot/estate-2.jpg',
+ '/images/estate-lot/estate-3.jpg',
+ '/images/estate-lot/estate-4.jpg',
+]
+
+const purchaseSteps = [
+ 'Talk to a Memorial Advisor and discuss your family\u2019s needs.',
+ 'Visit Heritage Park with your Memorial Advisor to view the available memorial lots.',
+ 'Choose the memorial lot that best fits your family, then complete the application and submit the required documents.',
+ 'Select your preferred payment option.',
+ 'Receive your ownership documents and keep them in a safe place.',
+]
+
+const beforePurchasing = [
+ {
+  title: 'A Pre-Need Package Is Required',
+  desc: 'All memorial lot purchases must include a Heritage Park Funeral Service plan in accordance with the company\u2019s policy.',
+ },
+ {
+  title: 'Mausoleum Is Built Separately',
+  desc: 'The estate lot provides the land for a private mausoleum. The mausoleum itself is not included and is a separate guided construction process handled by our team.',
+ },
+ {
+  title: 'Subject to Company Confirmation',
+  desc: 'All lot purchases are subject to investor confirmation and final approval by the company. Availability may change without prior notice.',
+ },
+ {
+  title: 'Private Estate Setting',
+  desc: 'Estate Lots are designed as exclusive family spaces, offering privacy, permanence, and the freedom to create a memorial estate that can honor generations to come.',
+ },
+]
 
 export default function EstateLotsSection() {
  return (
   <>
-   <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
+   {/* HERO */}
+   <section className="relative min-h-[500px] flex items-center bg-primary overflow-hidden">
     <div className="absolute inset-0 bg-[url(/images/estate-lot-hero.jpg)] bg-cover bg-center opacity-30" />
-    <div className="relative z-10 text-center px-4">
-     <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Estate Lots</p>
-     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">A Private Legacy, Built for Generations</h1>
-     <p className="text-white/70 max-w-2xl mx-auto text-lg">The pinnacle of memorial planning a private estate that reflects your family&apos;s enduring legacy.</p>
+    <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
+     <div className="max-w-2xl">
+      <p className="inline-block bg-gold/10 border border-gold/40 text-gold text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-4">
+       Estate Lots
+      </p>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">A Private Legacy, Built for Generations</h1>
+      <p className="text-white/80 text-base md:text-lg mb-8">The pinnacle of memorial planning &mdash; a private estate that reflects your family&apos;s enduring legacy.</p>
+      <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+       Inquire Now
+      </a>
+     </div>
     </div>
    </section>
 
+   {/* DETAILS */}
    <section className="py-20 bg-cream">
-    <div className="max-w-4xl mx-auto px-4">
+    <div className="max-w-6xl mx-auto px-4">
      <div className="text-center mb-12">
-      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Who It&apos;s For</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">For Families Who Seek the Extraordinary</h2>
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Lot Details</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary">Everything You Need to Know</h2>
      </div>
-     <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto text-center">
-      <p>An estate lot is for families who envision something more a <strong>private mausoleum</strong> that stands as a permanent tribute to their name and legacy. It&apos;s designed for those who want complete control over their memorial space, with the privacy and prestige that only a dedicated family structure can provide.</p>
+     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {details.map((d) => (
+       <div key={d.label} className="bg-white rounded-lg p-6 border border-light-stone">
+        <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mb-4">
+         <i className={`${d.icon} text-gold`} />
+        </div>
+        <h3 className="text-xs font-bold text-gold uppercase tracking-wider mb-2">{d.label}</h3>
+        <p className="text-sm text-primary/70 leading-relaxed">{d.value}</p>
+       </div>
+      ))}
      </div>
     </div>
    </section>
 
+   {/* ESTATE LOT TIERS */}
    <section className="py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4">
      <div className="text-center mb-12">
-      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">What&apos;s Included</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">Expansive Space, Endless Possibilities</h2>
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Estate Lot</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary">Choose Your Estate Lot</h2>
+      <p className="text-primary/60 mt-3 max-w-2xl mx-auto">
+       Estate Lots are designed for families who envision something more &mdash; a private mausoleum that stands as a permanent tribute to their name and legacy.
+      </p>
      </div>
-     <div className="max-w-3xl mx-auto space-y-4">
-      <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
-       <div className="w-10 h-10 bg-moss/10 rounded-full flex items-center justify-center shrink-0 text-moss">
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-        </svg>
+     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {tiers.map((tier) => (
+       <div key={tier.name} className="bg-cream rounded-lg p-8 flex flex-col items-start md:col-span-2 md:max-w-xl md:mx-auto w-full">
+        <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mb-4">
+         <i className={`${tier.icon} text-gold text-lg`} />
+        </div>
+        <h3 className="text-xl font-heading font-bold text-primary mb-1">{tier.name}</h3>
+        <p className="text-gold text-sm font-semibold mb-4">{tier.position}</p>
+        <p className="text-sm text-primary/70 leading-relaxed">{tier.desc}</p>
        </div>
-       <div>
-        <h3 className="font-heading font-bold text-primary mb-1">Lot Size</h3>
-        <p className="text-sm text-primary/70">A generous <strong>39.04 sqm (4.00m �- 9.76m)</strong> more than enough space for a private family mausoleum and surrounding landscape.</p>
-       </div>
-      </div>
-      <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
-       <div className="w-10 h-10 bg-moss/10 rounded-full flex items-center justify-center shrink-0 text-moss">
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-       </div>
-       <div>
-        <h3 className="font-heading font-bold text-primary mb-1">Capacity</h3>
-        <p className="text-sm text-primary/70">Designed to accommodate <strong>32 full body interments</strong> plus <strong>2 aboveground crypts</strong>, ensuring space for generations to come.</p>
-       </div>
-      </div>
-      <div className="bg-cream rounded-lg p-5 flex items-start gap-4">
-       <div className="w-10 h-10 bg-moss/10 rounded-full flex items-center justify-center shrink-0 text-moss">
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-        </svg>
-       </div>
-       <div>
-        <h3 className="font-heading font-bold text-primary mb-1">Mausoleum Allowance</h3>
-        <p className="text-sm text-primary/70">The estate lot provides the land for a private mausoleum. <em>The mausoleum itself is not included and is a separate guided construction process.</em></p>
-       </div>
-      </div>
+      ))}
      </div>
     </div>
    </section>
 
+   {/* GALLERY */}
    <section className="py-20 bg-cream">
-    <div className="max-w-4xl mx-auto px-4">
+    <div className="max-w-5xl mx-auto px-4">
      <div className="text-center mb-12">
-      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">The Mausoleum Process</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">Building Your Family&apos;s Monument</h2>
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Gallery</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary">A Closer Look</h2>
      </div>
-     <div className="text-primary/70 text-base leading-relaxed max-w-3xl mx-auto space-y-4">
-      <p>Your private mausoleum is a separate, guided construction process that begins after you secure your estate lot. Our team will walk you through every step from design consultation with our architects to material selection, permitting, and construction management.</p>
-      <p>The result is a one of a kind family memorial that reflects your values, your story, and your legacy. Whether you envision classic marble, modern stone, or a custom architectural design, we help bring it to life.</p>
+     <div className="grid grid-cols-2 gap-4">
+      {gallery.map((src) => (
+       <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-white">
+        <Image src={src} alt="Estate Lot photo" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
+       </div>
+      ))}
      </div>
     </div>
    </section>
 
+   {/* FINANCE CALCULATOR */}
    <FinanceCalculator mode="property" data={estateLotData} title="Estate Lot Payment Calculator" />
 
-   <div className="text-center pb-16 -mt-8">
-    <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Request a Quote</a>
-   </div>
+   {/* HOW TO PURCHASE */}
+   <section className="py-20 bg-white">
+    <div className="max-w-4xl mx-auto px-4">
+     <div className="text-center mb-12">
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">How to Purchase</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary">How to Purchase an Estate Lot</h2>
+     </div>
+     <div className="space-y-0">
+      {purchaseSteps.map((step, i) => (
+       <div key={i}>
+        <div className="flex items-start gap-4 bg-cream rounded-lg p-6">
+         <div className="w-10 h-10 bg-gold text-primary rounded-full flex items-center justify-center font-bold shrink-0">
+          {i + 1}
+         </div>
+         <p className="text-primary/70 text-sm md:text-base leading-relaxed pt-2">{step}</p>
+        </div>
+        {i < purchaseSteps.length - 1 && (
+         <div className="flex justify-center py-2">
+          <i className="fa-solid fa-arrow-down-long text-gold text-xl font-bold" />
+         </div>
+        )}
+       </div>
+      ))}
+     </div>
+    </div>
+   </section>
 
-   <section className="py-16 bg-primary">
-    <div className="max-w-4xl mx-auto px-4 text-center">
-     <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Begin Your Legacy?</h2>
-     <p className="text-white/70 mb-8 max-w-xl mx-auto">Our team is here to discuss your vision in complete confidence with no pressure, only guidance.</p>
-     <a href="/contact" className="inline-block bg-[#e2af43] text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-[#e2af43]/90 transition-colors">Schedule a Private Consultation</a>
+   {/* BEFORE PURCHASING */}
+   <section className="py-20 bg-cream">
+    <div className="max-w-5xl mx-auto px-4">
+     <div className="text-center mb-12">
+      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Important Notes</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary">Before Purchasing an Estate Lot</h2>
+     </div>
+     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      {beforePurchasing.map((b) => (
+       <div key={b.title} className="bg-white rounded-lg p-6 border border-light-stone">
+        <h3 className="text-base font-bold text-primary mb-2">{b.title}</h3>
+        <p className="text-sm text-primary/70 leading-relaxed">{b.desc}</p>
+       </div>
+      ))}
+     </div>
+    </div>
+   </section>
+
+   {/* CTA */}
+   <section className="py-20 bg-primary">
+    <div className="max-w-3xl mx-auto px-4 text-center">
+     <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-3">Ready to Secure an Estate Lot</p>
+     <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">Ready to Begin Your Legacy?</h2>
+     <p className="text-white/70 mb-8 max-w-xl mx-auto">
+      Every family has different needs. Whether you&apos;re comparing locations, exploring payment options, or simply have questions, our Memorial Advisors are here to help you make an informed decision.
+     </p>
+     <a href="/contact" className="inline-block bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">
+      Talk to a Memorial Advisor
+     </a>
     </div>
    </section>
   </>
