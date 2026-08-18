@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import BlogSection from './BlogSection'
 
 const values = [
@@ -74,7 +75,7 @@ export default function HomeSections() {
        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
       </svg>
      </div>
-     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Need a Memorial Lot Today?</h2>
+     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 normal-case">Need a Memorial Lot Today?</h2>
      <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md">Whether you need a memorial property immediately or you&apos;re planning ahead, we&apos;ll help you find the right option based on your family&apos;s needs and budget.</p>
      <p className="text-gold text-sm md:text-base mt-4">
       <a href="tel:+639178841009" className="hover:underline">0917 884 1009</a>
@@ -93,11 +94,11 @@ export default function HomeSections() {
    <section className="py-20 bg-cream">
     <div className="max-w-7xl mx-auto px-4 text-center">
      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Heritage Park Memorial Lots</p>
-     <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Find the Right Memorial Property for Your Family</h2>
+     <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 normal-case">Find the Right Memorial Property for Your Family</h2>
      <p className="text-primary/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
       From individual lots to private family estates, Heritage Park offers a range of memorial properties designed for different needs, preferences, and budgets.
      </p>
-     <image src="/images/memorial-lots.jpg" alt="Heritage Park Memorial Lots" className="mx-auto rounded-lg shadow-lg mb-8" />
+     <Image src="/images/plan-ahead-hero.jpg" alt="Heritage Park Memorial Lots" className="mx-auto rounded-lg shadow-lg mb-8" width={1200} height={600} />
      <Link
       href="/memorial-properties"
       className="inline-block text-primary font-semibold px-10 py-4 rounded text-sm hover:opacity-90 transition-colors"
@@ -112,12 +113,13 @@ export default function HomeSections() {
    <section className="py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 text-center">
      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Heritage Park Memorial Plans</p>
-     <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Discover the Right Plan for Your Family</h2>
+     <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 normal-case">Discover the Right Plan for Your Family</h2>
      <p className="text-primary/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
-      Planning ahead means more than choosing a memorial property. Explore our memorial plans and find the protection that best fits your family&apos;s needs.
-     </p>
-     <Link
-      href="/memorial-services"
+Planning ahead means more than choosing a memorial property. Explore our memorial plans and find the protection that best fits your family&apos;s needs.
+      </p>
+      <Image src="/images/Heritage%20Park%20Funeral%20Services.jpg" alt="Heritage Park Funeral Services" className="mx-auto rounded-lg shadow-lg mb-8" width={1200} height={600} />
+      <Link
+       href="/memorial-services"
       className="inline-block text-primary font-semibold px-10 py-4 rounded text-sm hover:opacity-90 transition-colors"
       style={{ backgroundColor: '#e2af43' }}
      >
@@ -131,7 +133,7 @@ export default function HomeSections() {
     <div className="max-w-7xl mx-auto px-4">
      <div className="text-center mb-12">
       <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Why Families Choose Us</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-white">Designed with Your Family in Mind</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-white normal-case">Designed with Your Family in Mind</h2>
      </div>
      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {values.map((v) => (
@@ -150,9 +152,9 @@ export default function HomeSections() {
    {/* Lead Magnet: Free Guide */}
    <section className="py-20 bg-primary">
     <div className="max-w-3xl mx-auto px-4 text-center">
-     <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-      Get Your Free Heritage Park Family Planning Guide
-     </h2>
+<h2 className="text-2xl md:text-3xl font-bold text-white mb-4 normal-case">
+       Get Your Free Heritage Park Family Planning Guide
+      </h2>
      <p className="text-white/60 text-sm mb-8 max-w-xl mx-auto">
       A gentle introduction to preneed memorial planning, written for Filipino families who want to prepare with confidence.
      </p>
@@ -182,9 +184,9 @@ export default function HomeSections() {
    {/* Advisor CTA */}
    <section className="py-20 bg-cream">
     <div className="max-w-3xl mx-auto px-4 text-center">
-     <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-      Ready to Plan Ahead?
-     </h2>
+<h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 normal-case">
+       Ready to Plan Ahead?
+      </h2>
      <p className="text-primary/60 text-sm mb-8 max-w-xl mx-auto leading-relaxed">
       Speak with a Heritage Park Advisor to discuss your family&apos;s needs, explore memorial options, and get clear answers, all with no obligation.
      </p>
@@ -202,8 +204,7 @@ export default function HomeSections() {
    <section className="py-20 bg-white">
     <div className="max-w-3xl mx-auto px-4">
      <div className="text-center mb-12">
-      <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Have Questions?</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions</h2>
+<h2 className="text-3xl md:text-4xl font-bold text-primary normal-case">Frequently Asked Questions</h2>
      </div>
      <div className="space-y-3">
       {faqs.map((faq) => (

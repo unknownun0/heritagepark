@@ -36,9 +36,9 @@ async function getMergedPosts(): Promise<BlogPost[]> {
 export default async function BlogSection() {
  const allPosts = await getMergedPosts()
  const topicDisplay: { id: string; label: string }[] = [
-  { id: 'planning', label: 'PLANNING AHEAD' },
-  { id: 'costs', label: 'UNDERSTANDING MEMORIAL OPTIONS' },
-  { id: 'culture', label: 'FILIPINO TRADITIONS & GRIEF SUPPORT' },
+  { id: 'planning', label: 'Planning Ahead' },
+  { id: 'costs', label: 'Understanding Memorial Options' },
+  { id: 'culture', label: 'Filipino Traditions & Grief Support' },
  ]
  const topics = topicDisplay.filter((t) => allPosts.some((p) => p.topicId === t.id))
 
@@ -46,7 +46,7 @@ export default async function BlogSection() {
   <section className="py-20 bg-cream">
    <div className="max-w-7xl mx-auto px-4">
     <div className="text-center mb-14">
-     <h2 className="text-3xl md:text-4xl font-bold text-primary">Helping You Understand EveryStep</h2>
+     <h2 className="text-3xl md:text-4xl font-bold text-primary normal-case">Helping You Understand EveryStep</h2>
      <p className="text-primary/60 max-w-2xl mx-auto mt-3">Planning for the future can feel overwhelming. Our simple guides explain everything you needtoknow.</p>
     </div>
 
