@@ -47,7 +47,8 @@ export default function PlanAheadSections() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
           <div className="max-w-2xl">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">Plan Ahead</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Plan Your Family&apos;s <br className="hidden sm:block" /> Memorial Needs in Advance</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Plan Your Family&apos;s</h1>          
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Memorial Needs in Advance</h1>
             <p className="text-white/80 text-base md:text-lg mb-8">Preparing today gives your family more time, more choices, and less financial stress when the unexpected happens.</p>
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a href="/memorial-properties" className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Explore Memorial Lots</a>
