@@ -97,6 +97,7 @@ export default function HomeSections() {
      <p className="text-primary/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
       From individual lots to private family estates, Heritage Park offers a range of memorial properties designed for different needs, preferences, and budgets.
      </p>
+     <image src="/images/memorial-lots.jpg" alt="Heritage Park Memorial Lots" className="mx-auto rounded-lg shadow-lg mb-8" />
      <Link
       href="/memorial-properties"
       className="inline-block text-primary font-semibold px-10 py-4 rounded text-sm hover:opacity-90 transition-colors"
