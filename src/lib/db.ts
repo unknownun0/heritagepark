@@ -249,7 +249,7 @@ class JsonDb {
  }
 
  private parseCreateTable(sql: string) {
-  const match = sql.match(/^CREATE\s+TABLE\s+IF\s+NOT\s+EXISTS\s+([A-Za-z0-9_]+)\s*\((.*)\)$/is);
+  const match = sql.match(/^CREATE\s+TABLE\s+IF\s+NOT\s+EXISTS\s+([A-Za-z0-9_]+)\s*\(([\s\S]*)\)$/i);
   if (!match) return;
   const [, tableName] = match;
   this.getTable(tableName);
