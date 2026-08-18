@@ -47,11 +47,11 @@ export default function PlanAheadSections() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
           <div className="max-w-2xl">
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">Plan Ahead</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Plan Your Family&apos;s Memorial Needs in Advance</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Plan Your Family&apos;s <br> Memorial Needs in Advance</br></h1>
             <p className="text-white/80 text-base md:text-lg mb-8">Preparing today gives your family more time, more choices, and less financial stress when the unexpected happens.</p>
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a href="/memorial-properties" className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Explore Memorial Lots</a>
-              <a href="/memorial-services" className="border-2 border-white/30 text-white font-semibold px-8 py-3.5 rounded text-sm hover:bg-white/10 transition-colors">Explore Memorial Plans</a>
+              <a href="/memorial-services" className="bg-gold text-primary font-semibold px-8 py-3.5 rounded text-sm hover:bg-gold/90 transition-colors">Explore Memorial Plans</a>
             </div>
           </div>
         </div>
@@ -79,7 +79,6 @@ export default function PlanAheadSections() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Why Families Choose to Plan</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Why More Families Choose to Plan Ahead</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -163,7 +162,6 @@ export default function PlanAheadSections() {
       <section id="common-questions" className="py-20 bg-cream scroll-mt-24">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">Common Questions</p>
             <h2 className="text-2xl md:text-4xl font-bold text-primary">Common Questions About Planning Ahead</h2>
             <p className="text-primary/60 mt-2">Honest answers to the questions families ask most.</p>
           </div>
