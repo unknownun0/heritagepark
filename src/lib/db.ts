@@ -83,10 +83,20 @@ async function seedDefaults(db: SqlJsDatabase) {
 export async function getDb(): Promise<SqlJsDatabase> {
  if (db) return db;
 
+ const wasmPublicPath = path.join(process.cwd(), "public", "wasm", "sql-wasm.wasm");
+ const wasmNodePath = path.join(process.cwd(), "node_modules", "sql.js", "dist", "sql-wasm.wasm");
+
  const SQL = await initSqlJs({
   locateFile: (file: string) => {
    if (IS_VERCEL) return `/wasm/${file}`;
-   return path.join(process.cwd(), "node_modules", "sql.js", "dist", file);
+
+   const publicWasmPath = path.join(process.cwd(), "public", "wasm", file);
+   if (fs.existsSync(publicWasmPath)) return publicWasmPath;
+
+   const localWasmPath = path.join(process.cwd(), "node_modules", "sql.js", "dist", file);
+   if (fs.existsSync(localWasmPath)) return localWasmPath;
+
+   return wasmPublicPath;
   },
  });
 
