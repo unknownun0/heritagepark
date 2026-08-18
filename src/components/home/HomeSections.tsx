@@ -100,7 +100,7 @@ export default function HomeSections() {
      <p className="text-primary/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
       From individual lots to private family estates, Heritage Park offers a range of memorial properties designed for different needs, preferences, and budgets.
      </p>
-     <Image src="/images/plan-ahead-hero.jpg" alt="Heritage Park Memorial Lots" className="mx-auto rounded-lg shadow-lg mb-8" width={800} height={200} />
+     <Image src="/images/plan-ahead-hero.jpg" alt="Heritage Park Memorial Lots" className="mx-auto rounded-lg shadow-lg mb-8" width={400} height={200} />
      <Link
       href="/memorial-properties"
       className="inline-block text-primary font-semibold px-10 py-4 rounded text-sm hover:opacity-90 transition-colors"
@@ -119,7 +119,7 @@ export default function HomeSections() {
      <p className="text-primary/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
 Planning ahead means more than choosing a memorial property. Explore our memorial plans and find the protection that best fits your family&apos;s needs.
       </p>
-      <Image src="/images/Heritage%20Park%20Funeral%20Services.jpg" alt="Heritage Park Funeral Services" className="mx-auto rounded-lg shadow-lg mb-8" width={800} height={200} />
+      <Image src="/images/Heritage%20Park%20Funeral%20Services.jpg" alt="Heritage Park Funeral Services" className="mx-auto rounded-lg shadow-lg mb-8" width={400} height={200} />
       <Link
        href="/memorial-services"
       className="inline-block text-primary font-semibold px-10 py-4 rounded text-sm hover:opacity-90 transition-colors"
