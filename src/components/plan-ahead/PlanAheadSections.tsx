@@ -116,7 +116,7 @@ export default function PlanAheadSections() {
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-primary">
+                    <span className="flex h-3 w-3 items-center justify-center rounded-full bg-gold text-sm font-bold text-primary">
                       {i + 1}
                     </span>
                     <p className="text-sm font-semibold text-primary leading-relaxed">{step.text}</p>
