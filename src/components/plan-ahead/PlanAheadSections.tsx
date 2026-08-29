@@ -107,11 +107,11 @@ export default function PlanAheadSections() {
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {processSteps.map((step, i) => (
               <div key={step.text} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-primary/5">
-                <div className="relative aspect-[4/3] bg-cream">
+                <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl bg-cream">
                   <img
                     src={step.image}
                     alt={step.text}
-                    className="h-full w-full object-cover"
+                    className="h-4 w-4 object-cover"
                   />
                 </div>
                 <div className="p-5">
