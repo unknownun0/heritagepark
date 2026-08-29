@@ -14,13 +14,13 @@ const whyPlan = [
 ]
 
 const processSteps = [
-  { text: 'Choose your memorial lot or memorial plan' },
-  { text: 'Complete your application' },
-  { text: 'Receive your documents' },
-  { text: 'Start your payment schedule' },
-  { text: 'Keep your documents safe' },
-  { text: 'Share your plan information with your family' },
-  { text: 'Your Memorial Advisor remains available whenever you need assistance' },
+  { text: 'Choose your memorial lot or memorial plan', image: '/images/planahead/journey/1.png' },
+  { text: 'Complete your application', image: '/images/planahead/journey/2.png' },
+  { text: 'Receive your documents', image: '/images/planahead/journey/3.png' },
+  { text: 'Start your payment schedule', image: '/images/planahead/journey/4.png' },
+  { text: 'Keep your documents safe', image: '/images/planahead/journey/5.png' },
+  { text: 'Share your plan information with your family', image: '/images/planahead/journey/6.png' },
+  { text: 'Your Memorial Advisor remains available whenever you need assistance', image: '/images/planahead/journey/7.png' },
 ]
 
 const audiences = [
@@ -81,7 +81,7 @@ export default function PlanAheadSections() {
       {/* WHY MORE FAMILIES CHOOSE TO PLAN AHEAD */}
       <section className="relative py-20 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[url(/images/plan-ahead-why-families.png)] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-white/85" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Why More Families Choose to Plan Ahead</h2>
@@ -104,13 +104,24 @@ export default function PlanAheadSections() {
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">The Journey</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">What Happens After You Plan Ahead</h2>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {processSteps.map((step, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <div className="bg-primary rounded-lg px-4 py-3 text-center min-w-[160px]">
-                  <p className="text-white text-sm font-semibold">{step.text}</p>
+              <div key={step.text} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-primary/5">
+                <div className="relative aspect-[4/3] bg-cream">
+                  <img
+                    src={step.image}
+                    alt={step.text}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-                {i < processSteps.length - 1 && <i className="fa-solid fa-arrow-down-long text-gold text-xl font-bold" />}
+                <div className="p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-primary">
+                      {i + 1}
+                    </span>
+                    <p className="text-sm font-semibold text-primary leading-relaxed">{step.text}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
