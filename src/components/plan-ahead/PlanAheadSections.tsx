@@ -104,23 +104,21 @@ export default function PlanAheadSections() {
             <p className="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-2">The Journey</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary">What Happens After You Plan Ahead</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="space-y-4">
             {processSteps.map((step, i) => (
-              <div key={step.text} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-primary/5">
-                <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl bg-cream">
+              <div key={step.text} className="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm border border-primary/5">
+                <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-cream shrink-0">
                   <img
                     src={step.image}
                     alt={step.text}
-                    className="h-4 w-4 object-cover"
+                    className="h-3 w-3 object-cover"
                   />
                 </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="flex h-3 w-3 items-center justify-center rounded-full bg-gold text-sm font-bold text-primary">
-                      {i + 1}
-                    </span>
-                    <p className="text-sm font-semibold text-primary leading-relaxed">{step.text}</p>
-                  </div>
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-primary shrink-0">
+                    {i + 1}
+                  </span>
+                  <p className="text-sm font-semibold text-primary leading-relaxed">{step.text}</p>
                 </div>
               </div>
             ))}
