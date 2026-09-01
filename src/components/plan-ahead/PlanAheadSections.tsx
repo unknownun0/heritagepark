@@ -150,7 +150,7 @@ export default function PlanAheadSections() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative overflow-hidden rounded-lg bg-cream p-8">
-              <div className="absolute inset-0 bg-[url(/images/plan-ahead-hero2.png)] bg-cover bg-center opacity-10" />
+              <div className="absolute inset-0 bg-[url(/images/planahead/what%20to%20do%20when%20the%20time%20comes/Plan.jpeg)] bg-cover bg-center opacity-15" />
               <div className="relative z-10">
                 <h3 className="text-xl font-bold text-primary mb-4">If You Own a Memorial Plan</h3>
                 <ul className="space-y-3">
@@ -162,7 +162,7 @@ export default function PlanAheadSections() {
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg bg-cream p-8">
-              <div className="absolute inset-0 bg-[url(/images/plan-ahead-hero2.png)] bg-cover bg-center opacity-10" />
+              <div className="absolute inset-0 bg-[url(/images/planahead/what%20to%20do%20when%20the%20time%20comes/Lot.JPG)] bg-cover bg-center opacity-15" />
               <div className="relative z-10">
                 <h3 className="text-xl font-bold text-primary mb-4">If You Own a Memorial Lot</h3>
                 <ul className="space-y-3">
