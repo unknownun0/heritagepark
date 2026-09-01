@@ -111,7 +111,7 @@ export default function PlanAheadSections() {
                   <img
                     src={step.image}
                     alt={step.text}
-                    className="h-3 w-3 object-cover"
+                    className="h-8 w-8 object-cover"
                   />
                 </div>
                 <div className="flex items-center gap-2.5">
