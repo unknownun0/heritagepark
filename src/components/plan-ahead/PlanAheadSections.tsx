@@ -107,7 +107,7 @@ export default function PlanAheadSections() {
           <div className="space-y-4">
             {processSteps.map((step, i) => (
               <div key={step.text} className="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm border border-primary/5">
-                <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-cream shrink-0">
+                <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-lg bg-cream shrink-0">
                   <img
                     src={step.image}
                     alt={step.text}
