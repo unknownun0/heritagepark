@@ -154,10 +154,7 @@ export default function PlanAheadSections() {
               <div className="relative z-10">
                 <h3 className="text-xl font-bold text-primary mb-4">If You Own a Memorial Plan</h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Contact your Memorial Advisor.</li>
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Prepare the required documents.</li>
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>We&apos;ll verify your plan.</li>
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>We&apos;ll guide your family through the next steps.</li>
+                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Your family will contact the family Assitance office</li>
                 </ul>
               </div>
             </div>
@@ -166,11 +163,7 @@ export default function PlanAheadSections() {
               <div className="relative z-10">
                 <h3 className="text-xl font-bold text-primary mb-4">If You Own a Memorial Lot</h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Visit the Heritage Park Interment Office.</li>
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Present your lot documents and complete the required forms.</li>
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Pay the interment fee or Present your interment plan.</li>
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Heritage Park prepares the burial site.</li>
-                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Attend the scheduled interment.</li>
+                  <li className="flex items-start gap-3 text-primary/70 text-sm"><span className="text-gold shrink-0 mt-0.5">&rarr;</span>Your family will visit the heritage oark Interment office</li>
                 </ul>
               </div>
             </div>
