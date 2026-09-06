@@ -132,9 +132,11 @@ const beforePurchasing = [
 export default function NacionalSections() {
  return (
   <>
-   {/* HERO */}
+   {/* HERO VIDEO */}
    <section className="relative min-h-[500px] flex items-center justify-center bg-primary overflow-hidden">
-    <div className="absolute inset-0 bg-[url(/images/nacional-hero.jpg)] bg-cover bg-center opacity-30" />
+    <video autoPlay muted loop playsInline poster="/images/nacional-hero.jpg" className="absolute inset-0 w-full h-full object-cover opacity-40">
+     <source src="/videos/heritagepark.mp4" type="video/mp4" />
+    </video>
     <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/40 to-transparent" />
     <div className="relative z-10 text-center px-4 max-w-3xl">
      <p className="inline-block bg-gold/10 border border-gold/40 text-gold text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-4">
@@ -272,7 +274,7 @@ export default function NacionalSections() {
    </section>
 
    {/* FINANCE CALCULATOR */}
-   <FinanceCalculator mode="service" data={nacionalPlans} title="Nacional Plan Pricing" />
+   <FinanceCalculator mode="service" data={nacionalPlans} title="Mortuary Payment Calculator" insuranceToggle />
 
    {/* INSURANCE BENEFITS */}
    <section className="py-20 bg-white">
